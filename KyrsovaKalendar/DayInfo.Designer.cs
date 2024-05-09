@@ -252,6 +252,7 @@
             this.Controls.Add(this.createEventButton);
             this.Name = "DayInfo";
             this.Text = "DayInfo";
+            this.Load += new System.EventHandler(this.DayInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

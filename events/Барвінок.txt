@@ -1,0 +1,12 @@
+Type: TematicEvenings
+Name: Барвінок
+Start Date: 09.05.2024 17:45:17
+End Date: 09.05.2024 17:45:17
+Location: вул.Незалежності 6, буд.12
+Info: Запрошуємо всіх до участі!
+Time Start: 05.05.2024 12:00:37
+Time Length: 05.05.2024 1:00:00
+Cost: 0
+Limit: 18+
+Site Link: https://www.websiteplanet.com/ru/webtools/sharelink/
+Author: 

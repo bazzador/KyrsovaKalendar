@@ -12,9 +12,14 @@ namespace KyrsovaKalendar
 {
     public partial class UserControlDays : UserControl
     {
-        public UserControlDays()
+        public int dayFolder;
+        public int monthFolder;
+        public int yearFolder;
+        public UserControlDays(int monthFolder, int yearFolder)
         {
             InitializeComponent();
+            this.monthFolder = monthFolder;
+            this.yearFolder = yearFolder;
         }
         private void UserControlDays_Click(object sender, EventArgs e)
         {
@@ -29,6 +34,7 @@ namespace KyrsovaKalendar
         public void Days(int numDay)
         {
             labelDays.Text = numDay + "";
+            dayFolder = numDay;
         }
 
     }

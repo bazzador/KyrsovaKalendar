@@ -13,7 +13,7 @@ namespace KyrsovaKalendar
 {
     public partial class Calendar : Form
     {
-        int month, year;
+        public int month, year;
         DateTime now = DateTime.Now;
         public Calendar()
         {
@@ -40,7 +40,7 @@ namespace KyrsovaKalendar
             }
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays userDays = new UserControlDays();
+                UserControlDays userDays = new UserControlDays(month, year);
                 userDays.Days(i);
                 dayPanel.Controls.Add(userDays);
                 userDays.AddClickEventToUserControlDays();
