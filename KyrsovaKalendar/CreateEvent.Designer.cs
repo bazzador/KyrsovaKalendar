@@ -45,16 +45,18 @@
             this.eventTimeStart = new System.Windows.Forms.DateTimePicker();
             this.eventTimeLength = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.locationEvent = new System.Windows.Forms.TextBox();
+            this.eventLocation = new System.Windows.Forms.TextBox();
             this.location_3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.info_4 = new System.Windows.Forms.Label();
-            this.authorEvent = new System.Windows.Forms.TextBox();
+            this.eventAuthor = new System.Windows.Forms.TextBox();
             this.author_22 = new System.Windows.Forms.Label();
             this.goal_55 = new System.Windows.Forms.Label();
-            this.goalEvent = new System.Windows.Forms.RichTextBox();
-            this.toolsEvent = new System.Windows.Forms.RichTextBox();
+            this.eventGoal = new System.Windows.Forms.RichTextBox();
+            this.eventTools = new System.Windows.Forms.RichTextBox();
             this.tools_55 = new System.Windows.Forms.Label();
+            this.eventLink = new System.Windows.Forms.TextBox();
+            this.link_9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,7 +181,7 @@
             // 
             this.eventLimit.Location = new System.Drawing.Point(592, 530);
             this.eventLimit.Name = "eventLimit";
-            this.eventLimit.Size = new System.Drawing.Size(373, 82);
+            this.eventLimit.Size = new System.Drawing.Size(373, 80);
             this.eventLimit.TabIndex = 15;
             this.eventLimit.Text = "";
             // 
@@ -213,12 +215,12 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // locationEvent
+            // eventLocation
             // 
-            this.locationEvent.Location = new System.Drawing.Point(593, 135);
-            this.locationEvent.Name = "locationEvent";
-            this.locationEvent.Size = new System.Drawing.Size(450, 20);
-            this.locationEvent.TabIndex = 20;
+            this.eventLocation.Location = new System.Drawing.Point(593, 135);
+            this.eventLocation.Name = "eventLocation";
+            this.eventLocation.Size = new System.Drawing.Size(450, 20);
+            this.eventLocation.TabIndex = 20;
             // 
             // location_3
             // 
@@ -258,12 +260,12 @@
             this.info_4.TabIndex = 24;
             this.info_4.Text = "Програма та ведучі:";
             // 
-            // authorEvent
+            // eventAuthor
             // 
-            this.authorEvent.Location = new System.Drawing.Point(593, 76);
-            this.authorEvent.Name = "authorEvent";
-            this.authorEvent.Size = new System.Drawing.Size(450, 20);
-            this.authorEvent.TabIndex = 26;
+            this.eventAuthor.Location = new System.Drawing.Point(593, 76);
+            this.eventAuthor.Name = "eventAuthor";
+            this.eventAuthor.Size = new System.Drawing.Size(450, 20);
+            this.eventAuthor.TabIndex = 26;
             // 
             // author_22
             // 
@@ -284,23 +286,23 @@
             this.goal_55.TabIndex = 27;
             this.goal_55.Text = "Мета:";
             // 
-            // goalEvent
+            // eventGoal
             // 
-            this.goalEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.goalEvent.Location = new System.Drawing.Point(593, 170);
-            this.goalEvent.Name = "goalEvent";
-            this.goalEvent.Size = new System.Drawing.Size(430, 50);
-            this.goalEvent.TabIndex = 28;
-            this.goalEvent.Text = "";
+            this.eventGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventGoal.Location = new System.Drawing.Point(593, 170);
+            this.eventGoal.Name = "eventGoal";
+            this.eventGoal.Size = new System.Drawing.Size(430, 50);
+            this.eventGoal.TabIndex = 28;
+            this.eventGoal.Text = "";
             // 
-            // toolsEvent
+            // eventTools
             // 
-            this.toolsEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toolsEvent.Location = new System.Drawing.Point(593, 235);
-            this.toolsEvent.Name = "toolsEvent";
-            this.toolsEvent.Size = new System.Drawing.Size(430, 50);
-            this.toolsEvent.TabIndex = 30;
-            this.toolsEvent.Text = "";
+            this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventTools.Location = new System.Drawing.Point(593, 235);
+            this.eventTools.Name = "eventTools";
+            this.eventTools.Size = new System.Drawing.Size(430, 50);
+            this.eventTools.TabIndex = 30;
+            this.eventTools.Text = "";
             // 
             // tools_55
             // 
@@ -311,20 +313,39 @@
             this.tools_55.TabIndex = 29;
             this.tools_55.Text = "Обладнання:";
             // 
+            // eventLink
+            // 
+            this.eventLink.Location = new System.Drawing.Point(43, 590);
+            this.eventLink.Name = "eventLink";
+            this.eventLink.Size = new System.Drawing.Size(450, 20);
+            this.eventLink.TabIndex = 32;
+            // 
+            // link_9
+            // 
+            this.link_9.AutoSize = true;
+            this.link_9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.link_9.Location = new System.Drawing.Point(3, 590);
+            this.link_9.Name = "link_9";
+            this.link_9.Size = new System.Drawing.Size(35, 16);
+            this.link_9.TabIndex = 31;
+            this.link_9.Text = "Сайт:";
+            // 
             // CreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 985);
-            this.Controls.Add(this.toolsEvent);
+            this.Controls.Add(this.eventLink);
+            this.Controls.Add(this.link_9);
+            this.Controls.Add(this.eventTools);
             this.Controls.Add(this.tools_55);
-            this.Controls.Add(this.goalEvent);
+            this.Controls.Add(this.eventGoal);
             this.Controls.Add(this.goal_55);
-            this.Controls.Add(this.authorEvent);
+            this.Controls.Add(this.eventAuthor);
             this.Controls.Add(this.author_22);
             this.Controls.Add(this.info_4);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.locationEvent);
+            this.Controls.Add(this.eventLocation);
             this.Controls.Add(this.location_3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.eventTimeLength);
@@ -371,15 +392,17 @@
         private System.Windows.Forms.DateTimePicker eventTimeStart;
         private System.Windows.Forms.DateTimePicker eventTimeLength;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox locationEvent;
+        private System.Windows.Forms.TextBox eventLocation;
         private System.Windows.Forms.Label location_3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label info_4;
-        private System.Windows.Forms.TextBox authorEvent;
+        private System.Windows.Forms.TextBox eventAuthor;
         private System.Windows.Forms.Label author_22;
         private System.Windows.Forms.Label goal_55;
-        private System.Windows.Forms.RichTextBox goalEvent;
-        private System.Windows.Forms.RichTextBox toolsEvent;
+        private System.Windows.Forms.RichTextBox eventGoal;
+        private System.Windows.Forms.RichTextBox eventTools;
         private System.Windows.Forms.Label tools_55;
+        private System.Windows.Forms.TextBox eventLink;
+        private System.Windows.Forms.Label link_9;
     }
 }

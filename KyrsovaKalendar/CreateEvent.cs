@@ -15,8 +15,8 @@ namespace KyrsovaKalendar
     public partial class CreateEvent : Form
     {
         DayInfo store;
-        private IEventFactory eventFactory;
-
+        int numberOfSelectedSubject;
+        //private IEventFactory eventFactory;
         public CreateEvent(DayInfo store)
         {
             InitializeComponent();
@@ -73,29 +73,83 @@ namespace KyrsovaKalendar
             public int cost;
             public string siteLink;
             public string limit;
+
+            protected Event(string name, DateTime startDate, DateTime endDate, 
+                string location, string info, DateTime timeStart, DateTime timeLength, 
+                int cost, string limit, string siteLink)
+            {
+                this.name = name;
+                this.startDate = startDate;
+                this.endDate = endDate;
+                this.location = location;
+                this.info = info;
+                this.timeStart = timeStart;
+                this.timeLength = timeLength;
+                this.cost = cost;
+                this.limit = limit;
+                this.siteLink = siteLink;
+
+            }
         }
         public class TematicEvenings : Event
         {
-            public string author;
+            public string author { get; set; }
+
+            public TematicEvenings(string name, string author, DateTime startDate,
+                DateTime endDate, string location, string info, DateTime timeStart,
+                DateTime timeLength, int cost, string limit, string siteLink)
+                : base(name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink)
+            {
+                this.author = author;
+            }
         }
-        public class EveningsOfQuestions : Event
+        public class Questions : Event
         {
-            public string questions;
+            public string questions { get; set; }
+
+            public Questions(string name, DateTime startDate,
+                DateTime endDate, string location, string info, DateTime timeStart,
+                DateTime timeLength, int cost, string siteLink, string limit)
+                : base(name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink)
+            {
+                this.questions = questions;
+            }
         }
-        public class EveningsOfMeeting : Event
+        public class Meeting : Event
         {
-            public string invite;
+            public Meeting(string name, DateTime startDate,
+                DateTime endDate, string location, string info, DateTime timeStart,
+                DateTime timeLength, int cost, string limit, string siteLink)
+                : base(name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink)
+            {
+            }
         }
         public class Standup : Event
         {
-            public string comedians;
+            public Standup(string name, DateTime startDate,
+                DateTime endDate, string location, string info, DateTime timeStart,
+                DateTime timeLength, int cost, string limit, string siteLink)
+                : base(name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink)
+            {
+            }
         }
         public class Entertainment : Event
         {
-            public string goal;
-            public string tools;
-            public string recomendations;
-            public string authors; // ведучі
+            public string goal { get; set; }
+            public string tools { get; set; }
+            public string program { get; set; }
+            public string authors { get; set; }
+
+            public Entertainment(string name, DateTime startDate,
+                DateTime endDate, string location, string goal, string tools, string info, DateTime timeStart,
+                DateTime timeLength, int cost, string limit, string siteLink)
+                : base(name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink)
+            {
+                this.goal = goal;
+                this.tools = tools;
+                this.program = info;
+                this.authors = authors;
+            }
         }
 
         public void changeEvent(Event1 selectedEvent)
@@ -116,7 +170,32 @@ namespace KyrsovaKalendar
         {
             //Event1 newEvent = new Event1(eventName.Text, eventDate1.Value, eventDate2.Value, eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text);
             //store.events.Add(newEvent);
-
+            switch (numberOfSelectedSubject)
+            {
+                case 1:
+                    TematicEvenings newEvent1 = new TematicEvenings(eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, 
+                        eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, 
+                        int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    break;
+                case 2:
+                    Questions newEvent2 = new Questions(eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, 
+                        eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), 
+                        eventLimit.Text, eventLink.Text);
+                    break;
+                case 3:
+                    Meeting newEvent3 = new Meeting(eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, eventInfo.Text,
+                        eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    break;
+                case 4:
+                    Standup newEvent4 = new Standup(eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
+                        eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value,
+                        int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    break;
+                case 5:
+                    Entertainment newEvent5 = new Entertainment(eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
+                         eventGoal.Text, eventTools.Text, eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    break;
+            }
         }
 
         private void exitCreateEvent_Click(object sender, EventArgs e)
@@ -131,7 +210,7 @@ namespace KyrsovaKalendar
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedSubject = comboBox1.SelectedItem.ToString();
-            int numberOfSelectedSubject = (int)selectedSubject[0] - 48;
+            numberOfSelectedSubject = (int)selectedSubject[0] - 48;
             switch (numberOfSelectedSubject)
             {
                 case 1:
@@ -144,7 +223,6 @@ namespace KyrsovaKalendar
                     time_6.Location = new Point(423, 310);
                     cost_7.Location = new Point(492, 340);
                     limit_8.Location = new Point(511, 370);
-                    saveEvent.Location = new Point(231, 505);
                     //eventName.Location = new Point(592, 45);
                     eventDate1.Location = new Point(592, 75);
                     eventDate2.Location = new Point(742, 75);
@@ -153,18 +231,18 @@ namespace KyrsovaKalendar
                     eventLimit.Location = new Point(592, 370);
                     eventTimeStart.Location = new Point(592, 280);
                     eventTimeLength.Location = new Point(592, 310);
-                    locationEvent.Location = new Point(592, 105);
+                    eventLocation.Location = new Point(592, 105);
                     author_22.Visible = false;
-                    authorEvent.Visible = false;
+                    eventAuthor.Visible = false;
                     goal_55.Visible = false;
-                    goalEvent.Visible = false;
-                    toolsEvent.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
                     tools_55.Visible = false;
                     
                     break;
                 case 2:
                     author_22.Visible = true;
-                    authorEvent.Visible = true;
+                    eventAuthor.Visible = true;
                     //name_1.Location = new System.Drawing.Point(388, 45);
                     author_22.Location = new Point(543, 75);
                     date_2.Location = new Point(482, 75 + 30);
@@ -175,7 +253,6 @@ namespace KyrsovaKalendar
                     time_6.Location = new Point(423, 310 + 30);
                     cost_7.Location = new Point(492, 340 + 30);
                     limit_8.Location = new Point(511, 370 + 30);
-                    saveEvent.Location = new Point(231, 505 + 30);
                     //eventName.Location = new System.Drawing.Point(592, 45 + 30);
                     eventDate1.Location = new Point(592, 75 + 30);
                     eventDate2.Location = new Point(742, 75 + 30);
@@ -184,10 +261,10 @@ namespace KyrsovaKalendar
                     eventLimit.Location = new Point(592, 370 + 30);
                     eventTimeStart.Location = new Point(592, 280 + 30);
                     eventTimeLength.Location = new Point(592, 310 + 30);
-                    locationEvent.Location = new Point(592, 105 + 30);
+                    eventLocation.Location = new Point(592, 105 + 30);
                     goal_55.Visible = false;
-                    goalEvent.Visible = false;
-                    toolsEvent.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
                     tools_55.Visible = false;
                     break;
                 case 3:
@@ -200,7 +277,6 @@ namespace KyrsovaKalendar
                     time_6.Location = new Point(423, 310);
                     cost_7.Location = new Point(492, 340);
                     limit_8.Location = new Point(511, 370);
-                    saveEvent.Location = new Point(231, 505);
                     //eventName.Location = new Point(592, 45);
                     eventDate1.Location = new Point(592, 75);
                     eventDate2.Location = new Point(742, 75);
@@ -209,12 +285,12 @@ namespace KyrsovaKalendar
                     eventLimit.Location = new Point(592, 370);
                     eventTimeStart.Location = new Point(592, 280);
                     eventTimeLength.Location = new Point(592, 310);
-                    locationEvent.Location = new Point(592, 105);
+                    eventLocation.Location = new Point(592, 105);
                     author_22.Visible = false;
-                    authorEvent.Visible = false;
+                    eventAuthor.Visible = false;
                     goal_55.Visible = false;
-                    goalEvent.Visible = false;
-                    toolsEvent.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
                     tools_55.Visible = false;
                     break;
                 case 4:
@@ -235,19 +311,18 @@ namespace KyrsovaKalendar
                     eventLimit.Location = new Point(592, 370);
                     eventTimeStart.Location = new Point(592, 280);
                     eventTimeLength.Location = new Point(592, 310);
-                    locationEvent.Location = new Point(592, 105);
+                    eventLocation.Location = new Point(592, 105);
                     author_22.Visible = false;
-                    authorEvent.Visible = false;
+                    eventAuthor.Visible = false;
                     goal_55.Visible = false;
-                    goalEvent.Visible = false;
-                    toolsEvent.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
                     tools_55.Visible = false;
-
                     break;
                 case 5:
                     goal_55.Visible = true;
-                    goalEvent.Visible = true;
-                    toolsEvent.Visible = true;
+                    eventGoal.Visible = true;
+                    eventTools.Visible = true;
                     tools_55.Visible = true;
                     name_1.Location = new Point(388, 45);
                     date_2.Location = new Point(482, 105-30);
@@ -258,8 +333,8 @@ namespace KyrsovaKalendar
                     cost_7.Location = new Point(492, 500 - 30);
                     limit_8.Location = new Point(511, 530 - 30);
                     goal_55.Location = new Point(550, 170 - 30);
-                    goalEvent.Location = new Point(593, 170 - 30);
-                    toolsEvent.Location = new Point(593, 235 - 30);
+                    eventGoal.Location = new Point(593, 170 - 30);
+                    eventTools.Location = new Point(593, 235 - 30);
                     tools_55.Location = new Point(514, 235 - 30);
                     eventName.Location = new Point(592, 45);
                     eventDate1.Location = new Point(593, 105-30);
@@ -269,8 +344,8 @@ namespace KyrsovaKalendar
                     eventLimit.Location = new Point(592, 530 - 30);
                     eventTimeStart.Location = new Point(592, 440 - 30);
                     eventTimeLength.Location = new Point(592, 470 - 30);
-                    locationEvent.Location = new Point(593, 135 - 30);
-                    authorEvent.Visible = false;
+                    eventLocation.Location = new Point(593, 135 - 30);
+                    eventAuthor.Visible = false;
                     author_22.Visible = false;
                     break;
             }
