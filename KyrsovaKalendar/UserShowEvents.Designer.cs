@@ -31,7 +31,8 @@
             this.dayOfWeek = new System.Windows.Forms.Label();
             this.day = new System.Windows.Forms.Label();
             this.month = new System.Windows.Forms.Label();
-            this.eventCount = new System.Windows.Forms.Label();
+            this.eventList = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dayOfWeek
@@ -61,25 +62,40 @@
             this.month.TabIndex = 2;
             this.month.Text = "label3";
             // 
-            // eventCount
+            // eventList
             // 
-            this.eventCount.AutoSize = true;
-            this.eventCount.Location = new System.Drawing.Point(29, 165);
-            this.eventCount.Name = "eventCount";
-            this.eventCount.Size = new System.Drawing.Size(35, 13);
-            this.eventCount.TabIndex = 3;
-            this.eventCount.Text = "label4";
+            this.eventList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.eventList.FormattingEnabled = true;
+            this.eventList.ItemHeight = 16;
+            this.eventList.Location = new System.Drawing.Point(3, 152);
+            this.eventList.Name = "eventList";
+            this.eventList.Size = new System.Drawing.Size(94, 212);
+            this.eventList.TabIndex = 3;
+            this.eventList.SelectedIndexChanged += new System.EventHandler(this.eventList_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(9, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "---Події---";
             // 
             // UserShowEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.eventCount);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.eventList);
             this.Controls.Add(this.month);
             this.Controls.Add(this.day);
             this.Controls.Add(this.dayOfWeek);
             this.Name = "UserShowEvents";
             this.Size = new System.Drawing.Size(100, 370);
+            this.Click += new System.EventHandler(this.UserShowEvents_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +106,7 @@
         private System.Windows.Forms.Label dayOfWeek;
         private System.Windows.Forms.Label day;
         private System.Windows.Forms.Label month;
-        private System.Windows.Forms.Label eventCount;
+        private System.Windows.Forms.ListBox eventList;
+        private System.Windows.Forms.Label label1;
     }
 }

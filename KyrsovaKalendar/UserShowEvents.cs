@@ -12,12 +12,16 @@ namespace KyrsovaKalendar
 {
     public partial class UserShowEvents : UserControl
     {
-        public UserShowEvents(string dayOfWeek, string day, string month)
+        private DateTime date; 
+        public UserShowEvents(string dayOfWeek, DateTime date, string[] eventNames)
         {
             InitializeComponent();
             DayOfWeek(dayOfWeek);
-            Day(day);
-            Month(month);
+            Day(Convert.ToString(date.Day));
+            Month(Convert.ToString(date.Month));
+            this.date = date;
+             if (eventNames != null)
+            ListEvent(eventNames);
         }
         public void DayOfWeek(string dayOfWeek)
         {
@@ -30,6 +34,36 @@ namespace KyrsovaKalendar
         public void Month(string month)
         {
             this.month.Text = month;
+        }
+        public void ListEvent(string[] events)
+        {
+            foreach(string name in events)
+            {
+                string documentName = GetDocumentName(name);
+                eventList.Items.Add(documentName);
+            }
+        }
+        static string GetDocumentName(string filePath)
+        {
+            string[] parts = filePath.Split('\\');
+
+            string fileName = parts[parts.Length - 1];
+
+            string[] fileNameParts = fileName.Split('.');
+
+            string documentName = fileNameParts[0];
+
+            return documentName;
+        }
+        private void UserShowEvents_Click(object sender, EventArgs e)
+        {
+            DayInfo form = new DayInfo(date.Day, date.Month, date.Year);
+            form.ShowDialog();
+        }
+
+        private void eventList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

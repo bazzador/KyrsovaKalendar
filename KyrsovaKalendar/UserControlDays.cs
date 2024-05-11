@@ -23,13 +23,12 @@ namespace KyrsovaKalendar
         }
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            // Ваша логіка обробника подій Click для UserControlDays
-            DayInfo form = new DayInfo(this);
+            DayInfo form = new DayInfo(dayFolder, monthFolder, yearFolder);
             form.ShowDialog();
         }
         public void AddClickEventToUserControlDays()
         {
-            this.Click += UserControlDays_Click;
+            Click += UserControlDays_Click;
         }
         public void Days(int numDay)
         {

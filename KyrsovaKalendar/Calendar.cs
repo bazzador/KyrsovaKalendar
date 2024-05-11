@@ -65,7 +65,12 @@ namespace KyrsovaKalendar
 
         private void tomorrowEvents_Click(object sender, EventArgs e)
         {
-            tomorrowEvents_Click += todayEvents_Click;
+            tomorrowEvents.Click += todayEvents_Click;
+        }
+
+        private void days10Event_Click(object sender, EventArgs e)
+        {
+            days10Event.Click += todayEvents_Click;
         }
 
         private void prevButton_Click(object sender, EventArgs e)

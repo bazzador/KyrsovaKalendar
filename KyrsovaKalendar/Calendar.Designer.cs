@@ -43,7 +43,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.todayEvents = new System.Windows.Forms.Label();
             this.tomorrowEvents = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.days10Event = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dayPanel
@@ -192,21 +192,22 @@
             this.tomorrowEvents.Text = "На завтра";
             this.tomorrowEvents.Click += new System.EventHandler(this.tomorrowEvents_Click);
             // 
-            // label9
+            // days10Event
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(44, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "10 днів";
+            this.days10Event.AutoSize = true;
+            this.days10Event.Location = new System.Drawing.Point(44, 94);
+            this.days10Event.Name = "days10Event";
+            this.days10Event.Size = new System.Drawing.Size(42, 13);
+            this.days10Event.TabIndex = 14;
+            this.days10Event.Text = "10 днів";
+            this.days10Event.Click += new System.EventHandler(this.days10Event_Click);
             // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 1024);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.days10Event);
             this.Controls.Add(this.tomorrowEvents);
             this.Controls.Add(this.todayEvents);
             this.Controls.Add(this.label8);
@@ -249,7 +250,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label todayEvents;
         private System.Windows.Forms.Label tomorrowEvents;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label days10Event;
     }
 }
 

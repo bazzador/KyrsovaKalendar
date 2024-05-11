@@ -16,13 +16,18 @@ namespace KyrsovaKalendar
     {
         public string filePath = "C:\\Users\\Ivanchik\\source\\repos\\KyrsovaKalendar\\events\\";
         public string folderPath;
-        public UserControlDays parentUserControl;
         public List<Event> events;
-        private int currentItem=0;
-        public DayInfo(UserControlDays userControl)
+        private int currentItem = 0;
+        public int userDay { get; set; }
+        public int userMonth {  get; set; }
+        public int userYear { get; set; }
+
+        public DayInfo(int userDay, int userMonth, int userYear)
         {
             InitializeComponent();
-            parentUserControl = userControl;
+            this.userDay = userDay;
+            this.userMonth = userMonth;
+            this.userYear = userYear;
             events = new List<Event>();
             //EventComboBox.DataSource = events.Select(ev => ev.name).ToList();
         }
@@ -68,7 +73,7 @@ namespace KyrsovaKalendar
 
         private void DayInfo_Load(object sender, EventArgs e)
         {
-            folderPath = Path.Combine(filePath, parentUserControl.dayFolder + "_" + parentUserControl.monthFolder + "_" + parentUserControl.yearFolder);
+            folderPath = Path.Combine(filePath, userDay + "_" + userMonth + "_" + userYear);
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
