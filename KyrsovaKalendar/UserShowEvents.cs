@@ -63,7 +63,8 @@ namespace KyrsovaKalendar
 
         private void eventList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            DayInfo dayInfo = new DayInfo(date.Day, date.Month, date.Year, eventList.SelectedIndex);
+            dayInfo.ShowDialog();
         }
     }
 }

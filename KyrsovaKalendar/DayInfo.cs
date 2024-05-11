@@ -21,14 +21,15 @@ namespace KyrsovaKalendar
         public int userDay { get; set; }
         public int userMonth {  get; set; }
         public int userYear { get; set; }
-
-        public DayInfo(int userDay, int userMonth, int userYear)
+        public int indexOfEvent { get; set; }   
+        public DayInfo(int userDay, int userMonth, int userYear, int indexOfEvent=-1)
         {
             InitializeComponent();
             this.userDay = userDay;
             this.userMonth = userMonth;
             this.userYear = userYear;
             events = new List<Event>();
+            this.indexOfEvent = indexOfEvent;
             //EventComboBox.DataSource = events.Select(ev => ev.name).ToList();
         }
         private void createEventButton_Click(object sender, EventArgs e)
@@ -95,6 +96,8 @@ namespace KyrsovaKalendar
                 }
                 UpdateEvents();
             }
+           if(indexOfEvent!=-1)
+                EventComboBox.SelectedIndex = indexOfEvent;
         }
     }
 }
