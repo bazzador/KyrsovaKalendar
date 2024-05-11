@@ -1,0 +1,12 @@
+Type: TematicEvenings
+Name: sdfsdf
+Start Date: 10.05.2024 17:10:44
+End Date: 10.05.2024 17:10:44
+Location: sdf
+Info: sdf
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 4
+Limit: sdf
+Site Link: dsf
+Author: 

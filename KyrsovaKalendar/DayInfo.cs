@@ -14,8 +14,9 @@ namespace KyrsovaKalendar
 {
     public partial class DayInfo : Form
     {
-        public string filePath = "C:\\Users\\Ivanchik\\source\\repos\\KyrsovaKalendar\\events";
-        private UserControlDays parentUserControl;
+        public string filePath = "C:\\Users\\Ivanchik\\source\\repos\\KyrsovaKalendar\\events\\";
+        public string folderPath;
+        public UserControlDays parentUserControl;
         public List<Event> events;
         private int currentItem=0;
         public DayInfo(UserControlDays userControl)
@@ -56,35 +57,36 @@ namespace KyrsovaKalendar
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ChangeEvent_Click(object sender, EventArgs e)
         {
-            int selectedIndex = EventComboBox.SelectedIndex;
-            Event selectedEvent = events[selectedIndex];
+            Event selectedEvent = events[EventComboBox.SelectedIndex];
             events.Remove(selectedEvent);
-            //CreateEvent createEvent = new CreateEvent(this, selectedEvent);
-            //createEvent.ShowDialog();
+            selectedEvent.CollectEventData(selectedEvent);
+            CreateEvent createEvent = new CreateEvent(this, selectedEvent);
+            createEvent.ShowDialog();
         }
 
         private void DayInfo_Load(object sender, EventArgs e)
         {
-            string folderPath = Path.Combine(filePath, $"{parentUserControl.dayFolder}_{parentUserControl.monthFolder}_{parentUserControl.yearFolder}");
+            folderPath = Path.Combine(filePath, parentUserControl.dayFolder + "_" + parentUserControl.monthFolder + "_" + parentUserControl.yearFolder);
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            else
+            else if(!(Directory.GetFiles(folderPath).Length == 0 && Directory.GetDirectories(folderPath).Length == 0))
             {
                 string[] eventFiles = Directory.GetFiles(folderPath);
-                string type = eventFiles[0].Substring("Type: ".Length);
-                switch (type)
+                foreach(string files in eventFiles)
                 {
-                    case "TematicEvenings":
-                        TematicEvenings tematicEvenings = new TematicEvenings();
-                        break;
-                }
-                foreach (string file in eventFiles)
-                {
-                    
+                    string[] lines = File.ReadAllLines(files);
+                    string type = lines[0].Substring("Type: ".Length);
+                    switch (type)
+                    {
+                        case "TematicEvenings":
+                            TematicEvenings tematicEvenings = new TematicEvenings();
+                            events.Add(tematicEvenings.ReadDataFromFile(lines));
+                            break;
+                    }
                 }
                 UpdateEvents();
             }

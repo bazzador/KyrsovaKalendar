@@ -56,6 +56,18 @@ namespace KyrsovaKalendar
             }
             CalcCalendar(++month, year);
         }
+
+        private void todayEvents_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+        }
+
+        private void tomorrowEvents_Click(object sender, EventArgs e)
+        {
+            tomorrowEvents_Click += todayEvents_Click;
+        }
+
         private void prevButton_Click(object sender, EventArgs e)
         {
             dayPanel.Controls.Clear();

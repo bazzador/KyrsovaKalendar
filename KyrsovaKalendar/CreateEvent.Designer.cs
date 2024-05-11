@@ -367,6 +367,7 @@
             this.Name = "CreateEvent";
             this.Text = "CreateEvent";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateEvent_FormClosed);
+            this.Load += new System.EventHandler(this.CreateEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

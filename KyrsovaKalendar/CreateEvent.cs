@@ -15,13 +15,20 @@ namespace KyrsovaKalendar
 {
     public partial class CreateEvent : Form
     {
-        DayInfo store;
+        Event copyEvent;
+        DayInfo dayInfo;
         int numberOfSelectedSubject;
         //private IEventFactory eventFactory;
-        public CreateEvent(DayInfo store)
+        public CreateEvent(DayInfo dayInfo)
         {
             InitializeComponent();
-            this.store = store;
+            this.dayInfo = dayInfo;
+        }
+        public CreateEvent(DayInfo dayInfo, Event copyEvent)
+        {
+            InitializeComponent();
+            this.dayInfo = dayInfo;
+            this.copyEvent = copyEvent;
         }
         //public CreateEvent(DayInfo store, Event eventToChange)
         //{
@@ -66,7 +73,7 @@ namespace KyrsovaKalendar
         {
             void CollectEventData(Event eventData);
             void WriteDataToFile(string fileName);
-            Event ReadDataFromFile(string fileName);
+            Event ReadDataFromFile(string[] fileName);
         }
         //public class EventDataManagement : IDataManagement
         //{
@@ -177,47 +184,49 @@ namespace KyrsovaKalendar
                 this.siteLink = siteLink;
 
             }
+            protected Event()
+            {
 
+            }
             abstract public void CollectEventData(Event eventData);
-            abstract public Event ReadDataFromFile(string fileName);
+            abstract public Event ReadDataFromFile(string[] fileName);
             abstract public void WriteDataToFile(string fileName);
         }
         public class TematicEvenings : Event
         {
             
             public string author { get; set; }
+            public Event copyEvent { get; private set; }
 
-            public TematicEvenings(string name, string author, DateTime startDate,
+            public TematicEvenings(string name, DateTime startDate,
                 DateTime endDate, string location, string info, DateTime timeStart,
                 DateTime timeLength, int cost, string limit, string siteLink)
                 : base(name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink)
             {
                 this.author = author;
             }
+            public TematicEvenings() { }
 
             public override void CollectEventData(Event eventData)
             {
-                throw new NotImplementedException();
+                copyEvent = eventData;
             }
 
-            public override Event ReadDataFromFile(string fileName)
+            public override Event ReadDataFromFile(string[] fileName)
             {
-                string[] lines = File.ReadAllLines(fileName);
-
-                string name = lines[0].Substring("Name: ".Length);
-                DateTime startDate = DateTime.Parse(lines[1].Substring("Start Date: ".Length));
-                DateTime endDate = DateTime.Parse(lines[2].Substring("End Date: ".Length));
-                string location = lines[3].Substring("Location: ".Length);
-                string info = lines[4].Substring("Info: ".Length);
-                DateTime timeStart = DateTime.Parse(lines[5].Substring("Time Start: ".Length));
-                DateTime timeLength = DateTime.Parse(lines[6].Substring("Time Length: ".Length));
-                int cost = int.Parse(lines[7].Substring("Cost: ".Length));
-                string limit = lines[8].Substring("Limit: ".Length);
-                string siteLink = lines[9].Substring("Site Link: ".Length);
-                string author = lines[10].Substring("Author: ".Length);
-                return new TematicEvenings(name, author, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink);
+                string name = fileName[1].Substring("Name: ".Length);
+                DateTime startDate = DateTime.Parse(fileName[2].Substring("Start Date: ".Length));
+                DateTime endDate = DateTime.Parse(fileName[3].Substring("End Date: ".Length));
+                string location = fileName[4].Substring("Location: ".Length);
+                string info = fileName[5].Substring("Info: ".Length);
+                DateTime timeStart = DateTime.Parse(fileName[6].Substring("Time Start: ".Length));
+                DateTime timeLength = DateTime.Parse(fileName[7].Substring("Time Length: ".Length));
+                int cost = int.Parse(fileName[8].Substring("Cost: ".Length));
+                string limit = fileName[9].Substring("Limit: ".Length);
+                string siteLink = fileName[10].Substring("Site Link: ".Length);
+                string author = fileName[11].Substring("Author: ".Length);
+                return new TematicEvenings(name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink);
             }
-
             public override void WriteDataToFile(string directory)
             {
                 string fileName = $"{name}.txt";
@@ -304,11 +313,12 @@ namespace KyrsovaKalendar
             switch (numberOfSelectedSubject)
             {
                 case 1:
-                    TematicEvenings newEvent1 = new TematicEvenings(eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, 
+                    TematicEvenings newEvent1 = new TematicEvenings(eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, 
                         eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, 
                         int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
-                    newEvent1.WriteDataToFile(store.filePath);
-                    store.events.Add(newEvent1);
+                    newEvent1.WriteDataToFile(dayInfo.folderPath);
+
+                    dayInfo.events.Add(newEvent1);
                     break;
                 //case 2:
                 //    Questions newEvent2 = new Questions(eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, 
@@ -342,7 +352,7 @@ namespace KyrsovaKalendar
 
         private void CreateEvent_FormClosed(object sender, FormClosedEventArgs e)
         {
-            store.UpdateEvents();
+            dayInfo.UpdateEvents();
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -487,5 +497,26 @@ namespace KyrsovaKalendar
                     break;
             }
         }
+        private void CreateEvent_Load(object sender, EventArgs e)
+        {
+            if (copyEvent != null)
+            {
+                switch (copyEvent.GetType().Name)
+                {
+                    case "TematicEvenings":
+                        comboBox1.SelectedIndex = 0;
+                        eventName.Text = copyEvent.name;
+                        eventDate1.Value = copyEvent.startDate;
+                        eventDate2.Value = copyEvent.endDate;
+                        eventLocation.Text = copyEvent.location;
+                        eventInfo.Text = copyEvent.info;
+                        eventTimeStart.Value = copyEvent.timeStart;
+                        eventTimeLength.Value = copyEvent.timeLength;
+                        eventCost.Text = Convert.ToString(copyEvent.cost);
+                        eventLimit.Text = copyEvent.limit;
+                        break;
+                }       
+        }
+}
     }
 }
