@@ -1,11 +1,11 @@
 Type: TematicEvenings
 Name: 1
-Start Date: 12.05.2024 16:21:25
-End Date: 12.05.2024 16:21:25
-Location: s
-Info: sdf
+Start Date: 12.05.2024 18:17:32
+End Date: 12.05.2024 18:17:32
+Location: і
+Info: в
 Time Start: 05.05.2024 15:56:37
 Time Length: 05.05.2024 0:00:00
 Cost: 4
-Limit: dfsdsgsdg
-Site Link: sdg
+Limit: в
+Site Link: в

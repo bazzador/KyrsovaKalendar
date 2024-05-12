@@ -1,0 +1,23 @@
+Type: Questions
+Name: 2
+Author: a
+Start Date: 12.05.2024 18:15:52
+End Date: 12.05.2024 18:15:52
+Location: d
+Info: d
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 23
+Limit: a
+Site Link: d
+Type: TematicEvenings
+Name: 2
+Start Date: 12.05.2024 18:15:52
+End Date: 12.05.2024 18:15:52
+Location: d
+Info: d
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 23
+Limit: d
+Site Link: 

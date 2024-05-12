@@ -67,6 +67,7 @@
             this.name_1.Size = new System.Drawing.Size(198, 16);
             this.name_1.TabIndex = 0;
             this.name_1.Text = "Назва культурно-масового заходу:";
+            this.name_1.Visible = false;
             // 
             // date_2
             // 
@@ -77,6 +78,7 @@
             this.date_2.Size = new System.Drawing.Size(104, 16);
             this.date_2.TabIndex = 1;
             this.date_2.Text = "Дата проведення:";
+            this.date_2.Visible = false;
             // 
             // start_5
             // 
@@ -87,6 +89,7 @@
             this.start_5.Size = new System.Drawing.Size(107, 16);
             this.start_5.TabIndex = 2;
             this.start_5.Text = "Час початку події:";
+            this.start_5.Visible = false;
             // 
             // time_6
             // 
@@ -97,6 +100,7 @@
             this.time_6.Size = new System.Drawing.Size(163, 16);
             this.time_6.TabIndex = 4;
             this.time_6.Text = "Орієнтовна тривалість події:";
+            this.time_6.Visible = false;
             // 
             // cost_7
             // 
@@ -107,6 +111,7 @@
             this.cost_7.Size = new System.Drawing.Size(94, 16);
             this.cost_7.TabIndex = 5;
             this.cost_7.Text = "Вартість квитка:";
+            this.cost_7.Visible = false;
             // 
             // limit_8
             // 
@@ -117,6 +122,7 @@
             this.limit_8.Size = new System.Drawing.Size(75, 16);
             this.limit_8.TabIndex = 6;
             this.limit_8.Text = "Обмеження:";
+            this.limit_8.Visible = false;
             // 
             // saveEvent
             // 
@@ -144,6 +150,7 @@
             this.eventName.Name = "eventName";
             this.eventName.Size = new System.Drawing.Size(450, 20);
             this.eventName.TabIndex = 9;
+            this.eventName.Visible = false;
             // 
             // eventDate1
             // 
@@ -151,6 +158,7 @@
             this.eventDate1.Name = "eventDate1";
             this.eventDate1.Size = new System.Drawing.Size(135, 20);
             this.eventDate1.TabIndex = 10;
+            this.eventDate1.Visible = false;
             // 
             // eventDate2
             // 
@@ -158,6 +166,7 @@
             this.eventDate2.Name = "eventDate2";
             this.eventDate2.Size = new System.Drawing.Size(135, 20);
             this.eventDate2.TabIndex = 11;
+            this.eventDate2.Visible = false;
             // 
             // eventInfo
             // 
@@ -167,6 +176,7 @@
             this.eventInfo.Size = new System.Drawing.Size(430, 120);
             this.eventInfo.TabIndex = 13;
             this.eventInfo.Text = "";
+            this.eventInfo.Visible = false;
             // 
             // eventCost
             // 
@@ -174,6 +184,7 @@
             this.eventCost.Name = "eventCost";
             this.eventCost.Size = new System.Drawing.Size(122, 20);
             this.eventCost.TabIndex = 14;
+            this.eventCost.Visible = false;
             // 
             // eventLimit
             // 
@@ -182,6 +193,7 @@
             this.eventLimit.Size = new System.Drawing.Size(373, 80);
             this.eventLimit.TabIndex = 15;
             this.eventLimit.Text = "";
+            this.eventLimit.Visible = false;
             // 
             // eventTimeStart
             // 
@@ -193,6 +205,7 @@
             this.eventTimeStart.Size = new System.Drawing.Size(122, 20);
             this.eventTimeStart.TabIndex = 16;
             this.eventTimeStart.Value = new System.DateTime(2024, 5, 5, 15, 56, 37, 0);
+            this.eventTimeStart.Visible = false;
             // 
             // eventTimeLength
             // 
@@ -204,6 +217,7 @@
             this.eventTimeLength.Size = new System.Drawing.Size(122, 20);
             this.eventTimeLength.TabIndex = 17;
             this.eventTimeLength.Value = new System.DateTime(2024, 5, 5, 0, 0, 0, 0);
+            this.eventTimeLength.Visible = false;
             // 
             // eventLocation
             // 
@@ -211,6 +225,7 @@
             this.eventLocation.Name = "eventLocation";
             this.eventLocation.Size = new System.Drawing.Size(450, 20);
             this.eventLocation.TabIndex = 20;
+            this.eventLocation.Visible = false;
             // 
             // location_3
             // 
@@ -221,6 +236,7 @@
             this.location_3.Size = new System.Drawing.Size(112, 16);
             this.location_3.TabIndex = 19;
             this.location_3.Text = "Місце проведення:";
+            this.location_3.Visible = false;
             // 
             // comboBox1
             // 
@@ -249,6 +265,7 @@
             this.info_4.Size = new System.Drawing.Size(108, 13);
             this.info_4.TabIndex = 24;
             this.info_4.Text = "Програма та ведучі:";
+            this.info_4.Visible = false;
             // 
             // eventAuthor
             // 
@@ -256,6 +273,7 @@
             this.eventAuthor.Name = "eventAuthor";
             this.eventAuthor.Size = new System.Drawing.Size(450, 20);
             this.eventAuthor.TabIndex = 26;
+            this.eventAuthor.Visible = false;
             // 
             // author_22
             // 
@@ -266,6 +284,7 @@
             this.author_22.Size = new System.Drawing.Size(43, 16);
             this.author_22.TabIndex = 25;
             this.author_22.Text = "Автор:";
+            this.author_22.Visible = false;
             // 
             // goal_55
             // 
@@ -275,6 +294,7 @@
             this.goal_55.Size = new System.Drawing.Size(36, 13);
             this.goal_55.TabIndex = 27;
             this.goal_55.Text = "Мета:";
+            this.goal_55.Visible = false;
             // 
             // eventGoal
             // 
@@ -284,6 +304,7 @@
             this.eventGoal.Size = new System.Drawing.Size(430, 50);
             this.eventGoal.TabIndex = 28;
             this.eventGoal.Text = "";
+            this.eventGoal.Visible = false;
             // 
             // eventTools
             // 
@@ -293,6 +314,7 @@
             this.eventTools.Size = new System.Drawing.Size(430, 50);
             this.eventTools.TabIndex = 30;
             this.eventTools.Text = "";
+            this.eventTools.Visible = false;
             // 
             // tools_55
             // 
@@ -302,6 +324,7 @@
             this.tools_55.Size = new System.Drawing.Size(72, 13);
             this.tools_55.TabIndex = 29;
             this.tools_55.Text = "Обладнання:";
+            this.tools_55.Visible = false;
             // 
             // eventLink
             // 
@@ -309,6 +332,7 @@
             this.eventLink.Name = "eventLink";
             this.eventLink.Size = new System.Drawing.Size(450, 20);
             this.eventLink.TabIndex = 32;
+            this.eventLink.Visible = false;
             // 
             // link_9
             // 
@@ -319,6 +343,7 @@
             this.link_9.Size = new System.Drawing.Size(35, 16);
             this.link_9.TabIndex = 31;
             this.link_9.Text = "Сайт:";
+            this.link_9.Visible = false;
             // 
             // CreateEvent
             // 

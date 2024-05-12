@@ -52,18 +52,18 @@ namespace KyrsovaKalendar
             if (selectedIndex >= 0 && selectedIndex < events.Count)
             {
                 Event selectedEvent = events[selectedIndex];
-                string typeName = events[selectedIndex].type;
-                PrepareField(typeName); 
+                PrepareField(selectedEvent); 
             }
         }
-        private void PrepareField(string type)
+        private void PrepareField(Event selectedEvent)
         {
-            name_1.Location = new Point(150, 100); //388, 45
+            name_1.Location = new Point(150, 100); name_1.Visible = true;date_2.Visible = true; location_3.Visible = true;info_4.Visible = true;start_5.Visible = true;time_6.Visible = true; cost_7.Visible = true;limit_8.Visible = true;//388, 45
+            eventName.Visible = true; eventName.Text = selectedEvent.name; eventDate1.Visible = true; eventDate1.Text = selectedEvent.startDate.ToString(); eventDate2.Visible = true; eventDate2.Text = selectedEvent.endDate.ToString(); eventLocation.Visible = true; eventLocation.Text = selectedEvent.location; eventInfo.Visible = true; eventInfo.Text = selectedEvent.info; eventTimeStart.Visible = true; eventTimeStart.Text = selectedEvent.timeStart.ToString(); eventTimeLength.Visible = true; eventTimeLength.Text = selectedEvent.timeLength.ToString(); eventCost.Visible = true; eventCost.Text = selectedEvent.cost.ToString(); eventLimit.Visible = true; eventLimit.Text = selectedEvent.limit;
             int x = 388 - 150;
             int y = 100 - 45;
-            switch (type)
+            switch (selectedEvent.type)
             {
-
+                // author goal tools
                 case "TematicEvenings":
                     date_2.Location = new Point(482-x, 75+y);
                     location_3.Location = new Point(474-x, 105 + y);
@@ -90,50 +90,49 @@ namespace KyrsovaKalendar
                     tools_55.Visible = false;
 
                     break;
-                case "Questions":
+                case "Questions": //author
+                    date_2.Location = new Point(482 - x, 75 + y);
+                    location_3.Location = new Point(474 - x, 105 + y);
+                    info_4.Location = new Point(522 - x, 140 + y);
+                    info_4.Text = "Запитання:";
+                    start_5.Location = new Point(479 - x, 280 + y);
+                    time_6.Location = new Point(423 - x, 310 + y);
+                    cost_7.Location = new Point(492 - x, 340 + y);
+                    limit_8.Location = new Point(511 - x, 370 + y);
+                    eventName.Location = new Point(592 - x, 45 + y);
+                    eventDate1.Location = new Point(592 - x, 75 + y);
+                    eventDate2.Location = new Point(742 - x, 75 + y);
+                    eventInfo.Location = new Point(592 - x, 140 + y);
+                    eventCost.Location = new Point(592 - x, 340 + y);
+                    eventLimit.Location = new Point(592 - x, 370 + y);
+                    eventTimeStart.Location = new Point(592 - x, 280 + y);
+                    eventTimeLength.Location = new Point(592 - x, 310 + y);
+                    eventLocation.Location = new Point(592 - x, 105 + y);
                     author_22.Visible = true;
                     eventAuthor.Visible = true;
-                    author_22.Location = new Point(543 - x, 75 + y);
-                    date_2.Location = new Point(482 - x, 75 + 30 + y);
-                    location_3.Location = new Point(474 - x, 105 + 30 + y);
-                    info_4.Location = new Point(522 - x, 140 + 35 + y);
-                    info_4.Text = "Запитання:";
-                    start_5.Location = new Point(479 - x, 280 + 30 + y);
-                    time_6.Location = new Point(423 - x, 310 + 30 + y);
-                    cost_7.Location = new Point(492 - x, 340 + 30 + y);
-                    limit_8.Location = new Point(511 - x, 370 + 30 + y);
-                    eventName.Location = new Point(592 - x, 45 + 30 + y);
-                    eventDate1.Location = new Point(592 - x, 75 + 30 + y);
-                    eventDate2.Location = new Point(742 - x, 75 + 30 + y);
-                    eventInfo.Location = new Point(592 - x, 140 + 30 + y);
-                    eventCost.Location = new Point(592 - x, 340 + 30 + y);
-                    eventLimit.Location = new Point(592 - x, 370 + 30 + y);
-                    eventTimeStart.Location = new Point(592 - x, 280 + 30 + y);
-                    eventTimeLength.Location = new Point(592 - x, 310 + 30 + y);
-                    eventLocation.Location = new Point(592 - x, 105 + 30 + y);
                     goal_55.Visible = false;
                     eventGoal.Visible = false;
                     eventTools.Visible = false;
                     tools_55.Visible = false;
                     break;
                     case "Meeting":
-                    date_2.Location = new Point(482, 75);
-                    location_3.Location = new Point(474, 105);
-                    info_4.Location = new Point(514, 140);
+                    date_2.Location = new Point(482 - x, 75 + y);
+                    location_3.Location = new Point(474 - x, 105 + y);
+                    info_4.Location = new Point(514 - x, 140 + y);
                     info_4.Text = "Гості заходу:";
-                    start_5.Location = new Point(479, 280);
-                    time_6.Location = new Point(423, 310);
-                    cost_7.Location = new Point(492, 340);
-                    limit_8.Location = new Point(511, 370);
-                    eventName.Location = new Point(592, 45);
-                    eventDate1.Location = new Point(592, 75);
-                    eventDate2.Location = new Point(742, 75);
-                    eventInfo.Location = new Point(592, 140);
-                    eventCost.Location = new Point(592, 340);
-                    eventLimit.Location = new Point(592, 370);
-                    eventTimeStart.Location = new Point(592, 280);
-                    eventTimeLength.Location = new Point(592, 310);
-                    eventLocation.Location = new Point(592, 105);
+                    start_5.Location = new Point(479 - x, 280 + y);
+                    time_6.Location = new Point(423 - x, 310 + y);
+                    cost_7.Location = new Point(492 - x, 340 + y);
+                    limit_8.Location = new Point(511 - x, 370 + y);
+                    eventName.Location = new Point(592 - x, 45 + y);
+                    eventDate1.Location = new Point(592 - x, 75 + y);
+                    eventDate2.Location = new Point(742 - x, 75 + y);
+                    eventInfo.Location = new Point(592 - x, 140 + y);
+                    eventCost.Location = new Point(592 - x, 340 + y);
+                    eventLimit.Location = new Point(592 - x, 370 + y);
+                    eventTimeStart.Location = new Point(592 - x, 280 + y);
+                    eventTimeLength.Location = new Point(592 - x, 310 + y);
+                    eventLocation.Location = new Point(592 - x, 105 + y);
                     author_22.Visible = false;
                     eventAuthor.Visible = false;
                     goal_55.Visible = false;
@@ -142,23 +141,23 @@ namespace KyrsovaKalendar
                     tools_55.Visible = false;
                     break;
                 case "Standup":
-                    date_2.Location = new Point(482, 75);
-                    location_3.Location = new Point(474, 105);
-                    info_4.Location = new Point(478, 140);
+                    date_2.Location = new Point(482 - x, 75 + y);
+                    location_3.Location = new Point(474 - x, 105 + y);
+                    info_4.Location = new Point(478 - x, 140 + y);
                     info_4.Text = "Програма та ведучі:";
-                    start_5.Location = new Point(479, 280);
-                    time_6.Location = new Point(423, 310);
-                    cost_7.Location = new Point(492, 340);
-                    limit_8.Location = new Point(511, 370);
-                    eventName.Location = new Point(592, 45);
-                    eventDate1.Location = new Point(592, 75);
-                    eventDate2.Location = new Point(742, 75);
-                    eventInfo.Location = new Point(592, 140);
-                    eventCost.Location = new Point(592, 340);
-                    eventLimit.Location = new Point(592, 370);
-                    eventTimeStart.Location = new Point(592, 280);
-                    eventTimeLength.Location = new Point(592, 310);
-                    eventLocation.Location = new Point(592, 105);
+                    start_5.Location = new Point(479 - x, 280 + y);
+                    time_6.Location = new Point(423 - x, 310 + y);
+                    cost_7.Location = new Point(492 - x, 340 + y);
+                    limit_8.Location = new Point(511 - x, 370 + y);
+                    eventName.Location = new Point(592 - x, 45 + y);
+                    eventDate1.Location = new Point(592 - x, 75 + y);
+                    eventDate2.Location = new Point(742 - x, 75 + y);
+                    eventInfo.Location = new Point(592 - x, 140 + y);
+                    eventCost.Location = new Point(592 - x, 340 + y);
+                    eventLimit.Location = new Point(592 - x, 370 + y);
+                    eventTimeStart.Location = new Point(592 - x, 280 + y);
+                    eventTimeLength.Location = new Point(592 - x, 310 + y);
+                    eventLocation.Location = new Point(592 - x, 105 + y);
                     author_22.Visible = false;
                     eventAuthor.Visible = false;
                     goal_55.Visible = false;
@@ -166,33 +165,33 @@ namespace KyrsovaKalendar
                     eventTools.Visible = false;
                     tools_55.Visible = false;
                     break;
-                case "Entertainment":
+                case "Entertainment": //goal tools author
+                    date_2.Location = new Point(482 - x, 75 + y);
+                    location_3.Location = new Point(474 - x, 105 + y);
+                    info_4.Location = new Point(478 - x, 270 + y);
+                    start_5.Location = new Point(479 - x, 41 + y);
+                    time_6.Location = new Point(423 - x, 44 + y);
+                    cost_7.Location = new Point(492 - x, 470 + y);
+                    limit_8.Location = new Point(511 - x, 500 + y);
+                    goal_55.Location = new Point(550 - x, 140 + y);
+                    eventGoal.Location = new Point(593 - x, 140 + y);
+                    eventTools.Location = new Point(593 - x, 205 + y);
+                    tools_55.Location = new Point(514 - x, 205 + y);
+                    eventName.Location = new Point(592 - x, 45 + y);
+                    eventDate1.Location = new Point(593 - x, 75 + y);
+                    eventDate2.Location = new Point(742 - x, 75 + y);
+                    eventInfo.Location = new Point(592 - x, 270 + y);
+                    eventCost.Location = new Point(592 - x, 470 + y);
+                    eventLimit.Location = new Point(592 - x, 500 + y);
+                    eventTimeStart.Location = new Point(592 - x, 410 + y);
+                    eventTimeLength.Location = new Point(592 - x, 440 + y);
+                    eventLocation.Location = new Point(593 - x, 105 + y);
+                    eventAuthor.Visible = true;
+                    author_22.Visible = true;
                     goal_55.Visible = true;
                     eventGoal.Visible = true;
                     eventTools.Visible = true;
                     tools_55.Visible = true;
-                    date_2.Location = new Point(482, 75);
-                    location_3.Location = new Point(474, 105);
-                    info_4.Location = new Point(478, 270);
-                    start_5.Location = new Point(479, 41);
-                    time_6.Location = new Point(423, 44);
-                    cost_7.Location = new Point(492, 470);
-                    limit_8.Location = new Point(511, 500);
-                    goal_55.Location = new Point(550, 140);
-                    eventGoal.Location = new Point(593, 140);
-                    eventTools.Location = new Point(593, 205);
-                    tools_55.Location = new Point(514, 205);
-                    eventName.Location = new Point(592, 45);
-                    eventDate1.Location = new Point(593, 75);
-                    eventDate2.Location = new Point(742, 75);
-                    eventInfo.Location = new Point(592, 270);
-                    eventCost.Location = new Point(592, 470);
-                    eventLimit.Location = new Point(592, 500);
-                    eventTimeStart.Location = new Point(592, 410);
-                    eventTimeLength.Location = new Point(592, 440);
-                    eventLocation.Location = new Point(593, 105);
-                    eventAuthor.Visible = false;
-                    author_22.Visible = false;
                     break;
             }
         }

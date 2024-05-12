@@ -52,9 +52,9 @@
             this.eventAuthor = new System.Windows.Forms.Label();
             this.eventLocation = new System.Windows.Forms.Label();
             this.eventGoal = new System.Windows.Forms.RichTextBox();
-            this.eventTools = new System.Windows.Forms.RichTextBox();
             this.eventInfo = new System.Windows.Forms.RichTextBox();
             this.eventLimit = new System.Windows.Forms.RichTextBox();
+            this.eventTools = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // createEventButton
@@ -87,6 +87,7 @@
             this.eventName.Size = new System.Drawing.Size(10, 13);
             this.eventName.TabIndex = 33;
             this.eventName.Text = "-";
+            this.eventName.Visible = false;
             // 
             // eventDate1
             // 
@@ -96,6 +97,7 @@
             this.eventDate1.Size = new System.Drawing.Size(10, 13);
             this.eventDate1.TabIndex = 34;
             this.eventDate1.Text = "-";
+            this.eventDate1.Visible = false;
             // 
             // eventDate2
             // 
@@ -105,6 +107,7 @@
             this.eventDate2.Size = new System.Drawing.Size(10, 13);
             this.eventDate2.TabIndex = 35;
             this.eventDate2.Text = "-";
+            this.eventDate2.Visible = false;
             // 
             // eventTimeStart
             // 
@@ -114,6 +117,7 @@
             this.eventTimeStart.Size = new System.Drawing.Size(10, 13);
             this.eventTimeStart.TabIndex = 36;
             this.eventTimeStart.Text = "-";
+            this.eventTimeStart.Visible = false;
             // 
             // eventTimeLength
             // 
@@ -123,15 +127,17 @@
             this.eventTimeLength.Size = new System.Drawing.Size(10, 13);
             this.eventTimeLength.TabIndex = 37;
             this.eventTimeLength.Text = "-";
+            this.eventTimeLength.Visible = false;
             // 
             // eventCost
             // 
             this.eventCost.AutoSize = true;
-            this.eventCost.Location = new System.Drawing.Point(244, 528);
+            this.eventCost.Location = new System.Drawing.Point(244, 543);
             this.eventCost.Name = "eventCost";
             this.eventCost.Size = new System.Drawing.Size(10, 13);
             this.eventCost.TabIndex = 38;
             this.eventCost.Text = "-";
+            this.eventCost.Visible = false;
             // 
             // button1
             // 
@@ -155,6 +161,7 @@
             this.tools_55.Size = new System.Drawing.Size(72, 13);
             this.tools_55.TabIndex = 50;
             this.tools_55.Text = "Обладнання:";
+            this.tools_55.Visible = false;
             // 
             // goal_55
             // 
@@ -164,6 +171,7 @@
             this.goal_55.Size = new System.Drawing.Size(36, 13);
             this.goal_55.TabIndex = 49;
             this.goal_55.Text = "Мета:";
+            this.goal_55.Visible = false;
             // 
             // author_22
             // 
@@ -174,6 +182,7 @@
             this.author_22.Size = new System.Drawing.Size(43, 16);
             this.author_22.TabIndex = 48;
             this.author_22.Text = "Автор:";
+            this.author_22.Visible = false;
             // 
             // info_4
             // 
@@ -183,6 +192,7 @@
             this.info_4.Size = new System.Drawing.Size(108, 13);
             this.info_4.TabIndex = 47;
             this.info_4.Text = "Програма та ведучі:";
+            this.info_4.Visible = false;
             // 
             // location_3
             // 
@@ -193,6 +203,7 @@
             this.location_3.Size = new System.Drawing.Size(112, 16);
             this.location_3.TabIndex = 46;
             this.location_3.Text = "Місце проведення:";
+            this.location_3.Visible = false;
             // 
             // limit_8
             // 
@@ -203,6 +214,7 @@
             this.limit_8.Size = new System.Drawing.Size(75, 16);
             this.limit_8.TabIndex = 45;
             this.limit_8.Text = "Обмеження:";
+            this.limit_8.Visible = false;
             // 
             // cost_7
             // 
@@ -213,6 +225,7 @@
             this.cost_7.Size = new System.Drawing.Size(94, 16);
             this.cost_7.TabIndex = 44;
             this.cost_7.Text = "Вартість квитка:";
+            this.cost_7.Visible = false;
             // 
             // time_6
             // 
@@ -223,6 +236,7 @@
             this.time_6.Size = new System.Drawing.Size(163, 16);
             this.time_6.TabIndex = 43;
             this.time_6.Text = "Орієнтовна тривалість події:";
+            this.time_6.Visible = false;
             // 
             // start_5
             // 
@@ -233,6 +247,7 @@
             this.start_5.Size = new System.Drawing.Size(107, 16);
             this.start_5.TabIndex = 42;
             this.start_5.Text = "Час початку події:";
+            this.start_5.Visible = false;
             // 
             // date_2
             // 
@@ -243,6 +258,7 @@
             this.date_2.Size = new System.Drawing.Size(104, 16);
             this.date_2.TabIndex = 41;
             this.date_2.Text = "Дата проведення:";
+            this.date_2.Visible = false;
             // 
             // name_1
             // 
@@ -253,6 +269,7 @@
             this.name_1.Size = new System.Drawing.Size(198, 16);
             this.name_1.TabIndex = 40;
             this.name_1.Text = "Назва культурно-масового заходу:";
+            this.name_1.Visible = false;
             // 
             // eventAuthor
             // 
@@ -262,6 +279,7 @@
             this.eventAuthor.Size = new System.Drawing.Size(10, 13);
             this.eventAuthor.TabIndex = 51;
             this.eventAuthor.Text = "-";
+            this.eventAuthor.Visible = false;
             // 
             // eventLocation
             // 
@@ -271,41 +289,50 @@
             this.eventLocation.Size = new System.Drawing.Size(10, 13);
             this.eventLocation.TabIndex = 52;
             this.eventLocation.Text = "-";
+            this.eventLocation.Visible = false;
             // 
             // eventGoal
             // 
+            this.eventGoal.Enabled = false;
             this.eventGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventGoal.Location = new System.Drawing.Point(247, 194);
             this.eventGoal.Name = "eventGoal";
             this.eventGoal.Size = new System.Drawing.Size(430, 50);
             this.eventGoal.TabIndex = 53;
             this.eventGoal.Text = "";
-            // 
-            // eventTools
-            // 
-            this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.eventTools.Location = new System.Drawing.Point(247, 250);
-            this.eventTools.Name = "eventTools";
-            this.eventTools.Size = new System.Drawing.Size(430, 50);
-            this.eventTools.TabIndex = 54;
-            this.eventTools.Text = "";
+            this.eventGoal.Visible = false;
             // 
             // eventInfo
             // 
+            this.eventInfo.Enabled = false;
             this.eventInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventInfo.Location = new System.Drawing.Point(247, 316);
             this.eventInfo.Name = "eventInfo";
             this.eventInfo.Size = new System.Drawing.Size(430, 120);
             this.eventInfo.TabIndex = 55;
             this.eventInfo.Text = "";
+            this.eventInfo.Visible = false;
             // 
             // eventLimit
             // 
+            this.eventLimit.Enabled = false;
             this.eventLimit.Location = new System.Drawing.Point(247, 588);
             this.eventLimit.Name = "eventLimit";
             this.eventLimit.Size = new System.Drawing.Size(373, 80);
             this.eventLimit.TabIndex = 56;
             this.eventLimit.Text = "";
+            this.eventLimit.Visible = false;
+            // 
+            // eventTools
+            // 
+            this.eventTools.Enabled = false;
+            this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventTools.Location = new System.Drawing.Point(247, 250);
+            this.eventTools.Name = "eventTools";
+            this.eventTools.Size = new System.Drawing.Size(430, 50);
+            this.eventTools.TabIndex = 54;
+            this.eventTools.Text = "";
+            this.eventTools.Visible = false;
             // 
             // DayInfo
             // 
@@ -371,8 +398,8 @@
         private System.Windows.Forms.Label eventAuthor;
         private System.Windows.Forms.Label eventLocation;
         private System.Windows.Forms.RichTextBox eventGoal;
-        private System.Windows.Forms.RichTextBox eventTools;
         private System.Windows.Forms.RichTextBox eventInfo;
         private System.Windows.Forms.RichTextBox eventLimit;
+        private System.Windows.Forms.RichTextBox eventTools;
     }
 }

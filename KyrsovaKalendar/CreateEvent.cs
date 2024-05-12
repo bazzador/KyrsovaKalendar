@@ -436,12 +436,12 @@ namespace KyrsovaKalendar
                 string location = fileName[5].Substring("Location: ".Length);
                 string goal = fileName[6].Substring("Goal: ".Length);
                 string tools = fileName[7].Substring("Tools: ".Length);
-                string info = fileName[6].Substring("Info: ".Length);
-                DateTime timeStart = DateTime.Parse(fileName[7].Substring("Time Start: ".Length));
-                DateTime timeLength = DateTime.Parse(fileName[8].Substring("Time Length: ".Length));
-                int cost = int.Parse(fileName[9].Substring("Cost: ".Length));
-                string limit = fileName[10].Substring("Limit: ".Length);
-                string siteLink = fileName[11].Substring("Site Link: ".Length);
+                string info = fileName[8].Substring("Info: ".Length);
+                DateTime timeStart = DateTime.Parse(fileName[9].Substring("Time Start: ".Length));
+                DateTime timeLength = DateTime.Parse(fileName[10].Substring("Time Length: ".Length));
+                int cost = int.Parse(fileName[11].Substring("Cost: ".Length));
+                string limit = fileName[12].Substring("Limit: ".Length);
+                string siteLink = fileName[13].Substring("Site Link: ".Length);
                 return new Entertainment(type, name, author, startDate, endDate, location, goal, tools, info, timeStart, timeLength, cost, limit, siteLink);
             }
 
@@ -451,7 +451,7 @@ namespace KyrsovaKalendar
                 string filePath = Path.Combine(directory, fileName);
                 using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
-                    writer.WriteLine($"Type:  {type}");
+                    writer.WriteLine($"Type: {type}");
                     writer.WriteLine($"Name: {name}");
                     writer.WriteLine($"Author: {author}");
                     writer.WriteLine($"Start Date: {startDate}");
@@ -498,21 +498,25 @@ namespace KyrsovaKalendar
                 case 2:
                     Questions newEvent2 = new Questions("Questions", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
                         eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    newEvent2.WriteDataToFile(dayInfo.folderPath);
                     dayInfo.events.Add(newEvent2);
                     break;
                 case 3:
                     Meeting newEvent3 = new Meeting("Meeting", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, eventInfo.Text,
                         eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    newEvent3.WriteDataToFile(dayInfo.folderPath);
                     dayInfo.events.Add(newEvent3);
                     break;
                 case 4:
                     Standup newEvent4 = new Standup("Standup", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
                         eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    newEvent4.WriteDataToFile(dayInfo.folderPath);
                     dayInfo.events.Add(newEvent4);
                     break;
                 case 5:
                     Entertainment newEvent5 = new Entertainment("Entertainment", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
                          eventGoal.Text, eventTools.Text, eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                    newEvent5.WriteDataToFile(dayInfo.folderPath);
                     dayInfo.events.Add(newEvent5);
                     break;
             }
@@ -677,36 +681,60 @@ namespace KyrsovaKalendar
         {
             if (copyEvent != null)
             {
+                name_1.Visible = true; date_2.Visible = true; location_3.Visible = true; info_4.Visible = true; start_5.Visible = true; time_6.Visible = true; cost_7.Visible = true; limit_8.Visible = true;//388, 45
+                eventName.Visible = true; eventName.Text = copyEvent.name; eventDate1.Visible = true; eventDate1.Value = copyEvent.startDate; eventDate2.Visible = true; eventDate2.Value = copyEvent.endDate; eventLocation.Visible = true; eventLocation.Text = copyEvent.location; eventInfo.Visible = true; eventInfo.Text = copyEvent.info; eventTimeStart.Visible = true; eventTimeStart.Value = copyEvent.timeStart; eventTimeLength.Visible = true; eventTimeLength.Value = copyEvent.timeLength; eventCost.Visible = true; eventCost.Text = Convert.ToString(copyEvent.cost); eventLimit.Visible = true; eventLimit.Text = copyEvent.limit;
                 switch (copyEvent.GetType().Name)
                 {
                     case "TematicEvenings":
+                        author_22.Visible = false;
+                        eventAuthor.Visible = false;
+                        goal_55.Visible = false;
+                        eventGoal.Visible = false;
+                        tools_55.Visible = false;
+                        eventTools.Visible = false;
                         comboBox1.SelectedIndex = 0;
-                        eventName.Text = copyEvent.name;
-                        eventDate1.Value = copyEvent.startDate;
-                        eventDate2.Value = copyEvent.endDate;
-                        eventLocation.Text = copyEvent.location;
-                        eventInfo.Text = copyEvent.info;
-                        eventTimeStart.Value = copyEvent.timeStart;
-                        eventTimeLength.Value = copyEvent.timeLength;
-                        eventCost.Text = Convert.ToString(copyEvent.cost);
-                        eventLimit.Text = copyEvent.limit;
+
                         break;
                     case "Questions":
+                        eventAuthor.Text = copyEvent.
+                        author_22.Visible = true;
+                        eventAuthor.Visible = true;
+                        goal_55.Visible = false;
+                        eventGoal.Visible = false;
+                        tools_55.Visible = false;
+                        eventTools.Visible = false;
                         comboBox1.SelectedIndex = 1;
-                        comboBox1.SelectedIndex = 0;
-                        eventName.Text = copyEvent.name;
-                        eventAuthor.Text = eventAuthor.Text;
-                        eventDate1.Value = copyEvent.startDate;
-                        eventDate2.Value = copyEvent.endDate;
-                        eventLocation.Text = copyEvent.location;
-                        eventInfo.Text = copyEvent.info;
-                        eventTimeStart.Value = copyEvent.timeStart;
-                        eventTimeLength.Value = copyEvent.timeLength;
-                        eventCost.Text = Convert.ToString(copyEvent.cost);
-                        eventLimit.Text = copyEvent.limit;
                         break;
+                    case "Meeting":
+                        author_22.Visible = false;
+                        eventAuthor.Visible = false;
+                        goal_55.Visible = false;
+                        eventGoal.Visible = false;
+                        tools_55.Visible = false;
+                        eventTools.Visible = false;
+                        comboBox1.SelectedIndex = 2;
+                        break;
+                    case "Standup":
+                        author_22.Visible = false;
+                        eventAuthor.Visible = false;
+                        goal_55.Visible = false;
+                        eventGoal.Visible = false;
+                        tools_55.Visible = false;
+                        eventTools.Visible = false;
+                        comboBox1.SelectedIndex = 3;
+                        break;
+                    case "Entertainment":
+                        eventAuthor.Text = eventAuthor.Text;
+                        author_22.Visible = true;
+                        eventAuthor.Visible = true;
+                        eventGoal.Text = 
+                        goal_55.Visible = true;
+                        eventGoal.Visible = true;
+                        tools_55.Visible = true;
+                        eventTools.Visible = true;
+                        comboBox1.SelectedIndex = 4;
                 }       
+            }
         }
-}
     }
 }

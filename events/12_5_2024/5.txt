@@ -1,0 +1,28 @@
+Type: Entertainment
+Name: 5
+Author: 
+Start Date: 12.05.2024 18:46:06
+End Date: 12.05.2024 18:46:06
+Location: s
+Goal: sdf
+Tools: d
+Info: s
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 5
+Limit: s
+Site Link: s
+Type:  Entertainment
+Name: 5
+Author: 
+Start Date: 12.05.2024 18:48:11
+End Date: 12.05.2024 18:48:11
+Location: 2
+Goal: 2
+Tools: 2
+Info: 1
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 1
+Limit: 3
+Site Link: 4
