@@ -198,11 +198,12 @@ namespace KyrsovaKalendar
 
         private void ChangeEvent_Click(object sender, EventArgs e)
         {
-            Event selectedEvent = events[EventComboBox.SelectedIndex];
-            events.Remove(selectedEvent);
-            selectedEvent.CollectEventData(selectedEvent);
-            CreateEvent createEvent = new CreateEvent(this, selectedEvent);
-            createEvent.ShowDialog();  
+            if (EventComboBox.SelectedIndex != 0)
+            {
+                CreateEvent createEvent = new CreateEvent(this, EventComboBox.SelectedIndex);
+                createEvent.ShowDialog();
+            }
+            else MessageBox.Show("Оберіть подію для зміни!");
         }
 
         private void DayInfo_Load(object sender, EventArgs e)
