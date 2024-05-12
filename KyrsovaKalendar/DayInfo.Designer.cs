@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DayInfo));
             this.createEventButton = new System.Windows.Forms.Button();
             this.EventComboBox = new System.Windows.Forms.ComboBox();
-            this.eventLimit = new System.Windows.Forms.RichTextBox();
-            this.eventInfo = new System.Windows.Forms.RichTextBox();
             this.eventName = new System.Windows.Forms.Label();
             this.eventDate1 = new System.Windows.Forms.Label();
             this.eventDate2 = new System.Windows.Forms.Label();
@@ -40,20 +38,30 @@
             this.eventTimeLength = new System.Windows.Forms.Label();
             this.eventCost = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.tools_55 = new System.Windows.Forms.Label();
+            this.goal_55 = new System.Windows.Forms.Label();
+            this.author_22 = new System.Windows.Forms.Label();
+            this.info_4 = new System.Windows.Forms.Label();
+            this.location_3 = new System.Windows.Forms.Label();
+            this.limit_8 = new System.Windows.Forms.Label();
+            this.cost_7 = new System.Windows.Forms.Label();
+            this.time_6 = new System.Windows.Forms.Label();
+            this.start_5 = new System.Windows.Forms.Label();
+            this.date_2 = new System.Windows.Forms.Label();
+            this.name_1 = new System.Windows.Forms.Label();
+            this.eventAuthor = new System.Windows.Forms.Label();
+            this.eventLocation = new System.Windows.Forms.Label();
+            this.eventGoal = new System.Windows.Forms.RichTextBox();
+            this.eventTools = new System.Windows.Forms.RichTextBox();
+            this.eventInfo = new System.Windows.Forms.RichTextBox();
+            this.eventLimit = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // createEventButton
             // 
             this.createEventButton.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
             this.createEventButton.ForeColor = System.Drawing.Color.Green;
-            this.createEventButton.Location = new System.Drawing.Point(743, 12);
+            this.createEventButton.Location = new System.Drawing.Point(1007, 12);
             this.createEventButton.Name = "createEventButton";
             this.createEventButton.Size = new System.Drawing.Size(45, 45);
             this.createEventButton.TabIndex = 13;
@@ -65,29 +73,11 @@
             // EventComboBox
             // 
             this.EventComboBox.FormattingEnabled = true;
-            this.EventComboBox.Location = new System.Drawing.Point(42, 33);
+            this.EventComboBox.Location = new System.Drawing.Point(12, 12);
             this.EventComboBox.Name = "EventComboBox";
             this.EventComboBox.Size = new System.Drawing.Size(121, 21);
             this.EventComboBox.TabIndex = 14;
             this.EventComboBox.SelectedIndexChanged += new System.EventHandler(this.EventComboBox_SelectedIndexChanged);
-            // 
-            // eventLimit
-            // 
-            this.eventLimit.Location = new System.Drawing.Point(244, 356);
-            this.eventLimit.Name = "eventLimit";
-            this.eventLimit.ReadOnly = true;
-            this.eventLimit.Size = new System.Drawing.Size(373, 82);
-            this.eventLimit.TabIndex = 30;
-            this.eventLimit.Text = "";
-            // 
-            // eventInfo
-            // 
-            this.eventInfo.Location = new System.Drawing.Point(244, 129);
-            this.eventInfo.Name = "eventInfo";
-            this.eventInfo.ReadOnly = true;
-            this.eventInfo.Size = new System.Drawing.Size(431, 118);
-            this.eventInfo.TabIndex = 28;
-            this.eventInfo.Text = "";
             // 
             // eventName
             // 
@@ -101,7 +91,7 @@
             // eventDate1
             // 
             this.eventDate1.AutoSize = true;
-            this.eventDate1.Location = new System.Drawing.Point(244, 100);
+            this.eventDate1.Location = new System.Drawing.Point(244, 130);
             this.eventDate1.Name = "eventDate1";
             this.eventDate1.Size = new System.Drawing.Size(10, 13);
             this.eventDate1.TabIndex = 34;
@@ -110,7 +100,7 @@
             // eventDate2
             // 
             this.eventDate2.AutoSize = true;
-            this.eventDate2.Location = new System.Drawing.Point(388, 99);
+            this.eventDate2.Location = new System.Drawing.Point(366, 132);
             this.eventDate2.Name = "eventDate2";
             this.eventDate2.Size = new System.Drawing.Size(10, 13);
             this.eventDate2.TabIndex = 35;
@@ -119,7 +109,7 @@
             // eventTimeStart
             // 
             this.eventTimeStart.AutoSize = true;
-            this.eventTimeStart.Location = new System.Drawing.Point(244, 269);
+            this.eventTimeStart.Location = new System.Drawing.Point(244, 468);
             this.eventTimeStart.Name = "eventTimeStart";
             this.eventTimeStart.Size = new System.Drawing.Size(10, 13);
             this.eventTimeStart.TabIndex = 36;
@@ -128,7 +118,7 @@
             // eventTimeLength
             // 
             this.eventTimeLength.AutoSize = true;
-            this.eventTimeLength.Location = new System.Drawing.Point(244, 299);
+            this.eventTimeLength.Location = new System.Drawing.Point(244, 498);
             this.eventTimeLength.Name = "eventTimeLength";
             this.eventTimeLength.Size = new System.Drawing.Size(10, 13);
             this.eventTimeLength.TabIndex = 37;
@@ -137,7 +127,7 @@
             // eventCost
             // 
             this.eventCost.AutoSize = true;
-            this.eventCost.Location = new System.Drawing.Point(244, 329);
+            this.eventCost.Location = new System.Drawing.Point(244, 528);
             this.eventCost.Name = "eventCost";
             this.eventCost.Size = new System.Drawing.Size(10, 13);
             this.eventCost.TabIndex = 38;
@@ -149,7 +139,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
             this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(743, 63);
+            this.button1.Location = new System.Drawing.Point(1007, 63);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(45, 45);
             this.button1.TabIndex = 39;
@@ -157,88 +147,188 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.ChangeEvent_Click);
             // 
-            // label8
+            // tools_55
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label8.Location = new System.Drawing.Point(153, 359);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 16);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "Обмеження:";
+            this.tools_55.AutoSize = true;
+            this.tools_55.Location = new System.Drawing.Point(155, 250);
+            this.tools_55.Name = "tools_55";
+            this.tools_55.Size = new System.Drawing.Size(72, 13);
+            this.tools_55.TabIndex = 50;
+            this.tools_55.Text = "Обладнання:";
             // 
-            // label9
+            // goal_55
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label9.Location = new System.Drawing.Point(134, 329);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 16);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Вартість квитка:";
+            this.goal_55.AutoSize = true;
+            this.goal_55.Location = new System.Drawing.Point(186, 194);
+            this.goal_55.Name = "goal_55";
+            this.goal_55.Size = new System.Drawing.Size(36, 13);
+            this.goal_55.TabIndex = 49;
+            this.goal_55.Text = "Мета:";
             // 
-            // label10
+            // author_22
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label10.Location = new System.Drawing.Point(65, 296);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 16);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Орієнтовна тривалість події:";
+            this.author_22.AutoSize = true;
+            this.author_22.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.author_22.Location = new System.Drawing.Point(180, 99);
+            this.author_22.Name = "author_22";
+            this.author_22.Size = new System.Drawing.Size(43, 16);
+            this.author_22.TabIndex = 48;
+            this.author_22.Text = "Автор:";
             // 
-            // label11
+            // info_4
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label11.Location = new System.Drawing.Point(95, 132);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 16);
-            this.label11.TabIndex = 43;
-            this.label11.Text = "Інформація про подію:";
+            this.info_4.AutoSize = true;
+            this.info_4.Location = new System.Drawing.Point(123, 336);
+            this.info_4.Name = "info_4";
+            this.info_4.Size = new System.Drawing.Size(108, 13);
+            this.info_4.TabIndex = 47;
+            this.info_4.Text = "Програма та ведучі:";
             // 
-            // label12
+            // location_3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label12.Location = new System.Drawing.Point(121, 266);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(107, 16);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "Час початку події:";
+            this.location_3.AutoSize = true;
+            this.location_3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.location_3.Location = new System.Drawing.Point(110, 161);
+            this.location_3.Name = "location_3";
+            this.location_3.Size = new System.Drawing.Size(112, 16);
+            this.location_3.TabIndex = 46;
+            this.location_3.Text = "Місце проведення:";
             // 
-            // label13
+            // limit_8
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label13.Location = new System.Drawing.Point(124, 96);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 16);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Дата проведення:";
+            this.limit_8.AutoSize = true;
+            this.limit_8.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.limit_8.Location = new System.Drawing.Point(155, 590);
+            this.limit_8.Name = "limit_8";
+            this.limit_8.Size = new System.Drawing.Size(75, 16);
+            this.limit_8.TabIndex = 45;
+            this.limit_8.Text = "Обмеження:";
             // 
-            // label14
+            // cost_7
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.label14.Location = new System.Drawing.Point(30, 69);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(198, 16);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Назва культурно-масового заходу:";
+            this.cost_7.AutoSize = true;
+            this.cost_7.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.cost_7.Location = new System.Drawing.Point(137, 540);
+            this.cost_7.Name = "cost_7";
+            this.cost_7.Size = new System.Drawing.Size(94, 16);
+            this.cost_7.TabIndex = 44;
+            this.cost_7.Text = "Вартість квитка:";
+            // 
+            // time_6
+            // 
+            this.time_6.AutoSize = true;
+            this.time_6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.time_6.Location = new System.Drawing.Point(67, 499);
+            this.time_6.Name = "time_6";
+            this.time_6.Size = new System.Drawing.Size(163, 16);
+            this.time_6.TabIndex = 43;
+            this.time_6.Text = "Орієнтовна тривалість події:";
+            // 
+            // start_5
+            // 
+            this.start_5.AutoSize = true;
+            this.start_5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.start_5.Location = new System.Drawing.Point(118, 465);
+            this.start_5.Name = "start_5";
+            this.start_5.Size = new System.Drawing.Size(107, 16);
+            this.start_5.TabIndex = 42;
+            this.start_5.Text = "Час початку події:";
+            // 
+            // date_2
+            // 
+            this.date_2.AutoSize = true;
+            this.date_2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.date_2.Location = new System.Drawing.Point(118, 129);
+            this.date_2.Name = "date_2";
+            this.date_2.Size = new System.Drawing.Size(104, 16);
+            this.date_2.TabIndex = 41;
+            this.date_2.Text = "Дата проведення:";
+            // 
+            // name_1
+            // 
+            this.name_1.AutoSize = true;
+            this.name_1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.name_1.Location = new System.Drawing.Point(24, 69);
+            this.name_1.Name = "name_1";
+            this.name_1.Size = new System.Drawing.Size(198, 16);
+            this.name_1.TabIndex = 40;
+            this.name_1.Text = "Назва культурно-масового заходу:";
+            // 
+            // eventAuthor
+            // 
+            this.eventAuthor.AutoSize = true;
+            this.eventAuthor.Location = new System.Drawing.Point(244, 102);
+            this.eventAuthor.Name = "eventAuthor";
+            this.eventAuthor.Size = new System.Drawing.Size(10, 13);
+            this.eventAuthor.TabIndex = 51;
+            this.eventAuthor.Text = "-";
+            // 
+            // eventLocation
+            // 
+            this.eventLocation.AutoSize = true;
+            this.eventLocation.Location = new System.Drawing.Point(244, 164);
+            this.eventLocation.Name = "eventLocation";
+            this.eventLocation.Size = new System.Drawing.Size(10, 13);
+            this.eventLocation.TabIndex = 52;
+            this.eventLocation.Text = "-";
+            // 
+            // eventGoal
+            // 
+            this.eventGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventGoal.Location = new System.Drawing.Point(247, 194);
+            this.eventGoal.Name = "eventGoal";
+            this.eventGoal.Size = new System.Drawing.Size(430, 50);
+            this.eventGoal.TabIndex = 53;
+            this.eventGoal.Text = "";
+            // 
+            // eventTools
+            // 
+            this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventTools.Location = new System.Drawing.Point(247, 250);
+            this.eventTools.Name = "eventTools";
+            this.eventTools.Size = new System.Drawing.Size(430, 50);
+            this.eventTools.TabIndex = 54;
+            this.eventTools.Text = "";
+            // 
+            // eventInfo
+            // 
+            this.eventInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventInfo.Location = new System.Drawing.Point(247, 316);
+            this.eventInfo.Name = "eventInfo";
+            this.eventInfo.Size = new System.Drawing.Size(430, 120);
+            this.eventInfo.TabIndex = 55;
+            this.eventInfo.Text = "";
+            // 
+            // eventLimit
+            // 
+            this.eventLimit.Location = new System.Drawing.Point(247, 588);
+            this.eventLimit.Name = "eventLimit";
+            this.eventLimit.Size = new System.Drawing.Size(373, 80);
+            this.eventLimit.TabIndex = 56;
+            this.eventLimit.Text = "";
             // 
             // DayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
+            this.ClientSize = new System.Drawing.Size(1064, 985);
+            this.Controls.Add(this.eventLimit);
+            this.Controls.Add(this.eventInfo);
+            this.Controls.Add(this.eventTools);
+            this.Controls.Add(this.eventGoal);
+            this.Controls.Add(this.eventLocation);
+            this.Controls.Add(this.eventAuthor);
+            this.Controls.Add(this.tools_55);
+            this.Controls.Add(this.goal_55);
+            this.Controls.Add(this.author_22);
+            this.Controls.Add(this.info_4);
+            this.Controls.Add(this.location_3);
+            this.Controls.Add(this.limit_8);
+            this.Controls.Add(this.cost_7);
+            this.Controls.Add(this.time_6);
+            this.Controls.Add(this.start_5);
+            this.Controls.Add(this.date_2);
+            this.Controls.Add(this.name_1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.eventCost);
             this.Controls.Add(this.eventTimeLength);
@@ -246,8 +336,6 @@
             this.Controls.Add(this.eventDate2);
             this.Controls.Add(this.eventDate1);
             this.Controls.Add(this.eventName);
-            this.Controls.Add(this.eventLimit);
-            this.Controls.Add(this.eventInfo);
             this.Controls.Add(this.EventComboBox);
             this.Controls.Add(this.createEventButton);
             this.Name = "DayInfo";
@@ -262,8 +350,6 @@
 
         private System.Windows.Forms.Button createEventButton;
         private System.Windows.Forms.ComboBox EventComboBox;
-        private System.Windows.Forms.RichTextBox eventLimit;
-        private System.Windows.Forms.RichTextBox eventInfo;
         private System.Windows.Forms.Label eventName;
         private System.Windows.Forms.Label eventDate1;
         private System.Windows.Forms.Label eventDate2;
@@ -271,12 +357,22 @@
         private System.Windows.Forms.Label eventTimeLength;
         private System.Windows.Forms.Label eventCost;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label tools_55;
+        private System.Windows.Forms.Label goal_55;
+        private System.Windows.Forms.Label author_22;
+        private System.Windows.Forms.Label info_4;
+        private System.Windows.Forms.Label location_3;
+        private System.Windows.Forms.Label limit_8;
+        private System.Windows.Forms.Label cost_7;
+        private System.Windows.Forms.Label time_6;
+        private System.Windows.Forms.Label start_5;
+        private System.Windows.Forms.Label date_2;
+        private System.Windows.Forms.Label name_1;
+        private System.Windows.Forms.Label eventAuthor;
+        private System.Windows.Forms.Label eventLocation;
+        private System.Windows.Forms.RichTextBox eventGoal;
+        private System.Windows.Forms.RichTextBox eventTools;
+        private System.Windows.Forms.RichTextBox eventInfo;
+        private System.Windows.Forms.RichTextBox eventLimit;
     }
 }

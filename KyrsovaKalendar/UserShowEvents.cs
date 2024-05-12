@@ -33,7 +33,7 @@ namespace KyrsovaKalendar
         }
         public void Month(string month)
         {
-            this.month.Text = month;
+            this.month.Text = date.ToString("MMMM");
         }
         public void ListEvent(string[] events)
         {

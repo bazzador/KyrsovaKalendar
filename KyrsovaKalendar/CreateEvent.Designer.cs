@@ -44,7 +44,6 @@
             this.eventLimit = new System.Windows.Forms.RichTextBox();
             this.eventTimeStart = new System.Windows.Forms.DateTimePicker();
             this.eventTimeLength = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.eventLocation = new System.Windows.Forms.TextBox();
             this.location_3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -57,7 +56,6 @@
             this.tools_55 = new System.Windows.Forms.Label();
             this.eventLink = new System.Windows.Forms.TextBox();
             this.link_9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // name_1
@@ -192,7 +190,7 @@
             this.eventTimeStart.Location = new System.Drawing.Point(592, 440);
             this.eventTimeStart.Name = "eventTimeStart";
             this.eventTimeStart.ShowUpDown = true;
-            this.eventTimeStart.Size = new System.Drawing.Size(200, 20);
+            this.eventTimeStart.Size = new System.Drawing.Size(122, 20);
             this.eventTimeStart.TabIndex = 16;
             this.eventTimeStart.Value = new System.DateTime(2024, 5, 5, 15, 56, 37, 0);
             // 
@@ -203,21 +201,13 @@
             this.eventTimeLength.Location = new System.Drawing.Point(592, 470);
             this.eventTimeLength.Name = "eventTimeLength";
             this.eventTimeLength.ShowUpDown = true;
-            this.eventTimeLength.Size = new System.Drawing.Size(200, 20);
+            this.eventTimeLength.Size = new System.Drawing.Size(122, 20);
             this.eventTimeLength.TabIndex = 17;
             this.eventTimeLength.Value = new System.DateTime(2024, 5, 5, 0, 0, 0, 0);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(128, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 151);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // eventLocation
             // 
-            this.eventLocation.Location = new System.Drawing.Point(593, 135);
+            this.eventLocation.Location = new System.Drawing.Point(592, 135);
             this.eventLocation.Name = "eventLocation";
             this.eventLocation.Size = new System.Drawing.Size(450, 20);
             this.eventLocation.TabIndex = 20;
@@ -347,7 +337,6 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.eventLocation);
             this.Controls.Add(this.location_3);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.eventTimeLength);
             this.Controls.Add(this.eventTimeStart);
             this.Controls.Add(this.eventLimit);
@@ -368,7 +357,6 @@
             this.Text = "CreateEvent";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateEvent_FormClosed);
             this.Load += new System.EventHandler(this.CreateEvent_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,7 +380,6 @@
         private System.Windows.Forms.RichTextBox eventLimit;
         private System.Windows.Forms.DateTimePicker eventTimeStart;
         private System.Windows.Forms.DateTimePicker eventTimeLength;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox eventLocation;
         private System.Windows.Forms.Label location_3;
         private System.Windows.Forms.ComboBox comboBox1;

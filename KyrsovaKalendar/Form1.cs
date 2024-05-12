@@ -39,8 +39,6 @@ namespace KyrsovaKalendar
             for (int i = 0; i < 10; i++) 
             {
                 string dayOfWeek = ukrainianDayOfWeek[now.DayOfWeek.ToString()];
-                string day = now.Day.ToString();
-                string month = now.ToString("MMMM");
                 folderPath = Path.Combine(filePath, now.Day + "_" + now.Month + "_" + now.Year);
                 string[] eventFiles = null;
                 if (Directory.Exists(folderPath))
