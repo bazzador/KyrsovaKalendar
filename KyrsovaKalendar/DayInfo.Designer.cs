@@ -177,7 +177,7 @@
             // 
             this.author_22.AutoSize = true;
             this.author_22.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.author_22.Location = new System.Drawing.Point(180, 99);
+            this.author_22.Location = new System.Drawing.Point(179, 102);
             this.author_22.Name = "author_22";
             this.author_22.Size = new System.Drawing.Size(43, 16);
             this.author_22.TabIndex = 48;
@@ -253,7 +253,7 @@
             // 
             this.date_2.AutoSize = true;
             this.date_2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.date_2.Location = new System.Drawing.Point(118, 129);
+            this.date_2.Location = new System.Drawing.Point(121, 130);
             this.date_2.Name = "date_2";
             this.date_2.Size = new System.Drawing.Size(104, 16);
             this.date_2.TabIndex = 41;

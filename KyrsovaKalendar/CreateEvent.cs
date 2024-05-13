@@ -506,148 +506,146 @@ namespace KyrsovaKalendar
         {
             //PrepareField(comboBox1.SelectedItem.ToString());
         }
-        //private void PrepareField(string selectedSubject)
-        //{
-        //    numberOfSelectedSubject = (int)selectedSubject[0] - 48;
-        //    switch (numberOfSelectedSubject)
-        //    {
-        //        case 1:
-        //            //name_1.Location = new System.Drawing.Point(388, 45);
-        //            date_2.Location = new Point(482, 75);
-        //            location_3.Location = new Point(474, 105);
-        //            info_4.Location = new Point(473, 140);
-        //            info_4.Text = "Основна інформація:";
-        //            start_5.Location = new Point(479, 280);
-        //            time_6.Location = new Point(423, 310);
-        //            cost_7.Location = new Point(492, 340);
-        //            limit_8.Location = new Point(511, 370);
-        //            //eventName.Location = new Point(592, 45);
-        //            eventDate1.Location = new Point(592, 75);
-        //            eventDate2.Location = new Point(742, 75);
-        //            eventInfo.Location = new Point(592, 140);
-        //            eventCost.Location = new Point(592, 340);
-        //            eventLimit.Location = new Point(592, 370);
-        //            eventTimeStart.Location = new Point(592, 280);
-        //            eventTimeLength.Location = new Point(592, 310);
-        //            eventLocation.Location = new Point(592, 105);
-        //            author_22.Visible = false;
-        //            eventAuthor.Visible = false;
-        //            goal_55.Visible = false;
-        //            eventGoal.Visible = false;
-        //            eventTools.Visible = false;
-        //            tools_55.Visible = false;
+        private void PrepareField(string selectedSubject)
+        {
+            numberOfSelectedSubject = (int)selectedSubject[0] - 48;
+            switch (numberOfSelectedSubject)
+            {
+                case 1:
+                    //name_1.Location = new System.Drawing.Point(388, 45);
+                    date_2.Location = new Point(482, 75);
+                    location_3.Location = new Point(474, 105);
+                    info_4.Location = new Point(473, 140);
+                    info_4.Text = "Основна інформація:";
+                    start_5.Location = new Point(479, 280);
+                    time_6.Location = new Point(423, 310);
+                    cost_7.Location = new Point(492, 340);
+                    limit_8.Location = new Point(511, 370);
+                    //eventName.Location = new Point(592, 45);
+                    eventDate1.Location = new Point(592, 75);
+                    eventDate2.Location = new Point(742, 75);
+                    eventInfo.Location = new Point(592, 140);
+                    eventCost.Location = new Point(592, 340);
+                    eventLimit.Location = new Point(592, 370);
+                    eventTimeStart.Location = new Point(592, 280);
+                    eventTimeLength.Location = new Point(592, 310);
+                    eventLocation.Location = new Point(592, 105);
+                    author_22.Visible = false;
+                    eventAuthor.Visible = false;
+                    goal_55.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
+                    tools_55.Visible = false;
 
-        //            break;
-        //        case 2:
-        //            author_22.Visible = true;
-        //            eventAuthor.Visible = true;
-        //            //name_1.Location = new System.Drawing.Point(388, 45);
-        //            author_22.Location = new Point(543, 75);
-        //            date_2.Location = new Point(482, 75 + 30);
-        //            location_3.Location = new Point(474, 105 + 30);
-        //            info_4.Location = new Point(522, 140 + 35);
-        //            info_4.Text = "Запитання:";
-        //            start_5.Location = new Point(479, 280 + 30);
-        //            time_6.Location = new Point(423, 310 + 30);
-        //            cost_7.Location = new Point(492, 340 + 30);
-        //            limit_8.Location = new Point(511, 370 + 30);
-        //            //eventName.Location = new System.Drawing.Point(592, 45 + 30);
-        //            eventDate1.Location = new Point(592, 75 + 30);
-        //            eventDate2.Location = new Point(742, 75 + 30);
-        //            eventInfo.Location = new Point(592, 140 + 30);
-        //            eventCost.Location = new Point(592, 340 + 30);
-        //            eventLimit.Location = new Point(592, 370 + 30);
-        //            eventTimeStart.Location = new Point(592, 280 + 30);
-        //            eventTimeLength.Location = new Point(592, 310 + 30);
-        //            eventLocation.Location = new Point(592, 105 + 30);
-        //            goal_55.Visible = false;
-        //            eventGoal.Visible = false;
-        //            eventTools.Visible = false;
-        //            tools_55.Visible = false;
-        //            break;
-        //        case 3:
-        //            //name_1.Location = new System.Drawing.Point(388, 45);
-        //            date_2.Location = new Point(482, 75);
-        //            location_3.Location = new Point(474, 105);
-        //            info_4.Location = new Point(514, 140);
-        //            info_4.Text = "Гості заходу:";
-        //            start_5.Location = new Point(479, 280);
-        //            time_6.Location = new Point(423, 310);
-        //            cost_7.Location = new Point(492, 340);
-        //            limit_8.Location = new Point(511, 370);
-        //            //eventName.Location = new Point(592, 45);
-        //            eventDate1.Location = new Point(592, 75);
-        //            eventDate2.Location = new Point(742, 75);
-        //            eventInfo.Location = new Point(592, 140);
-        //            eventCost.Location = new Point(592, 340);
-        //            eventLimit.Location = new Point(592, 370);
-        //            eventTimeStart.Location = new Point(592, 280);
-        //            eventTimeLength.Location = new Point(592, 310);
-        //            eventLocation.Location = new Point(592, 105);
-        //            author_22.Visible = false;
-        //            eventAuthor.Visible = false;
-        //            goal_55.Visible = false;
-        //            eventGoal.Visible = false;
-        //            eventTools.Visible = false;
-        //            tools_55.Visible = false;
-        //            break;
-        //        case 4:
-        //            //name_1.Location = new System.Drawing.Point(388, 45);
-        //            date_2.Location = new Point(482, 75);
-        //            location_3.Location = new Point(474, 105);
-        //            info_4.Location = new Point(478, 140);
-        //            info_4.Text = "Програма та ведучі:";
-        //            start_5.Location = new Point(479, 280);
-        //            time_6.Location = new Point(423, 310);
-        //            cost_7.Location = new Point(492, 340);
-        //            limit_8.Location = new Point(511, 370);
-        //            //eventName.Location = new Point(592, 45);
-        //            eventDate1.Location = new Point(592, 75);
-        //            eventDate2.Location = new Point(742, 75);
-        //            eventInfo.Location = new Point(592, 140);
-        //            eventCost.Location = new Point(592, 340);
-        //            eventLimit.Location = new Point(592, 370);
-        //            eventTimeStart.Location = new Point(592, 280);
-        //            eventTimeLength.Location = new Point(592, 310);
-        //            eventLocation.Location = new Point(592, 105);
-        //            author_22.Visible = false;
-        //            eventAuthor.Visible = false;
-        //            goal_55.Visible = false;
-        //            eventGoal.Visible = false;
-        //            eventTools.Visible = false;
-        //            tools_55.Visible = false;
-        //            break;
-        //        case 5:
-        //            goal_55.Visible = true;
-        //            eventGoal.Visible = true;
-        //            eventTools.Visible = true;
-        //            tools_55.Visible = true;
-        //            name_1.Location = new Point(388, 45);
-        //            date_2.Location = new Point(482, 105 - 30);
-        //            location_3.Location = new Point(474, 135 - 30);
-        //            info_4.Location = new Point(478, 300 - 30);
-        //            start_5.Location = new Point(479, 440 - 30);
-        //            time_6.Location = new Point(423, 470 - 30);
-        //            cost_7.Location = new Point(492, 500 - 30);
-        //            limit_8.Location = new Point(511, 530 - 30);
-        //            goal_55.Location = new Point(550, 170 - 30);
-        //            eventGoal.Location = new Point(593, 170 - 30);
-        //            eventTools.Location = new Point(593, 235 - 30);
-        //            tools_55.Location = new Point(514, 235 - 30);
-        //            eventName.Location = new Point(592, 45);
-        //            eventDate1.Location = new Point(593, 105 - 30);
-        //            eventDate2.Location = new Point(742, 105 - 30);
-        //            eventInfo.Location = new Point(592, 300 - 30);
-        //            eventCost.Location = new Point(592, 500 - 30);
-        //            eventLimit.Location = new Point(592, 530 - 30);
-        //            eventTimeStart.Location = new Point(592, 440 - 30);
-        //            eventTimeLength.Location = new Point(592, 470 - 30);
-        //            eventLocation.Location = new Point(593, 135 - 30);
-        //            eventAuthor.Visible = false;
-        //            author_22.Visible = false;
-        //            break;
-        //    }
-        //}
+                    break;
+                case 2:
+                    author_22.Visible = true;
+                    eventAuthor.Visible = true;
+                    //name_1.Location = new System.Drawing.Point(388, 45);
+                    author_22.Location = new Point(543, 75);
+                    date_2.Location = new Point(482, 75 + 30);
+                    location_3.Location = new Point(474, 105 + 30);
+                    info_4.Location = new Point(522, 140 + 35);
+                    info_4.Text = "Запитання:";
+                    start_5.Location = new Point(479, 280 + 30);
+                    time_6.Location = new Point(423, 310 + 30);
+                    cost_7.Location = new Point(492, 340 + 30);
+                    limit_8.Location = new Point(511, 370 + 30);
+                    //eventName.Location = new System.Drawing.Point(592, 45 + 30);
+                    eventDate1.Location = new Point(592, 75 + 30);
+                    eventDate2.Location = new Point(742, 75 + 30);
+                    eventInfo.Location = new Point(592, 140 + 30);
+                    eventCost.Location = new Point(592, 340 + 30);
+                    eventLimit.Location = new Point(592, 370 + 30);
+                    eventTimeStart.Location = new Point(592, 280 + 30);
+                    eventTimeLength.Location = new Point(592, 310 + 30);
+                    eventLocation.Location = new Point(592, 105 + 30);
+                    goal_55.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
+                    tools_55.Visible = false;
+                    break;
+                case 3:
+                    //name_1.Location = new System.Drawing.Point(388, 45);
+                    date_2.Location = new Point(482, 75);
+                    location_3.Location = new Point(474, 105);
+                    info_4.Location = new Point(514, 140);
+                    info_4.Text = "Гості заходу:";
+                    start_5.Location = new Point(479, 280);
+                    time_6.Location = new Point(423, 310);
+                    cost_7.Location = new Point(492, 340);
+                    limit_8.Location = new Point(511, 370);
+                    //eventName.Location = new Point(592, 45);
+                    eventDate1.Location = new Point(592, 75);
+                    eventDate2.Location = new Point(742, 75);
+                    eventInfo.Location = new Point(592, 140);
+                    eventCost.Location = new Point(592, 340);
+                    eventLimit.Location = new Point(592, 370);
+                    eventTimeStart.Location = new Point(592, 280);
+                    eventTimeLength.Location = new Point(592, 310);
+                    eventLocation.Location = new Point(592, 105);
+                    author_22.Visible = false;
+                    eventAuthor.Visible = false;
+                    goal_55.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
+                    tools_55.Visible = false;
+                    break;
+                case 4:
+                    //name_1.Location = new System.Drawing.Point(388, 45);
+                    date_2.Location = new Point(482, 75);
+                    location_3.Location = new Point(474, 105);
+                    info_4.Location = new Point(478, 140);
+                    info_4.Text = "Програма та ведучі:";
+                    start_5.Location = new Point(479, 280);
+                    time_6.Location = new Point(423, 310);
+                    cost_7.Location = new Point(492, 340);
+                    limit_8.Location = new Point(511, 370);
+                    //eventName.Location = new Point(592, 45);
+                    eventDate1.Location = new Point(592, 75);
+                    eventDate2.Location = new Point(742, 75);
+                    eventInfo.Location = new Point(592, 140);
+                    eventCost.Location = new Point(592, 340);
+                    eventLimit.Location = new Point(592, 370);
+                    eventTimeStart.Location = new Point(592, 280);
+                    eventTimeLength.Location = new Point(592, 310);
+                    eventLocation.Location = new Point(592, 105);
+                    author_22.Visible = false;
+                    eventAuthor.Visible = false;
+                    goal_55.Visible = false;
+                    eventGoal.Visible = false;
+                    eventTools.Visible = false;
+                    tools_55.Visible = false;
+                    break;
+                case 5:
+                    goal_55.Visible = true;
+                    eventGoal.Visible = true;
+                    eventTools.Visible = true;
+                    tools_55.Visible = true;
+                    name_1.Location = new Point(388, 45);
+                    date_2.Location = new Point(482, 105 - 30);
+                    location_3.Location = new Point(474, 135 - 30);
+                    info_4.Location = new Point(478, 300 - 30);
+                    start_5.Location = new Point(479, 440 - 30);
+                    time_6.Location = new Point(423, 470 - 30);
+                    cost_7.Location = new Point(492, 500 - 30);
+                    limit_8.Location = new Point(511, 530 - 30);
+                    goal_55.Location = new Point(550, 170 - 30);
+                    eventGoal.Location = new Point(593, 170 - 30);
+                    eventTools.Location = new Point(593, 235 - 30);
+                    tools_55.Location = new Point(514, 235 - 30);
+                    eventName.Location = new Point(592, 45);
+                    eventDate1.Location = new Point(593, 105 - 30);
+                    eventDate2.Location = new Point(742, 105 - 30);
+                    eventInfo.Location = new Point(592, 300 - 30);
+                    eventCost.Location = new Point(592, 500 - 30);
+                    eventLimit.Location = new Point(592, 530 - 30);
+                    eventTimeStart.Location = new Point(592, 440 - 30);
+                    eventTimeLength.Location = new Point(592, 470 - 30);
+                    eventLocation.Location = new Point(593, 135 - 30);
+                    break;
+            }
+        }
         private void CreateEvent_Load(object sender, EventArgs e)
         {
             if (dayInfo.events[indexEventToChange] != null)
