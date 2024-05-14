@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar));
             this.dayPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.nextButton = new System.Windows.Forms.Button();
             this.prevButton = new System.Windows.Forms.Button();
@@ -39,37 +40,39 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.todayEvents = new System.Windows.Forms.Label();
-            this.tomorrowEvents = new System.Windows.Forms.Label();
-            this.days10Event = new System.Windows.Forms.Label();
+            this.EventShowButton = new System.Windows.Forms.Button();
+            this.FindEventTextBox = new System.Windows.Forms.TextBox();
+            this.FindEventButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dayPanel
             // 
+            this.dayPanel.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.dayPanel.Location = new System.Drawing.Point(24, 243);
             this.dayPanel.Name = "dayPanel";
-            this.dayPanel.Size = new System.Drawing.Size(1024, 579);
+            this.dayPanel.Size = new System.Drawing.Size(1024, 479);
             this.dayPanel.TabIndex = 0;
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(992, 830);
+            this.nextButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.nextButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton.BackgroundImage")));
+            this.nextButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nextButton.Location = new System.Drawing.Point(988, 728);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(75, 23);
+            this.nextButton.Size = new System.Drawing.Size(60, 60);
             this.nextButton.TabIndex = 0;
-            this.nextButton.Text = "вперед";
-            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // prevButton
             // 
-            this.prevButton.Location = new System.Drawing.Point(911, 830);
+            this.prevButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prevButton.BackgroundImage")));
+            this.prevButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prevButton.Location = new System.Drawing.Point(922, 728);
             this.prevButton.Name = "prevButton";
-            this.prevButton.Size = new System.Drawing.Size(75, 23);
+            this.prevButton.Size = new System.Drawing.Size(60, 60);
             this.prevButton.TabIndex = 1;
-            this.prevButton.Text = "назад";
             this.prevButton.UseVisualStyleBackColor = true;
             this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
             // 
@@ -155,63 +158,43 @@
             this.date.Text = "РІК МІСЯЦЬ";
             this.date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // EventShowButton
             // 
-            this.textBox1.Location = new System.Drawing.Point(424, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 20);
-            this.textBox1.TabIndex = 10;
+            this.EventShowButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EventShowButton.BackgroundImage")));
+            this.EventShowButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EventShowButton.Location = new System.Drawing.Point(24, 12);
+            this.EventShowButton.Name = "EventShowButton";
+            this.EventShowButton.Size = new System.Drawing.Size(60, 60);
+            this.EventShowButton.TabIndex = 15;
+            this.EventShowButton.UseVisualStyleBackColor = true;
+            this.EventShowButton.Click += new System.EventHandler(this.buttonEventShow_Click);
             // 
-            // label8
+            // FindEventTextBox
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(530, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Запит";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FindEventTextBox.Location = new System.Drawing.Point(285, 49);
+            this.FindEventTextBox.Name = "FindEventTextBox";
+            this.FindEventTextBox.Size = new System.Drawing.Size(148, 20);
+            this.FindEventTextBox.TabIndex = 16;
             // 
-            // todayEvents
+            // FindEventButton
             // 
-            this.todayEvents.AutoSize = true;
-            this.todayEvents.Location = new System.Drawing.Point(44, 37);
-            this.todayEvents.Name = "todayEvents";
-            this.todayEvents.Size = new System.Drawing.Size(67, 13);
-            this.todayEvents.TabIndex = 12;
-            this.todayEvents.Text = "На сьогодні";
-            this.todayEvents.Click += new System.EventHandler(this.todayEvents_Click);
-            // 
-            // tomorrowEvents
-            // 
-            this.tomorrowEvents.AutoSize = true;
-            this.tomorrowEvents.Location = new System.Drawing.Point(44, 64);
-            this.tomorrowEvents.Name = "tomorrowEvents";
-            this.tomorrowEvents.Size = new System.Drawing.Size(59, 13);
-            this.tomorrowEvents.TabIndex = 13;
-            this.tomorrowEvents.Text = "На завтра";
-            this.tomorrowEvents.Click += new System.EventHandler(this.tomorrowEvents_Click);
-            // 
-            // days10Event
-            // 
-            this.days10Event.AutoSize = true;
-            this.days10Event.Location = new System.Drawing.Point(44, 94);
-            this.days10Event.Name = "days10Event";
-            this.days10Event.Size = new System.Drawing.Size(42, 13);
-            this.days10Event.TabIndex = 14;
-            this.days10Event.Text = "10 днів";
-            this.days10Event.Click += new System.EventHandler(this.days10Event_Click);
+            this.FindEventButton.Location = new System.Drawing.Point(456, 49);
+            this.FindEventButton.Name = "FindEventButton";
+            this.FindEventButton.Size = new System.Drawing.Size(75, 23);
+            this.FindEventButton.TabIndex = 17;
+            this.FindEventButton.Text = "button1";
+            this.FindEventButton.UseVisualStyleBackColor = true;
+            this.FindEventButton.Click += new System.EventHandler(this.FindEventButton_Click);
             // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1080, 1024);
-            this.Controls.Add(this.days10Event);
-            this.Controls.Add(this.tomorrowEvents);
-            this.Controls.Add(this.todayEvents);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.FindEventButton);
+            this.Controls.Add(this.FindEventTextBox);
+            this.Controls.Add(this.EventShowButton);
             this.Controls.Add(this.date);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -246,11 +229,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label date;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label todayEvents;
-        private System.Windows.Forms.Label tomorrowEvents;
-        private System.Windows.Forms.Label days10Event;
+        private System.Windows.Forms.Button EventShowButton;
+        private System.Windows.Forms.TextBox FindEventTextBox;
+        private System.Windows.Forms.Button FindEventButton;
     }
 }
 

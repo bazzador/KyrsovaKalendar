@@ -19,11 +19,11 @@ namespace KyrsovaKalendar
         DayInfo dayInfo;
         int indexEventToChange;
         int numberOfSelectedSubject;
-        //private IEventFactory eventFactory;
         public CreateEvent(DayInfo dayInfo)
         {
             InitializeComponent();
             this.dayInfo = dayInfo;
+            this.indexEventToChange = -1;
         }
         public CreateEvent(DayInfo dayInfo, int indexEventToChange)
         {
@@ -31,130 +31,11 @@ namespace KyrsovaKalendar
             this.dayInfo = dayInfo;
             this.indexEventToChange = indexEventToChange;
         }
-        //public CreateEvent(DayInfo store, Event eventToChange)
-        //{
-        //    InitializeComponent();
-        //    if (eventToChange != null)
-        //    {
-        //        eventName.Text = eventToChange.name;
-        //        eventDate1.Value = eventToChange.startDate;
-        //        eventDate2.Value = eventToChange.endDate;
-        //        eventInfo.Text = eventToChange.info;
-        //        eventTimeStart.Value = eventToChange.timeStart;
-        //        eventTimeLength.Value = eventToChange.timeLength;
-        //        eventCost.Text = eventToChange.cost.ToString();
-        //        eventLimit.Text = eventToChange.limit;
-        //        this.store = store;
-        //    }
-        //}
-        //public class Event1
-        //{
-        //    public string name;
-        //    public DateTime startDate;
-        //    public DateTime endDate;
-        //    public string info;
-        //    public DateTime timeStart;
-        //    public DateTime timeLength;
-        //    public int cost;
-        //    public string limit;
-
-        //    public Event1(string name, DateTime startDate, DateTime endDate, string info, DateTime timeStart, DateTime timeLength, int cost, string limits)
-        //    {
-        //        this.name = name;
-        //        this.startDate = startDate;
-        //        this.endDate = endDate;
-        //        this.info = info;
-        //        this.timeStart = timeStart;
-        //        this.timeLength = timeLength;
-        //        this.cost = cost;
-        //        this.limit = limits;
-        //    }
-        //}
         public interface IDataManagement
         {
             void WriteDataToFile(string fileName);
             Event ReadDataFromFile(string[] fileName);
         }
-        //public class EventDataManagement : IDataManagement
-        //{
-        //    private Event collectedEventData;
-
-        //    public void CollectEventData(Event eventData)
-        //    {
-        //        collectedEventData = eventData;
-        //    }
-
-        //    public void WriteDataToFile(string fileName)
-        //    {
-        //        using (StreamWriter writer = new StreamWriter(fileName))
-        //        {
-        //            writer.WriteLine($"Name: {collectedEventData.name}");
-        //            writer.WriteLine($"Start Date: {collectedEventData.startDate}");
-        //            writer.WriteLine($"End Date: {collectedEventData.endDate}");
-        //            writer.WriteLine($"Location: {collectedEventData.location}");
-        //            writer.WriteLine($"Info: {collectedEventData.info}");
-        //            writer.WriteLine($"Time Start: {collectedEventData.timeStart}");
-        //            writer.WriteLine($"Time Length: {collectedEventData.timeLength}");
-        //            writer.WriteLine($"Cost: {collectedEventData.cost}");
-        //            writer.WriteLine($"Limit: {collectedEventData.limit}");
-        //            writer.WriteLine($"Site Link: {collectedEventData.siteLink}");
-
-        //            if (collectedEventData is TematicEvenings tematicEvenings)
-        //            {
-        //                writer.WriteLine($"Author: {tematicEvenings.author}");
-        //            }
-        //            //else if (collectedEventData is Questions questions)
-        //            //{
-        //            //}
-        //            else if (collectedEventData is Entertainment entertainment)
-        //            {
-        //                writer.WriteLine($"Goal: {entertainment.goal}");
-        //                writer.WriteLine($"Tools: {entertainment.tools}");
-        //                writer.WriteLine($"Authors: {entertainment.authors}");
-        //            }
-        //        }
-        //    }
-
-        //    public Event ReadDataFromFile(string fileName)
-        //    {
-        //        Event eventData = null;
-        //        using (StreamReader reader = new StreamReader(fileName))
-        //        {
-        //            string name = reader.ReadLine();
-        //            DateTime startDate = DateTime.Parse(reader.ReadLine());
-        //            DateTime endDate = DateTime.Parse(reader.ReadLine());
-        //            string location = reader.ReadLine();
-        //            string info = reader.ReadLine();
-        //            DateTime timeStart = DateTime.Parse(reader.ReadLine());
-        //            DateTime timeLength = DateTime.Parse(reader.ReadLine());
-        //            int cost = int.Parse(reader.ReadLine());
-        //            string limit = reader.ReadLine();
-        //            string siteLink = reader.ReadLine();
-
-        //            string nextLine = reader.ReadLine();
-        //            if (nextLine.StartsWith("Author:"))
-        //            {
-        //                string author = nextLine.Substring("Author:".Length).Trim();
-        //                eventData = new TematicEvenings(name, author, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink);
-        //            }
-        //            else if (nextLine.StartsWith("Questions:"))
-        //            {
-        //                string questions = nextLine.Substring("Questions:".Length).Trim();
-        //                eventData = new Questions(name, startDate, endDate, location, info, timeStart, timeLength, cost, siteLink, limit);
-        //            }
-        //            else if (nextLine.StartsWith("Goal:"))
-        //            {
-        //                string goal = nextLine.Substring("Goal:".Length).Trim();
-        //                string tools = reader.ReadLine().Substring("Tools:".Length).Trim();
-        //                string program = reader.ReadLine().Substring("Program:".Length).Trim();
-        //                string authors = reader.ReadLine().Substring("Authors:".Length).Trim();
-        //                eventData = new Entertainment(name, startDate, endDate, location, goal, tools, program, timeStart, timeLength, cost, limit, siteLink);
-        //            }
-        //        }
-        //        return eventData;
-        //    }
-        //}
-
         abstract public class Event : IDataManagement
         {
             public string type { get; set; }    
@@ -439,21 +320,6 @@ namespace KyrsovaKalendar
                 }
             }
         }
-
-        //public void changeEvent(Event1 selectedEvent)
-        //{
-        //    if (selectedEvent != null)
-        //    {
-        //        eventName.Text = selectedEvent.name;
-        //        eventDate1.Value = selectedEvent.startDate;
-        //        eventDate2.Value = selectedEvent.endDate;
-        //        eventInfo.Text = selectedEvent.info;
-        //        eventTimeStart.Value = selectedEvent.timeStart;
-        //        eventTimeLength.Value = selectedEvent.timeLength;
-        //        eventCost.Text = selectedEvent.cost.ToString();
-        //        eventLimit.Text = selectedEvent.limit;
-        //    }
-        //}
         public void saveEvent_Click(object sender, EventArgs e)
         {
 
@@ -504,7 +370,7 @@ namespace KyrsovaKalendar
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //PrepareField(comboBox1.SelectedItem.ToString());
+            PrepareField(comboBox1.SelectedItem.ToString());
         }
         private void PrepareField(string selectedSubject)
         {
@@ -512,7 +378,6 @@ namespace KyrsovaKalendar
             switch (numberOfSelectedSubject)
             {
                 case 1:
-                    //name_1.Location = new System.Drawing.Point(388, 45);
                     date_2.Location = new Point(482, 75);
                     location_3.Location = new Point(474, 105);
                     info_4.Location = new Point(473, 140);
@@ -521,7 +386,7 @@ namespace KyrsovaKalendar
                     time_6.Location = new Point(423, 310);
                     cost_7.Location = new Point(492, 340);
                     limit_8.Location = new Point(511, 370);
-                    //eventName.Location = new Point(592, 45);
+                    eventName.Location = new Point(592, 45);
                     eventDate1.Location = new Point(592, 75);
                     eventDate2.Location = new Point(742, 75);
                     eventInfo.Location = new Point(592, 140);
@@ -541,7 +406,7 @@ namespace KyrsovaKalendar
                 case 2:
                     author_22.Visible = true;
                     eventAuthor.Visible = true;
-                    //name_1.Location = new System.Drawing.Point(388, 45);
+                    name_1.Location = new Point(388, 45);
                     author_22.Location = new Point(543, 75);
                     date_2.Location = new Point(482, 75 + 30);
                     location_3.Location = new Point(474, 105 + 30);
@@ -551,7 +416,6 @@ namespace KyrsovaKalendar
                     time_6.Location = new Point(423, 310 + 30);
                     cost_7.Location = new Point(492, 340 + 30);
                     limit_8.Location = new Point(511, 370 + 30);
-                    //eventName.Location = new System.Drawing.Point(592, 45 + 30);
                     eventDate1.Location = new Point(592, 75 + 30);
                     eventDate2.Location = new Point(742, 75 + 30);
                     eventInfo.Location = new Point(592, 140 + 30);
@@ -566,7 +430,6 @@ namespace KyrsovaKalendar
                     tools_55.Visible = false;
                     break;
                 case 3:
-                    //name_1.Location = new System.Drawing.Point(388, 45);
                     date_2.Location = new Point(482, 75);
                     location_3.Location = new Point(474, 105);
                     info_4.Location = new Point(514, 140);
@@ -575,7 +438,6 @@ namespace KyrsovaKalendar
                     time_6.Location = new Point(423, 310);
                     cost_7.Location = new Point(492, 340);
                     limit_8.Location = new Point(511, 370);
-                    //eventName.Location = new Point(592, 45);
                     eventDate1.Location = new Point(592, 75);
                     eventDate2.Location = new Point(742, 75);
                     eventInfo.Location = new Point(592, 140);
@@ -592,7 +454,6 @@ namespace KyrsovaKalendar
                     tools_55.Visible = false;
                     break;
                 case 4:
-                    //name_1.Location = new System.Drawing.Point(388, 45);
                     date_2.Location = new Point(482, 75);
                     location_3.Location = new Point(474, 105);
                     info_4.Location = new Point(478, 140);
@@ -601,7 +462,6 @@ namespace KyrsovaKalendar
                     time_6.Location = new Point(423, 310);
                     cost_7.Location = new Point(492, 340);
                     limit_8.Location = new Point(511, 370);
-                    //eventName.Location = new Point(592, 45);
                     eventDate1.Location = new Point(592, 75);
                     eventDate2.Location = new Point(742, 75);
                     eventInfo.Location = new Point(592, 140);
@@ -618,93 +478,71 @@ namespace KyrsovaKalendar
                     tools_55.Visible = false;
                     break;
                 case 5:
+                    eventAuthor.Visible = true;
+                    author_22.Visible = true;
                     goal_55.Visible = true;
                     eventGoal.Visible = true;
                     eventTools.Visible = true;
                     tools_55.Visible = true;
-                    name_1.Location = new Point(388, 45);
-                    date_2.Location = new Point(482, 105 - 30);
-                    location_3.Location = new Point(474, 135 - 30);
-                    info_4.Location = new Point(478, 300 - 30);
-                    start_5.Location = new Point(479, 440 - 30);
-                    time_6.Location = new Point(423, 470 - 30);
-                    cost_7.Location = new Point(492, 500 - 30);
-                    limit_8.Location = new Point(511, 530 - 30);
-                    goal_55.Location = new Point(550, 170 - 30);
-                    eventGoal.Location = new Point(593, 170 - 30);
-                    eventTools.Location = new Point(593, 235 - 30);
-                    tools_55.Location = new Point(514, 235 - 30);
-                    eventName.Location = new Point(592, 45);
-                    eventDate1.Location = new Point(593, 105 - 30);
-                    eventDate2.Location = new Point(742, 105 - 30);
-                    eventInfo.Location = new Point(592, 300 - 30);
-                    eventCost.Location = new Point(592, 500 - 30);
-                    eventLimit.Location = new Point(592, 530 - 30);
-                    eventTimeStart.Location = new Point(592, 440 - 30);
-                    eventTimeLength.Location = new Point(592, 470 - 30);
-                    eventLocation.Location = new Point(593, 135 - 30);
+                    author_22.Location = new Point(543, 75);
+                    date_2.Location = new Point(482, 105);
+                    location_3.Location = new Point(474, 135);
+                    info_4.Location = new Point(478, 300);
+                    start_5.Location = new Point(479, 440);
+                    time_6.Location = new Point(423, 470);
+                    cost_7.Location = new Point(492, 500);
+                    limit_8.Location = new Point(511, 530);
+                    goal_55.Location = new Point(550, 170);
+                    eventGoal.Location = new Point(593, 170);
+                    eventTools.Location = new Point(593, 235);
+                    tools_55.Location = new Point(514, 235);
+                    eventDate1.Location = new Point(593, 105);
+                    eventDate2.Location = new Point(742, 105);
+                    eventInfo.Location = new Point(592, 300);
+                    eventCost.Location = new Point(592, 500);
+                    eventLimit.Location = new Point(592, 530);
+                    eventTimeStart.Location = new Point(592, 440);
+                    eventTimeLength.Location = new Point(592, 470);
+                    eventLocation.Location = new Point(593, 135);
                     break;
             }
+            eventName.Location = new Point(592, 45);name_1.Location = new Point(388, 45);
+            name_1.Visible = true;date_2.Visible = true;location_3.Visible = true;info_4.Visible = true;start_5.Visible = true;time_6.Visible = true;cost_7.Visible = true;limit_8.Visible = true; link_9.Visible = true;
+            eventName.Visible = true;eventDate1.Visible = true;eventDate2.Visible = true;eventLocation.Visible = true;eventInfo.Visible = true;eventTimeStart.Visible = true;eventTimeLength.Visible = true;eventCost.Visible = true;eventLimit.Visible = true;eventLink.Visible = true;
         }
         private void CreateEvent_Load(object sender, EventArgs e)
         {
-            if (dayInfo.events[indexEventToChange] != null)
+            if (indexEventToChange >=0)
             {
-                name_1.Visible = true; date_2.Visible = true; location_3.Visible = true; info_4.Visible = true; start_5.Visible = true; time_6.Visible = true; cost_7.Visible = true; limit_8.Visible = true;//388, 45
-                eventName.Visible = true; eventName.Text = dayInfo.events[indexEventToChange].name; eventDate1.Visible = true; eventDate1.Value = dayInfo.events[indexEventToChange].startDate; eventDate2.Visible = true; eventDate2.Value = dayInfo.events[indexEventToChange].endDate; eventLocation.Visible = true; eventLocation.Text = dayInfo.events[indexEventToChange].location; eventInfo.Visible = true; eventInfo.Text = dayInfo.events[indexEventToChange].info; eventTimeStart.Visible = true; eventTimeStart.Value = dayInfo.events[indexEventToChange].timeStart; eventTimeLength.Visible = true; eventTimeLength.Value = dayInfo.events[indexEventToChange].timeLength; eventCost.Visible = true; eventCost.Text = Convert.ToString(dayInfo.events[indexEventToChange].cost); eventLimit.Visible = true; eventLimit.Text = dayInfo.events[indexEventToChange].limit;
-                switch (dayInfo.events[indexEventToChange].type)
+                if (indexEventToChange!=-1)
                 {
-                    case "TematicEvenings":
-                        author_22.Visible = false;
-                        eventAuthor.Visible = false;
-                        goal_55.Visible = false;
-                        eventGoal.Visible = false;
-                        tools_55.Visible = false;
-                        eventTools.Visible = false;
-                        comboBox1.SelectedIndex = 0;
-
-                        break;
-                    case "Questions":
-                        Questions copyEvent = (Questions)dayInfo.events[indexEventToChange];
-                        eventAuthor.Text = copyEvent.author;
-                        eventAuthor.Visible = true;
-                        goal_55.Visible = false;
-                        eventGoal.Visible = false;
-                        tools_55.Visible = false;
-                        eventTools.Visible = false;
-                        comboBox1.SelectedIndex = 1;
-                        break;
-                    case "Meeting":
-                        author_22.Visible = false;
-                        eventAuthor.Visible = false;
-                        goal_55.Visible = false;
-                        eventGoal.Visible = false;
-                        tools_55.Visible = false;
-                        eventTools.Visible = false;
-                        comboBox1.SelectedIndex = 2;
-                        break;
-                    case "Standup":
-                        author_22.Visible = false;
-                        eventAuthor.Visible = false;
-                        goal_55.Visible = false;
-                        eventGoal.Visible = false;
-                        tools_55.Visible = false;
-                        eventTools.Visible = false;
-                        comboBox1.SelectedIndex = 3;
-                        break;
-                    case "Entertainment":
-                        Entertainment copyEvent1 = (Entertainment)dayInfo.events[indexEventToChange];
-                        eventAuthor.Text = copyEvent1.author;
-                        author_22.Visible = true;
-                        eventAuthor.Visible = true;
-                        eventGoal.Text = copyEvent1.goal;
-                        goal_55.Visible = true;
-                        eventGoal.Visible = true;
-                        tools_55.Visible = true;
-                        eventTools.Visible = true;
-                        comboBox1.SelectedIndex = 4;
-                        break;
-                }       
+                    name_1.Visible = true; date_2.Visible = true; location_3.Visible = true; info_4.Visible = true; start_5.Visible = true; time_6.Visible = true; cost_7.Visible = true; limit_8.Visible = true;//388, 45
+                    eventName.Visible = true; eventName.Text = dayInfo.events[indexEventToChange].name; eventDate1.Visible = true; eventDate1.Value = dayInfo.events[indexEventToChange].startDate; eventDate2.Visible = true; eventDate2.Value = dayInfo.events[indexEventToChange].endDate; eventLocation.Visible = true; eventLocation.Text = dayInfo.events[indexEventToChange].location; eventInfo.Visible = true; eventInfo.Text = dayInfo.events[indexEventToChange].info; eventTimeStart.Visible = true; eventTimeStart.Value = dayInfo.events[indexEventToChange].timeStart; eventTimeLength.Visible = true; eventTimeLength.Value = dayInfo.events[indexEventToChange].timeLength; eventCost.Visible = true; eventCost.Text = Convert.ToString(dayInfo.events[indexEventToChange].cost); eventLimit.Visible = true; eventLimit.Text = dayInfo.events[indexEventToChange].limit; eventLink.Text = dayInfo.events[indexEventToChange].siteLink;
+                    switch (dayInfo.events[indexEventToChange].type)
+                    {
+                        case "TematicEvenings":
+                            comboBox1.SelectedIndex = 0;
+                            break;
+                        case "Questions":
+                            Questions copyEvent = (Questions)dayInfo.events[indexEventToChange];
+                            eventAuthor.Text = copyEvent.author;
+                            comboBox1.SelectedIndex = 1;
+                            break;
+                        case "Meeting":
+                            comboBox1.SelectedIndex = 2;
+                            break;
+                        case "Standup":
+                            comboBox1.SelectedIndex = 3;
+                            break;
+                        case "Entertainment":
+                            Entertainment copyEvent1 = (Entertainment)dayInfo.events[indexEventToChange];
+                            eventAuthor.Text = copyEvent1.author;eventGoal.Text = copyEvent1.goal;eventTools.Text = copyEvent1.tools;
+                            comboBox1.SelectedIndex = 4;
+                            break;
+                    }
+                    File.Delete(dayInfo.folderPath + '\\' + dayInfo.events[indexEventToChange].name + ".txt");
+                    dayInfo.events.Remove(dayInfo.events[indexEventToChange]);
+                }
             }
         }
     }

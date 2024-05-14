@@ -55,17 +55,20 @@
             this.eventInfo = new System.Windows.Forms.RichTextBox();
             this.eventLimit = new System.Windows.Forms.RichTextBox();
             this.eventTools = new System.Windows.Forms.RichTextBox();
+            this.eventLink = new System.Windows.Forms.TextBox();
+            this.link_9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // createEventButton
             // 
+            this.createEventButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("createEventButton.BackgroundImage")));
+            this.createEventButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.createEventButton.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
             this.createEventButton.ForeColor = System.Drawing.Color.Green;
             this.createEventButton.Location = new System.Drawing.Point(1007, 12);
             this.createEventButton.Name = "createEventButton";
             this.createEventButton.Size = new System.Drawing.Size(45, 45);
             this.createEventButton.TabIndex = 13;
-            this.createEventButton.Text = "+";
             this.createEventButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.createEventButton.UseVisualStyleBackColor = true;
             this.createEventButton.Click += new System.EventHandler(this.createEventButton_Click);
@@ -334,11 +337,32 @@
             this.eventTools.Text = "";
             this.eventTools.Visible = false;
             // 
+            // eventLink
+            // 
+            this.eventLink.Location = new System.Drawing.Point(189, 13);
+            this.eventLink.Name = "eventLink";
+            this.eventLink.Size = new System.Drawing.Size(450, 20);
+            this.eventLink.TabIndex = 58;
+            this.eventLink.Visible = false;
+            // 
+            // link_9
+            // 
+            this.link_9.AutoSize = true;
+            this.link_9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.link_9.Location = new System.Drawing.Point(149, 13);
+            this.link_9.Name = "link_9";
+            this.link_9.Size = new System.Drawing.Size(35, 16);
+            this.link_9.TabIndex = 57;
+            this.link_9.Text = "Сайт:";
+            this.link_9.Visible = false;
+            // 
             // DayInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 985);
+            this.Controls.Add(this.eventLink);
+            this.Controls.Add(this.link_9);
             this.Controls.Add(this.eventLimit);
             this.Controls.Add(this.eventInfo);
             this.Controls.Add(this.eventTools);
@@ -401,5 +425,7 @@
         private System.Windows.Forms.RichTextBox eventInfo;
         private System.Windows.Forms.RichTextBox eventLimit;
         private System.Windows.Forms.RichTextBox eventTools;
+        private System.Windows.Forms.TextBox eventLink;
+        private System.Windows.Forms.Label link_9;
     }
 }

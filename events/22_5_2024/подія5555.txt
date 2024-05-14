@@ -1,0 +1,22 @@
+Type: TematicEvenings
+Name: подія5555
+Start Date: 14.05.2024 18:43:19
+End Date: 14.05.2024 18:43:19
+Location: 1
+Info: 1
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 00:00:00
+Cost: 1
+Limit: 1
+Site Link: 1
+Type: TematicEvenings
+Name: подія5555
+Start Date: 14.05.2024 18:43:19
+End Date: 14.05.2024 18:43:19
+Location: 1
+Info: 1
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 00:00:00
+Cost: 1
+Limit: 1
+Site Link: 1

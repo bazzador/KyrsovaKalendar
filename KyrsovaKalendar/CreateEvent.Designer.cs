@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateEvent));
             this.name_1 = new System.Windows.Forms.Label();
             this.date_2 = new System.Windows.Forms.Label();
             this.start_5 = new System.Windows.Forms.Label();
@@ -126,21 +127,23 @@
             // 
             // saveEvent
             // 
+            this.saveEvent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveEvent.BackgroundImage")));
+            this.saveEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveEvent.Location = new System.Drawing.Point(24, 258);
             this.saveEvent.Name = "saveEvent";
-            this.saveEvent.Size = new System.Drawing.Size(82, 35);
+            this.saveEvent.Size = new System.Drawing.Size(60, 60);
             this.saveEvent.TabIndex = 7;
-            this.saveEvent.Text = "Застосувати  ";
             this.saveEvent.UseVisualStyleBackColor = true;
             this.saveEvent.Click += new System.EventHandler(this.saveEvent_Click);
             // 
             // exitCreateEvent
             // 
+            this.exitCreateEvent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitCreateEvent.BackgroundImage")));
+            this.exitCreateEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitCreateEvent.Location = new System.Drawing.Point(112, 258);
             this.exitCreateEvent.Name = "exitCreateEvent";
-            this.exitCreateEvent.Size = new System.Drawing.Size(82, 35);
+            this.exitCreateEvent.Size = new System.Drawing.Size(60, 60);
             this.exitCreateEvent.TabIndex = 8;
-            this.exitCreateEvent.Text = "ОК";
             this.exitCreateEvent.UseVisualStyleBackColor = true;
             this.exitCreateEvent.Click += new System.EventHandler(this.exitCreateEvent_Click);
             // 

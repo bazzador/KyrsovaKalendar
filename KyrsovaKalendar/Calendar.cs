@@ -4,10 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static KyrsovaKalendar.CreateEvent;
 
 namespace KyrsovaKalendar
 {
@@ -15,6 +19,7 @@ namespace KyrsovaKalendar
     {
         public int month, year;
         DateTime now = DateTime.Now;
+        public string directoriesPath = "C:\\Users\\Ivanchik\\source\\repos\\KyrsovaKalendar\\events";
         public Calendar()
         {
             InitializeComponent();
@@ -56,30 +61,52 @@ namespace KyrsovaKalendar
             }
             CalcCalendar(++month, year);
         }
-
-        private void todayEvents_Click(object sender, EventArgs e)
+        private void buttonEventShow_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.ShowDialog();
         }
 
-        private void tomorrowEvents_Click(object sender, EventArgs e)
+        private void FindEventButton_Click(object sender, EventArgs e)
         {
-            tomorrowEvents.Click += todayEvents_Click;
+            FindEvent();
         }
-
-        private void days10Event_Click(object sender, EventArgs e)
+        private void FindEvent()
         {
-            days10Event.Click += todayEvents_Click;
+            if (FindEventTextBox.Text != "")
+            {
+                string[] eventFolders = Directory.GetDirectories(directoriesPath);
+                string fileName = FindEventTextBox.Text;
+                Regex fileNameRegex = new Regex(@"(\d{1,2})_(\d{1,2})_(\d{4})$");
+                foreach (string folderPath in eventFolders)
+                {
+                    string[] files = Directory.GetFiles(folderPath);
+                    foreach (string filePath in files)
+                    {
+                        string fileNameOnly = Path.GetFileName(filePath);
+                        if (fileName+".txt" == fileNameOnly)
+                        {
+                            Match match = fileNameRegex.Match(folderPath);
+                            if (match.Success)
+                            {   DayInfo dayInfo = new DayInfo(int.Parse(match.Groups[1].Value), int.Parse(match.Groups[2].Value), int.Parse(match.Groups[3].Value), Array.IndexOf(files, filePath));
+                                dayInfo.ShowDialog();
+                            }
+                        }
+                    }
+                }
+                MessageBox.Show("Файл не знайдено!");
+            }
+            else
+            {
+                MessageBox.Show("Вкажіть назву події для пошуку!");
+            }
         }
-
         private void prevButton_Click(object sender, EventArgs e)
         {
             dayPanel.Controls.Clear();
             if (month == 1)
             {
-                month = 13;
-                year--;
+                month = 13; year--;
             }
             CalcCalendar(--month, year);
         }

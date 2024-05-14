@@ -30,8 +30,8 @@ namespace KyrsovaKalendar
             this.userYear = userYear;
             events = new List<Event>();
             this.indexOfEvent = indexOfEvent;
-            //EventComboBox.DataSource = events.Select(ev => ev.name).ToList();
         }
+
         private void createEventButton_Click(object sender, EventArgs e)
         {
             CreateEvent createEvent = new CreateEvent(this);
@@ -60,7 +60,7 @@ namespace KyrsovaKalendar
             int x = 388 - 150;
             int y = 100 - 45;
             name_1.Location = new Point(150, 100); eventName.Location = new Point(592 - x, 45 + y); name_1.Visible = true; date_2.Visible = true; location_3.Visible = true; info_4.Visible = true; start_5.Visible = true; time_6.Visible = true; cost_7.Visible = true; limit_8.Visible = true;//388, 45
-            eventName.Visible = true; eventName.Text = selectedEvent.name; eventDate1.Visible = true; eventDate1.Text = selectedEvent.startDate.ToString(); eventDate2.Visible = true; eventDate2.Text = selectedEvent.endDate.ToString(); eventLocation.Visible = true; eventLocation.Text = selectedEvent.location; eventInfo.Visible = true; eventInfo.Text = selectedEvent.info; eventTimeStart.Visible = true; eventTimeStart.Text = selectedEvent.timeStart.ToString(); eventTimeLength.Visible = true; eventTimeLength.Text = selectedEvent.timeLength.ToString(); eventCost.Visible = true; eventCost.Text = selectedEvent.cost.ToString(); eventLimit.Visible = true; eventLimit.Text = selectedEvent.limit;
+            eventName.Visible = true; eventName.Text = selectedEvent.name; eventDate1.Visible = true; eventDate1.Text = selectedEvent.startDate.ToString(); eventDate2.Visible = true; eventDate2.Text = selectedEvent.endDate.ToString(); eventLocation.Visible = true; eventLocation.Text = selectedEvent.location; eventInfo.Visible = true; eventInfo.Text = selectedEvent.info; eventTimeStart.Visible = true; eventTimeStart.Text = selectedEvent.timeStart.ToString(); eventTimeLength.Visible = true; eventTimeLength.Text = selectedEvent.timeLength.ToString(); eventCost.Visible = true; eventCost.Text = selectedEvent.cost.ToString(); eventLimit.Visible = true; eventLimit.Text = selectedEvent.limit; eventLink.Visible = true; eventLink.Text = selectedEvent.siteLink;
             switch (selectedEvent.type)
             {
                 // author goal tools
@@ -90,6 +90,7 @@ namespace KyrsovaKalendar
 
                     break;
                 case "Questions": //author
+                    Questions copyEvent = (Questions)selectedEvent;
                     author_22.Location = new Point(543-x, 75 + y);
                     date_2.Location = new Point(482 - x, 105 + y);
                     location_3.Location = new Point(474 - x, 135 + y);
@@ -108,6 +109,7 @@ namespace KyrsovaKalendar
                     eventTimeStart.Location = new Point(592 - x, 310 + y);
                     eventTimeLength.Location = new Point(592 - x, 340 + y);
                     eventLocation.Location = new Point(592 - x, 135 + y);
+                    eventAuthor.Text = copyEvent.author;
                     author_22.Visible = true;
                     eventAuthor.Visible = true;
                     goal_55.Visible = false;
@@ -164,6 +166,7 @@ namespace KyrsovaKalendar
                     tools_55.Visible = false;
                     break;
                 case "Entertainment": //goal tools author
+                    Entertainment copyEvent1 = (Entertainment)selectedEvent;
                     author_22.Location = new Point(543 - x, 75 + y);
                     date_2.Location = new Point(482 - x, 105 + y);
                     location_3.Location = new Point(474 - x, 135 + y);
@@ -186,6 +189,9 @@ namespace KyrsovaKalendar
                     eventTimeLength.Location = new Point(592 - x, 450 + y);
                     eventCost.Location = new Point(592 - x, 480 + y);
                     eventLimit.Location = new Point(592 - x, 510 + y);
+                    eventAuthor.Text = copyEvent1.author;
+                    eventGoal.Text = copyEvent1.goal;
+                    eventTools.Text = copyEvent1.tools;
                     eventAuthor.Visible = true;
                     author_22.Visible = true;
                     goal_55.Visible = true;
@@ -198,9 +204,10 @@ namespace KyrsovaKalendar
 
         private void ChangeEvent_Click(object sender, EventArgs e)
         {
-            if (EventComboBox.SelectedIndex != 0)
+            if (EventComboBox.SelectedIndex >=0)
             {
                 CreateEvent createEvent = new CreateEvent(this, EventComboBox.SelectedIndex);
+                UpdateEvents();
                 createEvent.ShowDialog();
             }
             else MessageBox.Show("Оберіть подію для зміни!");
