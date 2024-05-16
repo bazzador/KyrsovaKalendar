@@ -50,7 +50,7 @@
             this.dayPanel.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.dayPanel.Location = new System.Drawing.Point(24, 243);
             this.dayPanel.Name = "dayPanel";
-            this.dayPanel.Size = new System.Drawing.Size(1024, 479);
+            this.dayPanel.Size = new System.Drawing.Size(1024, 480);
             this.dayPanel.TabIndex = 0;
             // 
             // nextButton
@@ -58,6 +58,8 @@
             this.nextButton.BackColor = System.Drawing.SystemColors.ControlDark;
             this.nextButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton.BackgroundImage")));
             this.nextButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextButton.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.nextButton.Location = new System.Drawing.Point(988, 728);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(60, 60);
@@ -69,6 +71,8 @@
             // 
             this.prevButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prevButton.BackgroundImage")));
             this.prevButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prevButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prevButton.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.prevButton.Location = new System.Drawing.Point(922, 728);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(60, 60);
@@ -162,6 +166,8 @@
             // 
             this.EventShowButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EventShowButton.BackgroundImage")));
             this.EventShowButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EventShowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EventShowButton.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.EventShowButton.Location = new System.Drawing.Point(24, 12);
             this.EventShowButton.Name = "EventShowButton";
             this.EventShowButton.Size = new System.Drawing.Size(60, 60);
@@ -171,19 +177,26 @@
             // 
             // FindEventTextBox
             // 
-            this.FindEventTextBox.Location = new System.Drawing.Point(285, 49);
+            this.FindEventTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.FindEventTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FindEventTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FindEventTextBox.Location = new System.Drawing.Point(283, 34);
             this.FindEventTextBox.Name = "FindEventTextBox";
-            this.FindEventTextBox.Size = new System.Drawing.Size(148, 20);
+            this.FindEventTextBox.Size = new System.Drawing.Size(150, 20);
             this.FindEventTextBox.TabIndex = 16;
             // 
             // FindEventButton
             // 
-            this.FindEventButton.Location = new System.Drawing.Point(456, 49);
+            this.FindEventButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.FindEventButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FindEventButton.BackgroundImage")));
+            this.FindEventButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FindEventButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindEventButton.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.FindEventButton.Location = new System.Drawing.Point(439, 17);
             this.FindEventButton.Name = "FindEventButton";
-            this.FindEventButton.Size = new System.Drawing.Size(75, 23);
+            this.FindEventButton.Size = new System.Drawing.Size(50, 50);
             this.FindEventButton.TabIndex = 17;
-            this.FindEventButton.Text = "button1";
-            this.FindEventButton.UseVisualStyleBackColor = true;
+            this.FindEventButton.UseVisualStyleBackColor = false;
             this.FindEventButton.Click += new System.EventHandler(this.FindEventButton_Click);
             // 
             // Calendar

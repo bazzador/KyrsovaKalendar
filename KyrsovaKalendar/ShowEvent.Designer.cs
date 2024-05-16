@@ -1,6 +1,6 @@
 ﻿namespace KyrsovaKalendar
 {
-    partial class Form1
+    partial class ShowEventForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,14 +38,15 @@
             this.eventsPanel.Size = new System.Drawing.Size(1064, 377);
             this.eventsPanel.TabIndex = 0;
             // 
-            // Form1
+            // ShowEventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 985);
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ClientSize = new System.Drawing.Size(1064, 496);
             this.Controls.Add(this.eventsPanel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ShowEventForm";
+            this.Text = "ShowEvent";
             this.ResumeLayout(false);
 
         }

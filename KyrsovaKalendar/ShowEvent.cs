@@ -14,21 +14,21 @@ using static KyrsovaKalendar.CreateEvent;
 
 namespace KyrsovaKalendar
 {
-    public partial class Form1 : Form
+    public partial class ShowEventForm : Form
     {
         public string filePath = "C:\\Users\\Ivanchik\\source\\repos\\KyrsovaKalendar\\events\\";
         public string folderPath;
         private Dictionary<string, string> ukrainianDayOfWeek = new Dictionary<string, string>()
         {
-            {"Monday", "Понеділок"},
-            {"Tuesday", "Вівторок"},
-            {"Wednesday", "Середа"},
-            {"Thursday", "Четвер"},
-            {"Friday", "П'ятниця"},
-            {"Saturday", "Субота"},
-            {"Sunday", "Неділя"}
+            {"Monday", "ПН"},
+            {"Tuesday", "ВТ"},
+            {"Wednesday", "СР"},
+            {"Thursday", "ЧТ"},
+            {"Friday", "ПТ"},
+            {"Saturday", "СБ"},
+            {"Sunday", "НД"}
         };
-        public Form1()
+        public ShowEventForm()
         {
             InitializeComponent();
             Display10Days();

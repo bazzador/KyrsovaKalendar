@@ -34,12 +34,12 @@
             // labelDays
             // 
             this.labelDays.AutoSize = true;
-            this.labelDays.BackColor = System.Drawing.Color.DimGray;
-            this.labelDays.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDays.ForeColor = System.Drawing.Color.HotPink;
-            this.labelDays.Location = new System.Drawing.Point(103, 9);
+            this.labelDays.BackColor = System.Drawing.Color.Gray;
+            this.labelDays.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDays.ForeColor = System.Drawing.Color.White;
+            this.labelDays.Location = new System.Drawing.Point(100, 10);
             this.labelDays.Name = "labelDays";
-            this.labelDays.Size = new System.Drawing.Size(18, 19);
+            this.labelDays.Size = new System.Drawing.Size(24, 26);
             this.labelDays.TabIndex = 0;
             this.labelDays.Text = "1";
             // 
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.labelDays);
             this.Name = "UserControlDays";
             this.Size = new System.Drawing.Size(140, 90);

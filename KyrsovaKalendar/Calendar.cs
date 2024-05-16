@@ -63,7 +63,7 @@ namespace KyrsovaKalendar
         }
         private void buttonEventShow_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            ShowEventForm form1 = new ShowEventForm();
             form1.ShowDialog();
         }
 

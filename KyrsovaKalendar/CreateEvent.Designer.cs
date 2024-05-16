@@ -149,6 +149,8 @@
             // 
             // eventName
             // 
+            this.eventName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventName.Location = new System.Drawing.Point(592, 45);
             this.eventName.Name = "eventName";
             this.eventName.Size = new System.Drawing.Size(450, 20);
@@ -157,6 +159,7 @@
             // 
             // eventDate1
             // 
+            this.eventDate1.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
             this.eventDate1.Location = new System.Drawing.Point(593, 105);
             this.eventDate1.Name = "eventDate1";
             this.eventDate1.Size = new System.Drawing.Size(135, 20);
@@ -165,6 +168,8 @@
             // 
             // eventDate2
             // 
+            this.eventDate2.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.eventDate2.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
             this.eventDate2.Location = new System.Drawing.Point(742, 105);
             this.eventDate2.Name = "eventDate2";
             this.eventDate2.Size = new System.Drawing.Size(135, 20);
@@ -173,6 +178,8 @@
             // 
             // eventInfo
             // 
+            this.eventInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventInfo.Location = new System.Drawing.Point(592, 300);
             this.eventInfo.Name = "eventInfo";
@@ -183,6 +190,7 @@
             // 
             // eventCost
             // 
+            this.eventCost.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventCost.Location = new System.Drawing.Point(592, 500);
             this.eventCost.Name = "eventCost";
             this.eventCost.Size = new System.Drawing.Size(122, 20);
@@ -191,6 +199,8 @@
             // 
             // eventLimit
             // 
+            this.eventLimit.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventLimit.Location = new System.Drawing.Point(592, 530);
             this.eventLimit.Name = "eventLimit";
             this.eventLimit.Size = new System.Drawing.Size(373, 80);
@@ -200,6 +210,7 @@
             // 
             // eventTimeStart
             // 
+            this.eventTimeStart.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.eventTimeStart.CustomFormat = "HH:mm";
             this.eventTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.eventTimeStart.Location = new System.Drawing.Point(592, 440);
@@ -212,6 +223,7 @@
             // 
             // eventTimeLength
             // 
+            this.eventTimeLength.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.eventTimeLength.CustomFormat = "HH:mm";
             this.eventTimeLength.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.eventTimeLength.Location = new System.Drawing.Point(592, 470);
@@ -224,6 +236,8 @@
             // 
             // eventLocation
             // 
+            this.eventLocation.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventLocation.Location = new System.Drawing.Point(592, 135);
             this.eventLocation.Name = "eventLocation";
             this.eventLocation.Size = new System.Drawing.Size(450, 20);
@@ -243,17 +257,15 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "1. Тематичні вечори",
             "2. Вечори запитань і відповідей",
             "3. Вечори-зустрічі",
             "4. Вечори гумору",
-            "5. Конкурсно-розважальні програми",
-            "6. Диспути",
-            "7. Дискусії",
-            "8. Філософські години",
-            "9. Бесіди"});
+            "5. Конкурсно-розважальні програми"});
             this.comboBox1.Location = new System.Drawing.Point(24, 213);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -272,6 +284,8 @@
             // 
             // eventAuthor
             // 
+            this.eventAuthor.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventAuthor.Location = new System.Drawing.Point(593, 76);
             this.eventAuthor.Name = "eventAuthor";
             this.eventAuthor.Size = new System.Drawing.Size(450, 20);
@@ -301,6 +315,8 @@
             // 
             // eventGoal
             // 
+            this.eventGoal.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventGoal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventGoal.Location = new System.Drawing.Point(593, 170);
             this.eventGoal.Name = "eventGoal";
@@ -311,6 +327,8 @@
             // 
             // eventTools
             // 
+            this.eventTools.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventTools.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventTools.Location = new System.Drawing.Point(593, 235);
             this.eventTools.Name = "eventTools";
@@ -331,6 +349,8 @@
             // 
             // eventLink
             // 
+            this.eventLink.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventLink.Location = new System.Drawing.Point(43, 590);
             this.eventLink.Name = "eventLink";
             this.eventLink.Size = new System.Drawing.Size(450, 20);
@@ -352,6 +372,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1064, 985);
             this.Controls.Add(this.eventLink);
             this.Controls.Add(this.link_9);
@@ -382,7 +403,7 @@
             this.Controls.Add(this.date_2);
             this.Controls.Add(this.name_1);
             this.Name = "CreateEvent";
-            this.Text = "CreateEvent";
+            this.Text = "і";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateEvent_FormClosed);
             this.Load += new System.EventHandler(this.CreateEvent_Load);
             this.ResumeLayout(false);

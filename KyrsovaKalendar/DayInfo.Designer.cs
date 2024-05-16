@@ -67,7 +67,7 @@
             this.createEventButton.ForeColor = System.Drawing.Color.Green;
             this.createEventButton.Location = new System.Drawing.Point(1007, 12);
             this.createEventButton.Name = "createEventButton";
-            this.createEventButton.Size = new System.Drawing.Size(45, 45);
+            this.createEventButton.Size = new System.Drawing.Size(50, 50);
             this.createEventButton.TabIndex = 13;
             this.createEventButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.createEventButton.UseVisualStyleBackColor = true;
@@ -75,6 +75,8 @@
             // 
             // EventComboBox
             // 
+            this.EventComboBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.EventComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EventComboBox.FormattingEnabled = true;
             this.EventComboBox.Location = new System.Drawing.Point(12, 12);
             this.EventComboBox.Name = "EventComboBox";
@@ -148,9 +150,9 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
             this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(1007, 63);
+            this.button1.Location = new System.Drawing.Point(1007, 65);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 45);
+            this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 39;
             this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -296,6 +298,8 @@
             // 
             // eventGoal
             // 
+            this.eventGoal.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventGoal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventGoal.Enabled = false;
             this.eventGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventGoal.Location = new System.Drawing.Point(247, 194);
@@ -307,6 +311,8 @@
             // 
             // eventInfo
             // 
+            this.eventInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventInfo.Enabled = false;
             this.eventInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventInfo.Location = new System.Drawing.Point(247, 316);
@@ -318,6 +324,8 @@
             // 
             // eventLimit
             // 
+            this.eventLimit.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventLimit.Enabled = false;
             this.eventLimit.Location = new System.Drawing.Point(247, 588);
             this.eventLimit.Name = "eventLimit";
@@ -328,6 +336,8 @@
             // 
             // eventTools
             // 
+            this.eventTools.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventTools.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventTools.Enabled = false;
             this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.eventTools.Location = new System.Drawing.Point(247, 250);
@@ -339,7 +349,9 @@
             // 
             // eventLink
             // 
-            this.eventLink.Location = new System.Drawing.Point(189, 13);
+            this.eventLink.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eventLink.Location = new System.Drawing.Point(247, 16);
             this.eventLink.Name = "eventLink";
             this.eventLink.Size = new System.Drawing.Size(450, 20);
             this.eventLink.TabIndex = 58;
@@ -349,7 +361,7 @@
             // 
             this.link_9.AutoSize = true;
             this.link_9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.link_9.Location = new System.Drawing.Point(149, 13);
+            this.link_9.Location = new System.Drawing.Point(187, 17);
             this.link_9.Name = "link_9";
             this.link_9.Size = new System.Drawing.Size(35, 16);
             this.link_9.TabIndex = 57;
@@ -360,6 +372,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1064, 985);
             this.Controls.Add(this.eventLink);
             this.Controls.Add(this.link_9);

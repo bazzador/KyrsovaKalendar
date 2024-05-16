@@ -38,38 +38,44 @@
             // dayOfWeek
             // 
             this.dayOfWeek.AutoSize = true;
-            this.dayOfWeek.Location = new System.Drawing.Point(29, 17);
+            this.dayOfWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dayOfWeek.ForeColor = System.Drawing.Color.Red;
+            this.dayOfWeek.Location = new System.Drawing.Point(37, 20);
             this.dayOfWeek.Name = "dayOfWeek";
-            this.dayOfWeek.Size = new System.Drawing.Size(35, 13);
+            this.dayOfWeek.Size = new System.Drawing.Size(57, 20);
             this.dayOfWeek.TabIndex = 0;
             this.dayOfWeek.Text = "label1";
             // 
             // day
             // 
             this.day.AutoSize = true;
-            this.day.Location = new System.Drawing.Point(29, 51);
+            this.day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.day.Location = new System.Drawing.Point(38, 54);
             this.day.Name = "day";
-            this.day.Size = new System.Drawing.Size(35, 13);
+            this.day.Size = new System.Drawing.Size(57, 20);
             this.day.TabIndex = 1;
             this.day.Text = "label2";
             // 
             // month
             // 
             this.month.AutoSize = true;
-            this.month.Location = new System.Drawing.Point(29, 97);
+            this.month.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.month.Location = new System.Drawing.Point(23, 94);
             this.month.Name = "month";
-            this.month.Size = new System.Drawing.Size(35, 13);
+            this.month.Size = new System.Drawing.Size(51, 20);
             this.month.TabIndex = 2;
             this.month.Text = "label3";
             // 
             // eventList
             // 
-            this.eventList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.eventList.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eventList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventList.FormattingEnabled = true;
-            this.eventList.ItemHeight = 16;
+            this.eventList.ItemHeight = 18;
             this.eventList.Location = new System.Drawing.Point(3, 152);
             this.eventList.Name = "eventList";
-            this.eventList.Size = new System.Drawing.Size(94, 212);
+            this.eventList.Size = new System.Drawing.Size(94, 200);
             this.eventList.TabIndex = 3;
             this.eventList.SelectedIndexChanged += new System.EventHandler(this.eventList_SelectedIndexChanged);
             // 
@@ -87,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.eventList);
             this.Controls.Add(this.month);
