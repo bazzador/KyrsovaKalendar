@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar));
             this.dayPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.nextButton = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.EventShowButton = new System.Windows.Forms.Button();
             this.FindEventTextBox = new System.Windows.Forms.TextBox();
             this.FindEventButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // dayPanel
@@ -172,6 +174,7 @@
             this.EventShowButton.Name = "EventShowButton";
             this.EventShowButton.Size = new System.Drawing.Size(60, 60);
             this.EventShowButton.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.EventShowButton, "Події, що відбудуться в наступні 10 днів");
             this.EventShowButton.UseVisualStyleBackColor = true;
             this.EventShowButton.Click += new System.EventHandler(this.buttonEventShow_Click);
             // 
@@ -198,6 +201,7 @@
             this.FindEventButton.TabIndex = 17;
             this.FindEventButton.UseVisualStyleBackColor = false;
             this.FindEventButton.Click += new System.EventHandler(this.FindEventButton_Click);
+            this.toolTip1.SetToolTip(this.FindEventButton, "Знайти подію за назвою");
             // 
             // Calendar
             // 
@@ -245,6 +249,7 @@
         private System.Windows.Forms.Button EventShowButton;
         private System.Windows.Forms.TextBox FindEventTextBox;
         private System.Windows.Forms.Button FindEventButton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

@@ -1,0 +1,11 @@
+Type: TematicEvenings
+Name: 66
+Start Date: 17.05.2024 20:03:22
+End Date: 17.05.2024 20:03:22
+Location: 
+Info: 
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 55
+Limit: 
+Site Link: 

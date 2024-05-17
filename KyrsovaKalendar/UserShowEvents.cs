@@ -20,8 +20,15 @@ namespace KyrsovaKalendar
             Day(Convert.ToString(date.Day));
             Month(Convert.ToString(date.Month));
             this.date = date;
-             if (eventNames != null)
-            ListEvent(eventNames);
+            if (eventNames != null)
+            {
+               ListEvent(eventNames);
+                if (eventNames.Length > 11)
+                {
+                    eventList.ScrollAlwaysVisible = true;
+                }
+            }
+           
         }
         public void DayOfWeek(string dayOfWeek)
         {

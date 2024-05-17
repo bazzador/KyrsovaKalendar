@@ -1,0 +1,22 @@
+Type: TematicEvenings
+Name: 32
+Start Date: 17.05.2024 22:33:42
+End Date: 17.05.2024 22:33:42
+Location: 
+Info: 
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 3
+Limit: 
+Site Link: 
+Type: Meeting
+Name: 32
+Start Date: 17.05.2024 22:37:17
+End Date: 17.05.2024 22:37:17
+Location: 
+Info: 
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 3
+Limit: 
+Site Link: 

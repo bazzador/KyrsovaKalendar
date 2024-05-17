@@ -1,0 +1,11 @@
+Type: TematicEvenings
+Name: 5
+Start Date: 17.05.2024 22:33:51
+End Date: 17.05.2024 22:33:51
+Location: 
+Info: 
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 5
+Limit: 
+Site Link: 
