@@ -21,11 +21,11 @@ namespace KyrsovaKalendar
         public int month, year;
         DateTime now = DateTime.Now;
         public string directoriesPath = @"C:\Users\Ivanchik\source\repos\KyrsovaKalendar\events";
-        public bool isAdmin;
-        public Calendar(bool isAdmin)
+        static public bool isAdmin;
+        public Calendar(bool _isAdmin)
         {
             InitializeComponent();
-            this.isAdmin = isAdmin;
+            isAdmin = _isAdmin;
         }
 
         private void Calendar_Load(object sender, EventArgs e)

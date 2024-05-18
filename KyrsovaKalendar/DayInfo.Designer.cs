@@ -37,7 +37,7 @@
             this.eventTimeStart = new System.Windows.Forms.Label();
             this.eventTimeLength = new System.Windows.Forms.Label();
             this.eventCost = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.changeEventButton = new System.Windows.Forms.Button();
             this.tools_55 = new System.Windows.Forms.Label();
             this.goal_55 = new System.Windows.Forms.Label();
             this.author_22 = new System.Windows.Forms.Label();
@@ -151,19 +151,19 @@
             this.eventCost.Text = "-";
             this.eventCost.Visible = false;
             // 
-            // button1
+            // changeEventButton
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
-            this.button1.ForeColor = System.Drawing.Color.Green;
-            this.button1.Location = new System.Drawing.Point(1007, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 39;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.ChangeEvent_Click);
+            this.changeEventButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("changeEventButton.BackgroundImage")));
+            this.changeEventButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.changeEventButton.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
+            this.changeEventButton.ForeColor = System.Drawing.Color.Green;
+            this.changeEventButton.Location = new System.Drawing.Point(1007, 65);
+            this.changeEventButton.Name = "changeEventButton";
+            this.changeEventButton.Size = new System.Drawing.Size(50, 50);
+            this.changeEventButton.TabIndex = 39;
+            this.changeEventButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.changeEventButton.UseVisualStyleBackColor = true;
+            this.changeEventButton.Click += new System.EventHandler(this.ChangeEvent_Click);
             // 
             // tools_55
             // 
@@ -407,7 +407,7 @@
             this.Controls.Add(this.start_5);
             this.Controls.Add(this.date_2);
             this.Controls.Add(this.name_1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.changeEventButton);
             this.Controls.Add(this.eventCost);
             this.Controls.Add(this.eventTimeLength);
             this.Controls.Add(this.eventTimeStart);
@@ -434,7 +434,7 @@
         private System.Windows.Forms.Label eventTimeStart;
         private System.Windows.Forms.Label eventTimeLength;
         private System.Windows.Forms.Label eventCost;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button changeEventButton;
         private System.Windows.Forms.Label tools_55;
         private System.Windows.Forms.Label goal_55;
         private System.Windows.Forms.Label author_22;

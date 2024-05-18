@@ -27,6 +27,11 @@ namespace KyrsovaKalendar
             this.userYear = userYear;
             events = new List<Event>();
             this.indexOfEvent = indexOfEvent;
+            if (!user.IsAdmin)
+            {
+                createEventButton.Enabled = false;
+                changeEventButton.Enabled = false;
+            }
         }
 
         private void createEventButton_Click(object sender, EventArgs e)

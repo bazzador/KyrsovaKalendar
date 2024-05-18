@@ -41,7 +41,7 @@ namespace KyrsovaKalendar
             public string type { get; set; }    
             public Event copyEvent { get; protected set; }
             public string name { get; set; }
-            public DateTime startDate { get; set; }
+            public DateTime startDate { get; set; } 
             public DateTime endDate { get; set; }
             public string location { get; set; }
             public string info { get; set; }
