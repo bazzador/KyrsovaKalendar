@@ -20,13 +20,15 @@ namespace KyrsovaKalendar
     {
         public int month, year;
         DateTime now = DateTime.Now;
-        public string directoriesPath = "C:\\Users\\Ivanchik\\source\\repos\\KyrsovaKalendar\\events";
-        public Calendar()
+        public string directoriesPath = @"C:\Users\Ivanchik\source\repos\KyrsovaKalendar\events";
+        public bool isAdmin;
+        public Calendar(bool isAdmin)
         {
             InitializeComponent();
+            this.isAdmin = isAdmin;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Calendar_Load(object sender, EventArgs e)
         {
             month = now.Month;
             year = now.Year;
