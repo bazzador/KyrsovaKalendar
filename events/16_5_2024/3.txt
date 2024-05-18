@@ -1,0 +1,11 @@
+Type: Meeting
+Name: 3
+Start Date: 18.05.2024 12:53:30
+End Date: 18.05.2024 12:53:30
+Location: 3
+Info: 3
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 3
+Limit: 3
+Site Link: 3

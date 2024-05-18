@@ -1,0 +1,14 @@
+Type: Entertainment
+Name: 5
+Author: 5
+Start Date: 18.05.2024 12:54:02
+End Date: 18.05.2024 12:54:02
+Location: 5
+Goal: 5
+Tools: 5
+Info: 5
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 5
+Limit: 5
+Site Link: 5

@@ -1,0 +1,12 @@
+Type: Questions
+Name: 22222
+Author: 22
+Start Date: 18.05.2024 12:58:05
+End Date: 18.05.2024 12:58:05
+Location: 2
+Info: 22
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 2
+Limit: 
+Site Link: 2

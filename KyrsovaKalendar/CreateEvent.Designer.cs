@@ -62,10 +62,10 @@
             // name_1
             // 
             this.name_1.AutoSize = true;
-            this.name_1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.name_1.Location = new System.Drawing.Point(388, 45);
+            this.name_1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name_1.Location = new System.Drawing.Point(352, 43);
             this.name_1.Name = "name_1";
-            this.name_1.Size = new System.Drawing.Size(198, 16);
+            this.name_1.Size = new System.Drawing.Size(234, 19);
             this.name_1.TabIndex = 0;
             this.name_1.Text = "Назва культурно-масового заходу:";
             this.name_1.Visible = false;
@@ -73,10 +73,10 @@
             // date_2
             // 
             this.date_2.AutoSize = true;
-            this.date_2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.date_2.Location = new System.Drawing.Point(482, 105);
+            this.date_2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.date_2.Location = new System.Drawing.Point(464, 105);
             this.date_2.Name = "date_2";
-            this.date_2.Size = new System.Drawing.Size(104, 16);
+            this.date_2.Size = new System.Drawing.Size(123, 19);
             this.date_2.TabIndex = 1;
             this.date_2.Text = "Дата проведення:";
             this.date_2.Visible = false;
@@ -84,10 +84,10 @@
             // start_5
             // 
             this.start_5.AutoSize = true;
-            this.start_5.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.start_5.Location = new System.Drawing.Point(479, 440);
+            this.start_5.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.start_5.Location = new System.Drawing.Point(462, 440);
             this.start_5.Name = "start_5";
-            this.start_5.Size = new System.Drawing.Size(107, 16);
+            this.start_5.Size = new System.Drawing.Size(124, 19);
             this.start_5.TabIndex = 2;
             this.start_5.Text = "Час початку події:";
             this.start_5.Visible = false;
@@ -95,10 +95,10 @@
             // time_6
             // 
             this.time_6.AutoSize = true;
-            this.time_6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.time_6.Location = new System.Drawing.Point(423, 470);
+            this.time_6.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.time_6.Location = new System.Drawing.Point(394, 470);
             this.time_6.Name = "time_6";
-            this.time_6.Size = new System.Drawing.Size(163, 16);
+            this.time_6.Size = new System.Drawing.Size(192, 19);
             this.time_6.TabIndex = 4;
             this.time_6.Text = "Орієнтовна тривалість події:";
             this.time_6.Visible = false;
@@ -106,10 +106,10 @@
             // cost_7
             // 
             this.cost_7.AutoSize = true;
-            this.cost_7.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.cost_7.Location = new System.Drawing.Point(492, 500);
+            this.cost_7.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.cost_7.Location = new System.Drawing.Point(475, 500);
             this.cost_7.Name = "cost_7";
-            this.cost_7.Size = new System.Drawing.Size(94, 16);
+            this.cost_7.Size = new System.Drawing.Size(111, 19);
             this.cost_7.TabIndex = 5;
             this.cost_7.Text = "Вартість квитка:";
             this.cost_7.Visible = false;
@@ -117,10 +117,10 @@
             // limit_8
             // 
             this.limit_8.AutoSize = true;
-            this.limit_8.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.limit_8.Location = new System.Drawing.Point(511, 530);
+            this.limit_8.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.limit_8.Location = new System.Drawing.Point(497, 530);
             this.limit_8.Name = "limit_8";
-            this.limit_8.Size = new System.Drawing.Size(75, 16);
+            this.limit_8.Size = new System.Drawing.Size(89, 19);
             this.limit_8.TabIndex = 6;
             this.limit_8.Text = "Обмеження:";
             this.limit_8.Visible = false;
@@ -151,18 +151,20 @@
             // 
             this.eventName.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventName.Location = new System.Drawing.Point(592, 45);
             this.eventName.Name = "eventName";
-            this.eventName.Size = new System.Drawing.Size(450, 20);
+            this.eventName.Size = new System.Drawing.Size(450, 21);
             this.eventName.TabIndex = 9;
             this.eventName.Visible = false;
             // 
             // eventDate1
             // 
             this.eventDate1.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventDate1.Location = new System.Drawing.Point(593, 105);
             this.eventDate1.Name = "eventDate1";
-            this.eventDate1.Size = new System.Drawing.Size(135, 20);
+            this.eventDate1.Size = new System.Drawing.Size(135, 22);
             this.eventDate1.TabIndex = 10;
             this.eventDate1.Visible = false;
             // 
@@ -170,9 +172,10 @@
             // 
             this.eventDate2.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.eventDate2.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventDate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventDate2.Location = new System.Drawing.Point(742, 105);
             this.eventDate2.Name = "eventDate2";
-            this.eventDate2.Size = new System.Drawing.Size(135, 20);
+            this.eventDate2.Size = new System.Drawing.Size(135, 22);
             this.eventDate2.TabIndex = 11;
             this.eventDate2.Visible = false;
             // 
@@ -180,7 +183,7 @@
             // 
             this.eventInfo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eventInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventInfo.Location = new System.Drawing.Point(592, 300);
             this.eventInfo.Name = "eventInfo";
             this.eventInfo.Size = new System.Drawing.Size(430, 120);
@@ -191,9 +194,10 @@
             // eventCost
             // 
             this.eventCost.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventCost.Location = new System.Drawing.Point(592, 500);
             this.eventCost.Name = "eventCost";
-            this.eventCost.Size = new System.Drawing.Size(122, 20);
+            this.eventCost.Size = new System.Drawing.Size(122, 21);
             this.eventCost.TabIndex = 14;
             this.eventCost.Visible = false;
             // 
@@ -201,6 +205,7 @@
             // 
             this.eventLimit.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eventLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.eventLimit.Location = new System.Drawing.Point(592, 530);
             this.eventLimit.Name = "eventLimit";
             this.eventLimit.Size = new System.Drawing.Size(373, 80);
@@ -212,11 +217,12 @@
             // 
             this.eventTimeStart.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.eventTimeStart.CustomFormat = "HH:mm";
+            this.eventTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.eventTimeStart.Location = new System.Drawing.Point(592, 440);
             this.eventTimeStart.Name = "eventTimeStart";
             this.eventTimeStart.ShowUpDown = true;
-            this.eventTimeStart.Size = new System.Drawing.Size(122, 20);
+            this.eventTimeStart.Size = new System.Drawing.Size(122, 22);
             this.eventTimeStart.TabIndex = 16;
             this.eventTimeStart.Value = new System.DateTime(2024, 5, 5, 15, 56, 37, 0);
             this.eventTimeStart.Visible = false;
@@ -225,11 +231,12 @@
             // 
             this.eventTimeLength.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.eventTimeLength.CustomFormat = "HH:mm";
+            this.eventTimeLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventTimeLength.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.eventTimeLength.Location = new System.Drawing.Point(592, 470);
             this.eventTimeLength.Name = "eventTimeLength";
             this.eventTimeLength.ShowUpDown = true;
-            this.eventTimeLength.Size = new System.Drawing.Size(122, 20);
+            this.eventTimeLength.Size = new System.Drawing.Size(122, 22);
             this.eventTimeLength.TabIndex = 17;
             this.eventTimeLength.Value = new System.DateTime(2024, 5, 5, 0, 0, 0, 0);
             this.eventTimeLength.Visible = false;
@@ -238,19 +245,20 @@
             // 
             this.eventLocation.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eventLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventLocation.Location = new System.Drawing.Point(592, 135);
             this.eventLocation.Name = "eventLocation";
-            this.eventLocation.Size = new System.Drawing.Size(450, 20);
+            this.eventLocation.Size = new System.Drawing.Size(450, 21);
             this.eventLocation.TabIndex = 20;
             this.eventLocation.Visible = false;
             // 
             // location_3
             // 
             this.location_3.AutoSize = true;
-            this.location_3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.location_3.Location = new System.Drawing.Point(474, 135);
+            this.location_3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.location_3.Location = new System.Drawing.Point(454, 135);
             this.location_3.Name = "location_3";
-            this.location_3.Size = new System.Drawing.Size(112, 16);
+            this.location_3.Size = new System.Drawing.Size(132, 19);
             this.location_3.TabIndex = 19;
             this.location_3.Text = "Місце проведення:";
             this.location_3.Visible = false;
@@ -259,6 +267,7 @@
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "1. Тематичні вечори",
@@ -268,16 +277,17 @@
             "5. Конкурсно-розважальні програми"});
             this.comboBox1.Location = new System.Drawing.Point(24, 213);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 21;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // info_4
             // 
             this.info_4.AutoSize = true;
-            this.info_4.Location = new System.Drawing.Point(478, 300);
+            this.info_4.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.info_4.Location = new System.Drawing.Point(449, 300);
             this.info_4.Name = "info_4";
-            this.info_4.Size = new System.Drawing.Size(108, 13);
+            this.info_4.Size = new System.Drawing.Size(137, 19);
             this.info_4.TabIndex = 24;
             this.info_4.Text = "Програма та ведучі:";
             this.info_4.Visible = false;
@@ -286,19 +296,20 @@
             // 
             this.eventAuthor.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eventAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventAuthor.Location = new System.Drawing.Point(593, 76);
             this.eventAuthor.Name = "eventAuthor";
-            this.eventAuthor.Size = new System.Drawing.Size(450, 20);
+            this.eventAuthor.Size = new System.Drawing.Size(450, 21);
             this.eventAuthor.TabIndex = 26;
             this.eventAuthor.Visible = false;
             // 
             // author_22
             // 
             this.author_22.AutoSize = true;
-            this.author_22.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.author_22.Location = new System.Drawing.Point(544, 75);
+            this.author_22.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.author_22.Location = new System.Drawing.Point(535, 76);
             this.author_22.Name = "author_22";
-            this.author_22.Size = new System.Drawing.Size(43, 16);
+            this.author_22.Size = new System.Drawing.Size(51, 19);
             this.author_22.TabIndex = 25;
             this.author_22.Text = "Автор:";
             this.author_22.Visible = false;
@@ -306,9 +317,10 @@
             // goal_55
             // 
             this.goal_55.AutoSize = true;
-            this.goal_55.Location = new System.Drawing.Point(550, 170);
+            this.goal_55.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.goal_55.Location = new System.Drawing.Point(541, 170);
             this.goal_55.Name = "goal_55";
-            this.goal_55.Size = new System.Drawing.Size(36, 13);
+            this.goal_55.Size = new System.Drawing.Size(45, 19);
             this.goal_55.TabIndex = 27;
             this.goal_55.Text = "Мета:";
             this.goal_55.Visible = false;
@@ -317,7 +329,7 @@
             // 
             this.eventGoal.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventGoal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eventGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventGoal.Location = new System.Drawing.Point(593, 170);
             this.eventGoal.Name = "eventGoal";
             this.eventGoal.Size = new System.Drawing.Size(430, 50);
@@ -329,7 +341,7 @@
             // 
             this.eventTools.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventTools.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.eventTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventTools.Location = new System.Drawing.Point(593, 235);
             this.eventTools.Name = "eventTools";
             this.eventTools.Size = new System.Drawing.Size(430, 50);
@@ -340,9 +352,10 @@
             // tools_55
             // 
             this.tools_55.AutoSize = true;
-            this.tools_55.Location = new System.Drawing.Point(514, 235);
+            this.tools_55.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.tools_55.Location = new System.Drawing.Point(495, 235);
             this.tools_55.Name = "tools_55";
-            this.tools_55.Size = new System.Drawing.Size(72, 13);
+            this.tools_55.Size = new System.Drawing.Size(92, 19);
             this.tools_55.TabIndex = 29;
             this.tools_55.Text = "Обладнання:";
             this.tools_55.Visible = false;
@@ -351,19 +364,20 @@
             // 
             this.eventLink.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eventLink.Location = new System.Drawing.Point(43, 590);
+            this.eventLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.eventLink.Location = new System.Drawing.Point(47, 590);
             this.eventLink.Name = "eventLink";
-            this.eventLink.Size = new System.Drawing.Size(450, 20);
+            this.eventLink.Size = new System.Drawing.Size(450, 22);
             this.eventLink.TabIndex = 32;
             this.eventLink.Visible = false;
             // 
             // link_9
             // 
             this.link_9.AutoSize = true;
-            this.link_9.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.link_9.Location = new System.Drawing.Point(3, 590);
+            this.link_9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.link_9.Location = new System.Drawing.Point(-1, 590);
             this.link_9.Name = "link_9";
-            this.link_9.Size = new System.Drawing.Size(35, 16);
+            this.link_9.Size = new System.Drawing.Size(42, 19);
             this.link_9.TabIndex = 31;
             this.link_9.Text = "Сайт:";
             this.link_9.Visible = false;

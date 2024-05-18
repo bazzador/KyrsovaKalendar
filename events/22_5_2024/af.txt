@@ -1,0 +1,11 @@
+Type: TematicEvenings
+Name: af
+Start Date: 18.05.2024 12:32:20
+End Date: 18.05.2024 12:32:20
+Location: af
+Info: saf
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 3
+Limit: 3
+Site Link: 
