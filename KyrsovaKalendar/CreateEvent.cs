@@ -322,41 +322,43 @@ namespace KyrsovaKalendar
         }
         public void saveEvent_Click(object sender, EventArgs e)
         {
-
-            switch (numberOfSelectedSubject)
+            try
             {
-                case 1:
-                    TematicEvenings newEvent1 = new TematicEvenings("TematicEvenings", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, 
-                        eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
-                    newEvent1.WriteDataToFile(dayInfo.folderPath);
+                switch (numberOfSelectedSubject)
+                {
+                    case 1:
+                        TematicEvenings newEvent1 = new TematicEvenings("TematicEvenings", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
+                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                        newEvent1.WriteDataToFile(dayInfo.folderPath);
 
-                    dayInfo.events.Add(newEvent1);
-                    break;
-                case 2:
-                    Questions newEvent2 = new Questions("Questions", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
-                        eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
-                    newEvent2.WriteDataToFile(dayInfo.folderPath);
-                    dayInfo.events.Add(newEvent2);
-                    break;
-                case 3:
-                    Meeting newEvent3 = new Meeting("Meeting", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, eventInfo.Text,
-                        eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
-                    newEvent3.WriteDataToFile(dayInfo.folderPath);
-                    dayInfo.events.Add(newEvent3);
-                    break;
-                case 4:
-                    Standup newEvent4 = new Standup("Standup", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
-                        eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
-                    newEvent4.WriteDataToFile(dayInfo.folderPath);
-                    dayInfo.events.Add(newEvent4);
-                    break;
-                case 5:
-                    Entertainment newEvent5 = new Entertainment("Entertainment", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
-                         eventGoal.Text, eventTools.Text, eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
-                    newEvent5.WriteDataToFile(dayInfo.folderPath);
-                    dayInfo.events.Add(newEvent5);
-                    break;
-            }
+                        dayInfo.events.Add(newEvent1);
+                        break;
+                    case 2:
+                        Questions newEvent2 = new Questions("Questions", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
+                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                        newEvent2.WriteDataToFile(dayInfo.folderPath);
+                        dayInfo.events.Add(newEvent2);
+                        break;
+                    case 3:
+                        Meeting newEvent3 = new Meeting("Meeting", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, eventInfo.Text,
+                            eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                        newEvent3.WriteDataToFile(dayInfo.folderPath);
+                        dayInfo.events.Add(newEvent3);
+                        break;
+                    case 4:
+                        Standup newEvent4 = new Standup("Standup", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
+                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                        newEvent4.WriteDataToFile(dayInfo.folderPath);
+                        dayInfo.events.Add(newEvent4);
+                        break;
+                    case 5:
+                        Entertainment newEvent5 = new Entertainment("Entertainment", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
+                             eventGoal.Text, eventTools.Text, eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                        newEvent5.WriteDataToFile(dayInfo.folderPath);
+                        dayInfo.events.Add(newEvent5);
+                        break;
+                }
+            }catch(Exception ex) { MessageBox.Show("Перевірте правильність введення значень! Обов'язково повинна бути назва події та її ціна"); }
         }
 
         private void exitCreateEvent_Click(object sender, EventArgs e)
