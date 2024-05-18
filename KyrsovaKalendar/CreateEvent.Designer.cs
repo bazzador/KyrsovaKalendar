@@ -387,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1064, 985);
+            this.ClientSize = new System.Drawing.Size(1064, 649);
             this.Controls.Add(this.eventLink);
             this.Controls.Add(this.link_9);
             this.Controls.Add(this.eventTools);

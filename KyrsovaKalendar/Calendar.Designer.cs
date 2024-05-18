@@ -199,16 +199,16 @@
             this.FindEventButton.Name = "FindEventButton";
             this.FindEventButton.Size = new System.Drawing.Size(50, 50);
             this.FindEventButton.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.FindEventButton, "Знайти подію за назвою");
             this.FindEventButton.UseVisualStyleBackColor = false;
             this.FindEventButton.Click += new System.EventHandler(this.FindEventButton_Click);
-            this.toolTip1.SetToolTip(this.FindEventButton, "Знайти подію за назвою");
             // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1080, 1024);
+            this.ClientSize = new System.Drawing.Size(1080, 831);
             this.Controls.Add(this.FindEventButton);
             this.Controls.Add(this.FindEventTextBox);
             this.Controls.Add(this.EventShowButton);
