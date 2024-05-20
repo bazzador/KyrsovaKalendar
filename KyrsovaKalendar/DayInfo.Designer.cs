@@ -81,7 +81,7 @@
             this.EventComboBox.FormattingEnabled = true;
             this.EventComboBox.Location = new System.Drawing.Point(12, 12);
             this.EventComboBox.Name = "EventComboBox";
-            this.EventComboBox.Size = new System.Drawing.Size(121, 24);
+            this.EventComboBox.Size = new System.Drawing.Size(133, 24);
             this.EventComboBox.TabIndex = 14;
             this.EventComboBox.SelectedIndexChanged += new System.EventHandler(this.EventComboBox_SelectedIndexChanged);
             // 

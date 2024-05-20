@@ -140,7 +140,7 @@
             // 
             this.exitCreateEvent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitCreateEvent.BackgroundImage")));
             this.exitCreateEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitCreateEvent.Location = new System.Drawing.Point(112, 258);
+            this.exitCreateEvent.Location = new System.Drawing.Point(170, 258);
             this.exitCreateEvent.Name = "exitCreateEvent";
             this.exitCreateEvent.Size = new System.Drawing.Size(60, 60);
             this.exitCreateEvent.TabIndex = 8;
@@ -277,7 +277,7 @@
             "5. Конкурсно-розважальні програми"});
             this.comboBox1.Location = new System.Drawing.Point(24, 213);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(206, 24);
             this.comboBox1.TabIndex = 21;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
