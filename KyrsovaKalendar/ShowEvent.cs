@@ -50,5 +50,14 @@ namespace KyrsovaKalendar
                 now = now.AddDays(1);
             }
         }
+
+        private void exitProgram_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Чи дійсно ви хочете вийти з програми?", "Вихід з програми", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

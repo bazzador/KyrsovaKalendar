@@ -1,0 +1,11 @@
+Type: Standup
+Name: 1
+Start Date: 21.05.2024 17:43:15
+End Date: 21.05.2024 17:43:15
+Location: 
+Info: 
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 0
+Limit: 
+Site Link: 

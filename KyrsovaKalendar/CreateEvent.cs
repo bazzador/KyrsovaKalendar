@@ -73,6 +73,27 @@ namespace KyrsovaKalendar
             }
             abstract public Event ReadDataFromFile(string[] fileName);
             abstract public void WriteDataToFile(string directory);
+            protected string ExtractData(string[] fileLines, string key)
+            {
+                StringBuilder sb = new StringBuilder();
+                bool recording = false;
+
+                foreach (string line in fileLines)
+                {
+                    if (line.StartsWith(key))
+                    {
+                        if (recording) break;
+                        sb.Append(line.Substring(key.Length));
+                        recording = true;
+                    }
+                    else if (recording)
+                    {
+                        if (line.Contains(": ") && !line.StartsWith(" ")) break; // Stop if a new key is detected
+                        sb.Append(Environment.NewLine).Append(line);
+                    }
+                }
+                return sb.ToString().Trim();
+            }
         }
         public class TematicEvenings : Event
         {
@@ -84,25 +105,30 @@ namespace KyrsovaKalendar
                 this.type = "TematicEvenings";
             }
             public TematicEvenings() { }
-            public override Event ReadDataFromFile(string[] fileName)
+            public override Event ReadDataFromFile(string[] fileLines)
             {
-                string type = fileName[0].Substring("Type: ".Length);
-                string name = fileName[1].Substring("Name: ".Length);
-                DateTime startDate = DateTime.Parse(fileName[2].Substring("Start Date: ".Length));
-                DateTime endDate = DateTime.Parse(fileName[3].Substring("End Date: ".Length));
-                string location = fileName[4].Substring("Location: ".Length);
-                string info = fileName[5].Substring("Info: ".Length);
-                DateTime timeStart = DateTime.Parse(fileName[6].Substring("Time Start: ".Length));
-                DateTime timeLength = DateTime.Parse(fileName[7].Substring("Time Length: ".Length));
-                int cost = int.Parse(fileName[8].Substring("Cost: ".Length));
-                string limit = fileName[9].Substring("Limit: ".Length);
-                string siteLink = fileName[10].Substring("Site Link: ".Length);
+                string type = ExtractData(fileLines, "Type: ");
+                string name = ExtractData(fileLines, "Name: ");
+                DateTime startDate = DateTime.Parse(ExtractData(fileLines, "Start Date: "));
+                DateTime endDate = DateTime.Parse(ExtractData(fileLines, "End Date: "));
+                string location = ExtractData(fileLines, "Location: ");
+                string info = ExtractData(fileLines, "Info: ");
+                DateTime timeStart = DateTime.Parse(ExtractData(fileLines, "Time Start: "));
+                DateTime timeLength = DateTime.Parse(ExtractData(fileLines, "Time Length: "));
+                int cost = int.Parse(ExtractData(fileLines, "Cost: "));
+                string limit = ExtractData(fileLines, "Limit: ");
+                string siteLink = ExtractData(fileLines, "Site Link: ");
+
                 return new TematicEvenings(type, name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink);
             }
             public override void WriteDataToFile(string directory)
             {
                 string fileName = $"{name}.txt";
                 string filePath = Path.Combine(directory, fileName);
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
                 using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
                     writer.WriteLine($"Type: {type}");
@@ -131,27 +157,31 @@ namespace KyrsovaKalendar
                 this.author= author;
             }
             public Questions() { }
-            public override Event ReadDataFromFile(string[] fileName)
+            public override Event ReadDataFromFile(string[] fileLines)
             {
-                string type = fileName[0].Substring("Type: ".Length);
-                string name = fileName[1].Substring("Name: ".Length);
-                string author = fileName[2].Substring("Author:".Length);
-                DateTime startDate = DateTime.Parse(fileName[3].Substring("Start Date: ".Length));
-                DateTime endDate = DateTime.Parse(fileName[4].Substring("End Date: ".Length));
-                string location = fileName[5].Substring("Location: ".Length);
-                string info = fileName[6].Substring("Info: ".Length);
-                DateTime timeStart = DateTime.Parse(fileName[7].Substring("Time Start: ".Length));
-                DateTime timeLength = DateTime.Parse(fileName[8].Substring("Time Length: ".Length));
-                int cost = int.Parse(fileName[9].Substring("Cost: ".Length));
-                string limit = fileName[10].Substring("Limit: ".Length);
-                string siteLink = fileName[11].Substring("Site Link: ".Length);
-                return new Questions(type, name, author, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink);
+                string type = ExtractData(fileLines, "Type: ");
+                string name = ExtractData(fileLines, "Name: ");
+                string author = ExtractData(fileLines, "Author: ");
+                DateTime startDate = DateTime.Parse(ExtractData(fileLines, "Start Date: "));
+                DateTime endDate = DateTime.Parse(ExtractData(fileLines, "End Date: "));
+                string location = ExtractData(fileLines, "Location: ");
+                string info = ExtractData(fileLines, "Info: ");
+                DateTime timeStart = DateTime.Parse(ExtractData(fileLines, "Time Start: "));
+                DateTime timeLength = DateTime.Parse(ExtractData(fileLines, "Time Length: "));
+                int cost = int.Parse(ExtractData(fileLines, "Cost: "));
+                string limit = ExtractData(fileLines, "Limit: ");
+                string siteLink = ExtractData(fileLines, "Site Link: ");
+                return new Questions(type, name, author, startDate, endDate, location, info, timeStart, timeLength, cost, siteLink, limit);
             }
 
             public override void WriteDataToFile(string directory)
             {
                 string fileName = $"{name}.txt";
                 string filePath = Path.Combine(directory, fileName);
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
                 using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
                     writer.WriteLine($"Type: {type}");
@@ -179,19 +209,20 @@ namespace KyrsovaKalendar
                 this.type = "Meeting";
             }
             public Meeting() { }
-            public override Event ReadDataFromFile(string[] fileName)
+            public override Event ReadDataFromFile(string[] fileLines)
             {
-                string type = fileName[0].Substring("Type: ".Length);
-                string name = fileName[1].Substring("Name: ".Length);
-                DateTime startDate = DateTime.Parse(fileName[2].Substring("Start Date: ".Length));
-                DateTime endDate = DateTime.Parse(fileName[3].Substring("End Date: ".Length));
-                string location = fileName[4].Substring("Location: ".Length);
-                string info = fileName[5].Substring("Info: ".Length);
-                DateTime timeStart = DateTime.Parse(fileName[6].Substring("Time Start: ".Length));
-                DateTime timeLength = DateTime.Parse(fileName[7].Substring("Time Length: ".Length));
-                int cost = int.Parse(fileName[8].Substring("Cost: ".Length));
-                string limit = fileName[9].Substring("Limit: ".Length);
-                string siteLink = fileName[10].Substring("Site Link: ".Length);
+                string type = ExtractData(fileLines, "Type: ");
+                string name = ExtractData(fileLines, "Name: ");
+                DateTime startDate = DateTime.Parse(ExtractData(fileLines, "Start Date: "));
+                DateTime endDate = DateTime.Parse(ExtractData(fileLines, "End Date: "));
+                string location = ExtractData(fileLines, "Location: ");
+                string info = ExtractData(fileLines, "Info: ");
+                DateTime timeStart = DateTime.Parse(ExtractData(fileLines, "Time Start: "));
+                DateTime timeLength = DateTime.Parse(ExtractData(fileLines, "Time Length: "));
+                int cost = int.Parse(ExtractData(fileLines, "Cost: "));
+                string limit = ExtractData(fileLines, "Limit: ");
+                string siteLink = ExtractData(fileLines, "Site Link: ");
+
                 return new Meeting(type, name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink);
             }
 
@@ -199,6 +230,10 @@ namespace KyrsovaKalendar
             {
                 string fileName = $"{name}.txt";
                 string filePath = Path.Combine(directory, fileName);
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
                 using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
                     writer.WriteLine($"Type: {type}");
@@ -225,26 +260,30 @@ namespace KyrsovaKalendar
                 this.type = "Standup";
             }
             public Standup() { }
-            public override Event ReadDataFromFile(string[] fileName)
+            public override Event ReadDataFromFile(string[] fileLines)
             {
-                string type = fileName[0].Substring("Type: ".Length);
-                string name = fileName[1].Substring("Name: ".Length);
-                DateTime startDate = DateTime.Parse(fileName[2].Substring("Start Date: ".Length));
-                DateTime endDate = DateTime.Parse(fileName[3].Substring("End Date: ".Length));
-                string location = fileName[4].Substring("Location: ".Length);
-                string info = fileName[5].Substring("Info: ".Length);
-                DateTime timeStart = DateTime.Parse(fileName[6].Substring("Time Start: ".Length));
-                DateTime timeLength = DateTime.Parse(fileName[7].Substring("Time Length: ".Length));
-                int cost = int.Parse(fileName[8].Substring("Cost: ".Length));
-                string limit = fileName[9].Substring("Limit: ".Length);
-                string siteLink = fileName[10].Substring("Site Link: ".Length);
+                string type = ExtractData(fileLines, "Type: ");
+                string name = ExtractData(fileLines, "Name: ");
+                DateTime startDate = DateTime.Parse(ExtractData(fileLines, "Start Date: "));
+                DateTime endDate = DateTime.Parse(ExtractData(fileLines, "End Date: "));
+                string location = ExtractData(fileLines, "Location: ");
+                string info = ExtractData(fileLines, "Info: ");
+                DateTime timeStart = DateTime.Parse(ExtractData(fileLines, "Time Start: "));
+                DateTime timeLength = DateTime.Parse(ExtractData(fileLines, "Time Length: "));
+                int cost = int.Parse(ExtractData(fileLines, "Cost: "));
+                string limit = ExtractData(fileLines, "Limit: ");
+                string siteLink = ExtractData(fileLines, "Site Link: ");
+
                 return new Standup(type, name, startDate, endDate, location, info, timeStart, timeLength, cost, limit, siteLink);
             }
-
             public override void WriteDataToFile(string directory)
             {
                 string fileName = $"{name}.txt";
                 string filePath = Path.Combine(directory, fileName);
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
                 using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
                     writer.WriteLine($"Type: {type}");
@@ -278,22 +317,23 @@ namespace KyrsovaKalendar
                 this.author = author;
             }
             public Entertainment() { }
-            public override Event ReadDataFromFile(string[] fileName)
+            public override Event ReadDataFromFile(string[] fileLines)
             {
-                string type = fileName[0].Substring("Type: ".Length);
-                string name = fileName[1].Substring("Name: ".Length);
-                string author = fileName[2].Substring("Author:".Length);
-                DateTime startDate = DateTime.Parse(fileName[3].Substring("Start Date: ".Length));
-                DateTime endDate = DateTime.Parse(fileName[4].Substring("End Date: ".Length));
-                string location = fileName[5].Substring("Location: ".Length);
-                string goal = fileName[6].Substring("Goal: ".Length);
-                string tools = fileName[7].Substring("Tools: ".Length);
-                string info = fileName[8].Substring("Info: ".Length);
-                DateTime timeStart = DateTime.Parse(fileName[9].Substring("Time Start: ".Length));
-                DateTime timeLength = DateTime.Parse(fileName[10].Substring("Time Length: ".Length));
-                int cost = int.Parse(fileName[11].Substring("Cost: ".Length));
-                string limit = fileName[12].Substring("Limit: ".Length);
-                string siteLink = fileName[13].Substring("Site Link: ".Length);
+                string type = ExtractData(fileLines, "Type: ");
+                string name = ExtractData(fileLines, "Name: ");
+                string author = ExtractData(fileLines, "Author: ");
+                DateTime startDate = DateTime.Parse(ExtractData(fileLines, "Start Date: "));
+                DateTime endDate = DateTime.Parse(ExtractData(fileLines, "End Date: "));
+                string location = ExtractData(fileLines, "Location: ");
+                string goal = ExtractData(fileLines, "Goal: ");
+                string tools = ExtractData(fileLines, "Tools: ");
+                string info = ExtractData(fileLines, "Info: ");
+                DateTime timeStart = DateTime.Parse(ExtractData(fileLines, "Time Start: "));
+                DateTime timeLength = DateTime.Parse(ExtractData(fileLines, "Time Length: "));
+                int cost = int.Parse(ExtractData(fileLines, "Cost: "));
+                string limit = ExtractData(fileLines, "Limit: ");
+                string siteLink = ExtractData(fileLines, "Site Link: ");
+
                 return new Entertainment(type, name, author, startDate, endDate, location, goal, tools, info, timeStart, timeLength, cost, limit, siteLink);
             }
 
@@ -301,6 +341,10 @@ namespace KyrsovaKalendar
             {
                 string fileName = $"{name}.txt";
                 string filePath = Path.Combine(directory, fileName);
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
                 using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
                     writer.WriteLine($"Type: {type}");
@@ -324,48 +368,46 @@ namespace KyrsovaKalendar
         {
             try
             {
-                switch (numberOfSelectedSubject)
+                int cost = 0; // Значення за замовчуванням
+                if (!string.IsNullOrWhiteSpace(eventCost.Text) && int.Parse(eventCost.Text) >= 0)
                 {
+                    cost = int.Parse(eventCost.Text);
+                }
+                switch (numberOfSelectedSubject)
+                {   
                     case 1:
                         TematicEvenings newEvent1 = new TematicEvenings("TematicEvenings", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
-                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, cost, eventLimit.Text, eventLink.Text);
                         newEvent1.WriteDataToFile(dayInfo.folderPath);
-
                         dayInfo.events.Add(newEvent1);
                         break;
                     case 2:
                         Questions newEvent2 = new Questions("Questions", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
-                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, cost, eventLimit.Text, eventLink.Text);
                         newEvent2.WriteDataToFile(dayInfo.folderPath);
                         dayInfo.events.Add(newEvent2);
                         break;
                     case 3:
                         Meeting newEvent3 = new Meeting("Meeting", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text, eventInfo.Text,
-                            eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                            eventTimeStart.Value, eventTimeLength.Value, cost, eventLimit.Text, eventLink.Text);
                         newEvent3.WriteDataToFile(dayInfo.folderPath);
                         dayInfo.events.Add(newEvent3);
                         break;
                     case 4:
                         Standup newEvent4 = new Standup("Standup", eventName.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
-                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                            eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, cost, eventLimit.Text, eventLink.Text);
                         newEvent4.WriteDataToFile(dayInfo.folderPath);
                         dayInfo.events.Add(newEvent4);
                         break;
                     case 5:
                         Entertainment newEvent5 = new Entertainment("Entertainment", eventName.Text, eventAuthor.Text, eventDate1.Value, eventDate2.Value, eventLocation.Text,
-                             eventGoal.Text, eventTools.Text, eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, int.Parse(eventCost.Text), eventLimit.Text, eventLink.Text);
+                             eventGoal.Text, eventTools.Text, eventInfo.Text, eventTimeStart.Value, eventTimeLength.Value, cost, eventLimit.Text, eventLink.Text);
                         newEvent5.WriteDataToFile(dayInfo.folderPath);
                         dayInfo.events.Add(newEvent5);
                         break;
-                }
+                    }
             }catch(Exception ex) { MessageBox.Show("Перевірте правильність введення значень! Обов'язково повинна бути назва події та її ціна"); }
         }
-
-        private void exitCreateEvent_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void CreateEvent_FormClosed(object sender, FormClosedEventArgs e)
         {
             dayInfo.UpdateEvents();
@@ -544,6 +586,15 @@ namespace KyrsovaKalendar
                     File.Delete(dayInfo.folderPath + '\\' + dayInfo.events[indexEventToChange].name + ".txt");
                     dayInfo.events.Remove(dayInfo.events[indexEventToChange]);
                 }
+            }
+        }
+
+        private void exitProgram_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Чи дійсно ви хочете вийти з програми?", "Вихід з програми", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

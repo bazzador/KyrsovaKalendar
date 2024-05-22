@@ -1,0 +1,13 @@
+Type: TematicEvenings
+Name: asd
+Start Date: 20.05.2024 22:58:29
+End Date: 20.05.2024 22:58:29
+Location: 
+Info:
+adasdsa
+Time Start: 05.05.2024 15:56:37
+Time Length: 05.05.2024 0:00:00
+Cost: 2
+Limit: 2
+Site Link:
+

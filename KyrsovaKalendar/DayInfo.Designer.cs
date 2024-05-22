@@ -57,6 +57,8 @@
             this.eventTools = new System.Windows.Forms.RichTextBox();
             this.eventLink = new System.Windows.Forms.TextBox();
             this.link_9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.exitProgram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createEventButton
@@ -65,7 +67,7 @@
             this.createEventButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.createEventButton.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
             this.createEventButton.ForeColor = System.Drawing.Color.Green;
-            this.createEventButton.Location = new System.Drawing.Point(1007, 12);
+            this.createEventButton.Location = new System.Drawing.Point(1002, 56);
             this.createEventButton.Name = "createEventButton";
             this.createEventButton.Size = new System.Drawing.Size(50, 50);
             this.createEventButton.TabIndex = 13;
@@ -79,7 +81,7 @@
             this.EventComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EventComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EventComboBox.FormattingEnabled = true;
-            this.EventComboBox.Location = new System.Drawing.Point(12, 12);
+            this.EventComboBox.Location = new System.Drawing.Point(12, 31);
             this.EventComboBox.Name = "EventComboBox";
             this.EventComboBox.Size = new System.Drawing.Size(133, 24);
             this.EventComboBox.TabIndex = 14;
@@ -157,7 +159,7 @@
             this.changeEventButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.changeEventButton.Font = new System.Drawing.Font("Microsoft YaHei", 22.5F);
             this.changeEventButton.ForeColor = System.Drawing.Color.Green;
-            this.changeEventButton.Location = new System.Drawing.Point(1007, 65);
+            this.changeEventButton.Location = new System.Drawing.Point(1002, 109);
             this.changeEventButton.Name = "changeEventButton";
             this.changeEventButton.Size = new System.Drawing.Size(50, 50);
             this.changeEventButton.TabIndex = 39;
@@ -365,7 +367,7 @@
             this.eventLink.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.eventLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eventLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.eventLink.Location = new System.Drawing.Point(247, 16);
+            this.eventLink.Location = new System.Drawing.Point(393, 31);
             this.eventLink.Name = "eventLink";
             this.eventLink.Size = new System.Drawing.Size(450, 21);
             this.eventLink.TabIndex = 58;
@@ -375,12 +377,33 @@
             // 
             this.link_9.AutoSize = true;
             this.link_9.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
-            this.link_9.Location = new System.Drawing.Point(188, 16);
+            this.link_9.Location = new System.Drawing.Point(342, 31);
             this.link_9.Name = "link_9";
             this.link_9.Size = new System.Drawing.Size(42, 19);
             this.link_9.TabIndex = 57;
             this.link_9.Text = "Сайт:";
             this.link_9.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label8.Location = new System.Drawing.Point(29, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 16);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "Створені події";
+            // 
+            // exitProgram
+            // 
+            this.exitProgram.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitProgram.BackgroundImage")));
+            this.exitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitProgram.Location = new System.Drawing.Point(1025, 0);
+            this.exitProgram.Name = "exitProgram";
+            this.exitProgram.Size = new System.Drawing.Size(40, 40);
+            this.exitProgram.TabIndex = 60;
+            this.exitProgram.UseVisualStyleBackColor = true;
+            this.exitProgram.Click += new System.EventHandler(this.exitProgram_Click);
             // 
             // DayInfo
             // 
@@ -388,6 +411,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1064, 710);
+            this.Controls.Add(this.exitProgram);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.eventLink);
             this.Controls.Add(this.link_9);
             this.Controls.Add(this.eventLimit);
@@ -454,5 +479,7 @@
         private System.Windows.Forms.RichTextBox eventTools;
         private System.Windows.Forms.TextBox eventLink;
         private System.Windows.Forms.Label link_9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button exitProgram;
     }
 }

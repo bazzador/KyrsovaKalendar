@@ -1,0 +1,15 @@
+Type: Entertainment
+Name: Конкурс
+Author: Мельник С.А.
+Start Date: 20.05.2024 22:02:57
+End Date: 20.05.2024 22:02:57
+Location: м.Черкаси, вул. Матросова 20, буд. 3
+Goal: заохочення молоді до спорту
+Tools: гантелі, скакалки, штанги
+Info: Мельник С.А.
+Калина Т.М.
+Time Start: 05.05.2024 14:00:37
+Time Length: 05.05.2024 1:00:00
+Cost: 25
+Limit: Участь приймають учні 5-9 класів
+Site Link: https://teach.gr-kal.gru-ua

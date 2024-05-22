@@ -197,7 +197,11 @@ namespace KyrsovaKalendar
                 foreach(string files in eventFiles)
                 {
                     string[] lines = File.ReadAllLines(files);
-                    string type = lines[0].Substring("Type: ".Length);
+                    string type = null;
+                    if (lines.Length > 0 && lines[0].StartsWith("Type: "))
+                    {
+                        type = lines[0].Substring("Type: ".Length);
+                    }
                     switch (type)
                     {
                         case "TematicEvenings":
@@ -225,6 +229,15 @@ namespace KyrsovaKalendar
                 UpdateEvents();
             }
            if(indexOfEvent!=-1) EventComboBox.SelectedIndex = indexOfEvent;
+        }
+
+        private void exitProgram_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Чи дійсно ви хочете вийти з програми?", "Вихід з програми", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

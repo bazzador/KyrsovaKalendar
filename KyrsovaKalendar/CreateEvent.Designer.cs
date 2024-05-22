@@ -36,7 +36,6 @@
             this.cost_7 = new System.Windows.Forms.Label();
             this.limit_8 = new System.Windows.Forms.Label();
             this.saveEvent = new System.Windows.Forms.Button();
-            this.exitCreateEvent = new System.Windows.Forms.Button();
             this.eventName = new System.Windows.Forms.TextBox();
             this.eventDate1 = new System.Windows.Forms.DateTimePicker();
             this.eventDate2 = new System.Windows.Forms.DateTimePicker();
@@ -57,6 +56,8 @@
             this.tools_55 = new System.Windows.Forms.Label();
             this.eventLink = new System.Windows.Forms.TextBox();
             this.link_9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.exitProgram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name_1
@@ -135,17 +136,6 @@
             this.saveEvent.TabIndex = 7;
             this.saveEvent.UseVisualStyleBackColor = true;
             this.saveEvent.Click += new System.EventHandler(this.saveEvent_Click);
-            // 
-            // exitCreateEvent
-            // 
-            this.exitCreateEvent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitCreateEvent.BackgroundImage")));
-            this.exitCreateEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitCreateEvent.Location = new System.Drawing.Point(170, 258);
-            this.exitCreateEvent.Name = "exitCreateEvent";
-            this.exitCreateEvent.Size = new System.Drawing.Size(60, 60);
-            this.exitCreateEvent.TabIndex = 8;
-            this.exitCreateEvent.UseVisualStyleBackColor = true;
-            this.exitCreateEvent.Click += new System.EventHandler(this.exitCreateEvent_Click);
             // 
             // eventName
             // 
@@ -382,12 +372,34 @@
             this.link_9.Text = "Сайт:";
             this.link_9.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.label1.Location = new System.Drawing.Point(56, 182);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 19);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Оберіть шаблон події";
+            // 
+            // exitProgram
+            // 
+            this.exitProgram.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitProgram.BackgroundImage")));
+            this.exitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitProgram.Location = new System.Drawing.Point(1025, -1);
+            this.exitProgram.Name = "exitProgram";
+            this.exitProgram.Size = new System.Drawing.Size(40, 40);
+            this.exitProgram.TabIndex = 8;
+            this.exitProgram.UseVisualStyleBackColor = true;
+            this.exitProgram.Click += new System.EventHandler(this.exitProgram_Click);
+            // 
             // CreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1064, 649);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.eventLink);
             this.Controls.Add(this.link_9);
             this.Controls.Add(this.eventTools);
@@ -408,7 +420,7 @@
             this.Controls.Add(this.eventDate2);
             this.Controls.Add(this.eventDate1);
             this.Controls.Add(this.eventName);
-            this.Controls.Add(this.exitCreateEvent);
+            this.Controls.Add(this.exitProgram);
             this.Controls.Add(this.saveEvent);
             this.Controls.Add(this.limit_8);
             this.Controls.Add(this.cost_7);
@@ -417,7 +429,7 @@
             this.Controls.Add(this.date_2);
             this.Controls.Add(this.name_1);
             this.Name = "CreateEvent";
-            this.Text = "і";
+            this.Text = "CreateEvent";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateEvent_FormClosed);
             this.Load += new System.EventHandler(this.CreateEvent_Load);
             this.ResumeLayout(false);
@@ -434,7 +446,6 @@
         private System.Windows.Forms.Label cost_7;
         private System.Windows.Forms.Label limit_8;
         private System.Windows.Forms.Button saveEvent;
-        private System.Windows.Forms.Button exitCreateEvent;
         private System.Windows.Forms.TextBox eventName;
         private System.Windows.Forms.DateTimePicker eventDate1;
         private System.Windows.Forms.DateTimePicker eventDate2;
@@ -455,5 +466,7 @@
         private System.Windows.Forms.Label tools_55;
         private System.Windows.Forms.TextBox eventLink;
         private System.Windows.Forms.Label link_9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button exitProgram;
     }
 }

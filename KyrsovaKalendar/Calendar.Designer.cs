@@ -42,9 +42,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
             this.EventShowButton = new System.Windows.Forms.Button();
-            this.FindEventTextBox = new System.Windows.Forms.TextBox();
             this.FindEventButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.FindEventTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.exitProgram = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dayPanel
@@ -178,16 +180,6 @@
             this.EventShowButton.UseVisualStyleBackColor = true;
             this.EventShowButton.Click += new System.EventHandler(this.buttonEventShow_Click);
             // 
-            // FindEventTextBox
-            // 
-            this.FindEventTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.FindEventTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FindEventTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FindEventTextBox.Location = new System.Drawing.Point(283, 34);
-            this.FindEventTextBox.Name = "FindEventTextBox";
-            this.FindEventTextBox.Size = new System.Drawing.Size(150, 20);
-            this.FindEventTextBox.TabIndex = 16;
-            // 
             // FindEventButton
             // 
             this.FindEventButton.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -203,12 +195,46 @@
             this.FindEventButton.UseVisualStyleBackColor = false;
             this.FindEventButton.Click += new System.EventHandler(this.FindEventButton_Click);
             // 
+            // FindEventTextBox
+            // 
+            this.FindEventTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.FindEventTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FindEventTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.FindEventTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FindEventTextBox.Location = new System.Drawing.Point(283, 34);
+            this.FindEventTextBox.Name = "FindEventTextBox";
+            this.FindEventTextBox.Size = new System.Drawing.Size(150, 22);
+            this.FindEventTextBox.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label8.Location = new System.Drawing.Point(291, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(133, 16);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Введіть назву події";
+            // 
+            // exitProgram
+            // 
+            this.exitProgram.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitProgram.BackgroundImage")));
+            this.exitProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitProgram.Location = new System.Drawing.Point(1041, 0);
+            this.exitProgram.Name = "exitProgram";
+            this.exitProgram.Size = new System.Drawing.Size(40, 40);
+            this.exitProgram.TabIndex = 19;
+            this.exitProgram.UseVisualStyleBackColor = true;
+            this.exitProgram.Click += new System.EventHandler(this.exitProgram_Click);
+            // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1080, 831);
+            this.Controls.Add(this.exitProgram);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.FindEventButton);
             this.Controls.Add(this.FindEventTextBox);
             this.Controls.Add(this.EventShowButton);
@@ -223,7 +249,7 @@
             this.Controls.Add(this.prevButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.dayPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimizeBox = false;
             this.Name = "Calendar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v";
@@ -247,9 +273,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label date;
         private System.Windows.Forms.Button EventShowButton;
-        private System.Windows.Forms.TextBox FindEventTextBox;
         private System.Windows.Forms.Button FindEventButton;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox FindEventTextBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button exitProgram;
     }
 }
 
