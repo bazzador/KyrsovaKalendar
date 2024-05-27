@@ -1,31 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Net.NetworkInformation;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static KyrsovaKalendar.CreateEvent;
 
 namespace KyrsovaKalendar
 {
-    public partial class CreateEvent : Form
+    public partial class CreateEditEvent : Form
     {
         DayInfo dayInfo;
         int indexEventToChange;
         int numberOfSelectedSubject;
-        public CreateEvent(DayInfo dayInfo)
+        public CreateEditEvent(DayInfo dayInfo)
         {
             InitializeComponent();
             this.dayInfo = dayInfo;
             this.indexEventToChange = -1;
         }
-        public CreateEvent(DayInfo dayInfo, int indexEventToChange)
+        public CreateEditEvent(DayInfo dayInfo, int indexEventToChange)
         {
             InitializeComponent();
             this.dayInfo = dayInfo;
@@ -334,7 +326,8 @@ namespace KyrsovaKalendar
                 string limit = ExtractData(fileLines, "Limit: ");
                 string siteLink = ExtractData(fileLines, "Site Link: ");
 
-                return new Entertainment(type, name, author, startDate, endDate, location, goal, tools, info, timeStart, timeLength, cost, limit, siteLink);
+                return new Entertainment(type, name, author, startDate, endDate, location, goal, tools, 
+                                         info, timeStart, timeLength, cost, limit, siteLink);
             }
 
             public override void WriteDataToFile(string directory)
@@ -369,7 +362,7 @@ namespace KyrsovaKalendar
             try
             {
                 int cost = 0; // Значення за замовчуванням
-                if (!string.IsNullOrWhiteSpace(eventCost.Text) && int.Parse(eventCost.Text) >= 0)
+                if (!string.IsNullOrWhiteSpace(eventCost.Text) && int.Parse(eventCost.Text) > 0)
                 {
                     cost = int.Parse(eventCost.Text);
                 }

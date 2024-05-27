@@ -1,6 +1,6 @@
 ﻿namespace KyrsovaKalendar
 {
-    partial class CreateEvent
+    partial class CreateEditEvent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateEvent));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateEditEvent));
             this.name_1 = new System.Windows.Forms.Label();
             this.date_2 = new System.Windows.Forms.Label();
             this.start_5 = new System.Windows.Forms.Label();
@@ -429,7 +429,7 @@
             this.Controls.Add(this.date_2);
             this.Controls.Add(this.name_1);
             this.Name = "CreateEvent";
-            this.Text = "CreateEvent";
+            this.Text = "CreateEditEvent";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateEvent_FormClosed);
             this.Load += new System.EventHandler(this.CreateEvent_Load);
             this.ResumeLayout(false);

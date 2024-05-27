@@ -30,7 +30,7 @@ namespace KyrsovaKalendar
         {
             Click += UserControlDays_Click;
         }
-        public void Days(int numDay)
+        public void Days(int numDay)    
         {
             labelDays.Text = numDay + "";
             dayFolder = numDay;

@@ -11,7 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static KyrsovaKalendar.CreateEvent;
+using static KyrsovaKalendar.CreateEditEvent;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace KyrsovaKalendar

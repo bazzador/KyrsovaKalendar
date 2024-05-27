@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-
 namespace KyrsovaKalendar
 {
     public partial class ShowEventForm : Form

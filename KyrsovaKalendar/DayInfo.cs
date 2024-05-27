@@ -5,7 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using static KyrsovaKalendar.CreateEvent;
+using static KyrsovaKalendar.CreateEditEvent;
 
 namespace KyrsovaKalendar
 {
@@ -36,7 +36,7 @@ namespace KyrsovaKalendar
 
         private void createEventButton_Click(object sender, EventArgs e)
         {
-            CreateEvent createEvent = new CreateEvent(this);
+            CreateEditEvent createEvent = new CreateEditEvent(this);
             createEvent.ShowDialog();
         }
         public void UpdateEvents()
@@ -177,7 +177,7 @@ namespace KyrsovaKalendar
         {
             if (EventComboBox.SelectedIndex >=0)
             {
-                CreateEvent createEvent = new CreateEvent(this, EventComboBox.SelectedIndex);
+                CreateEditEvent createEvent = new CreateEditEvent(this, EventComboBox.SelectedIndex);
                 UpdateEvents();
                 createEvent.ShowDialog();
             }
