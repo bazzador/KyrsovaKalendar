@@ -1,2 +1,140 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KyrsovaKalendar.Calendar">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEYAgBACQAABAAMKCAIAAGCIQEAAgAAAAAAUGAAAA=</HashCode>
+      <FileName>Calendar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.CreateEditEvent">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Interface Name="KyrsovaKalendar.CreateEditEvent.IDataManagement" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CreateEditEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Interface>
+      <Class Name="KyrsovaKalendar.CreateEditEvent.Event" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CreateEditEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="KyrsovaKalendar.CreateEditEvent.TematicEvenings" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CreateEditEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="KyrsovaKalendar.CreateEditEvent.Questions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CreateEditEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="KyrsovaKalendar.CreateEditEvent.Meeting" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CreateEditEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="KyrsovaKalendar.CreateEditEvent.Standup" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CreateEditEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="KyrsovaKalendar.CreateEditEvent.Entertainment" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CreateEditEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAkAIDAMCCIggBAQAACAADACAPCgAACEoBQRANAgIIA=</HashCode>
+      <FileName>CreateEditEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.DayInfo">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAYDAICCIIiBBQIBCAQHAKALAgQNKEIBQRANAgIIA=</HashCode>
+      <FileName>DayInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.user">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.LogIn">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAACAAABEAACCCAAACAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>LogIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.Program" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.ShowEventForm">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAAAAAAICCAAAACAAAAAEAAAAAAAECAAAA=</HashCode>
+      <FileName>ShowEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.SignIn">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEAAACAAABAAECCCAAACAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>SignIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.UserControlBlank">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControlBlank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.UserControlDays">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACAEAAAABACAAAACAAAAAAABQAIAgAAAAAA=</HashCode>
+      <FileName>UserControlDays.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.UserShowEvents">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAIJCAAABAAAACACAACAAQIAAAEAAAUAQAAAEA=</HashCode>
+      <FileName>UserShowEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.Properties.Resources" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KyrsovaKalendar.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static KyrsovaKalendar.CreateEditEvent;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace KyrsovaKalendar
 {
@@ -21,7 +11,7 @@ namespace KyrsovaKalendar
         public int month, year;
         DateTime now = DateTime.Now;
         public string directoriesPath = @"C:\Users\Ivanchik\source\repos\KyrsovaKalendar\events";
-        static public bool isAdmin;
+        static private bool isAdmin;
         public Calendar(bool _isAdmin)
         {
             InitializeComponent();

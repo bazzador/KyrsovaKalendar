@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace KyrsovaKalendar
 {
@@ -16,6 +17,9 @@ namespace KyrsovaKalendar
             InitializeComponent();
             this.dayInfo = dayInfo;
             this.indexEventToChange = -1;
+            DateTime userDate = new DateTime(dayInfo.userYear, dayInfo.userMonth, dayInfo.userDay);
+            eventDate1.Value = userDate;
+            eventDate2.Value = userDate;
         }
         public CreateEditEvent(DayInfo dayInfo, int indexEventToChange)
         {

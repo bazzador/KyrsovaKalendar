@@ -151,22 +151,26 @@
             // eventDate1
             // 
             this.eventDate1.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventDate1.Enabled = false;
             this.eventDate1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventDate1.Location = new System.Drawing.Point(593, 105);
             this.eventDate1.Name = "eventDate1";
             this.eventDate1.Size = new System.Drawing.Size(135, 22);
             this.eventDate1.TabIndex = 10;
+            this.eventDate1.Value = new System.DateTime(2024, 5, 29, 0, 0, 0, 0);
             this.eventDate1.Visible = false;
             // 
             // eventDate2
             // 
             this.eventDate2.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.eventDate2.CalendarTitleForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.eventDate2.Enabled = false;
             this.eventDate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.eventDate2.Location = new System.Drawing.Point(742, 105);
             this.eventDate2.Name = "eventDate2";
             this.eventDate2.Size = new System.Drawing.Size(135, 22);
             this.eventDate2.TabIndex = 11;
+            this.eventDate2.Value = new System.DateTime(2024, 5, 29, 0, 0, 0, 0);
             this.eventDate2.Visible = false;
             // 
             // eventInfo
@@ -393,7 +397,7 @@
             this.exitProgram.UseVisualStyleBackColor = true;
             this.exitProgram.Click += new System.EventHandler(this.exitProgram_Click);
             // 
-            // CreateEvent
+            // CreateEditEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -428,7 +432,7 @@
             this.Controls.Add(this.start_5);
             this.Controls.Add(this.date_2);
             this.Controls.Add(this.name_1);
-            this.Name = "CreateEvent";
+            this.Name = "CreateEditEvent";
             this.Text = "CreateEditEvent";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateEvent_FormClosed);
             this.Load += new System.EventHandler(this.CreateEvent_Load);
